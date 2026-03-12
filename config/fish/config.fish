@@ -21,8 +21,6 @@ if status is-interactive
     alias vi 'nvim'
     alias vim 'nvim'
 
-    fish_add_path --path /home/sunny/.spicetify
-
     set -U fish_greeting
     set -g fish_key_bindings fish_vi_key_bindings
 end
