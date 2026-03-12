@@ -1,0 +1,10 @@
+azahar-git
+dolphin-emu-git
+duckstation-gpl
+pcsx2-git
+melonds-git
+mgba-qt
+eden-git
+sameboy
+wine
+winetricks

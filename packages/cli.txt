@@ -1,0 +1,12 @@
+fish
+fisher
+git
+less
+fastfetch
+hyfetch
+7zip
+unrar
+unzip
+yay
+kanata
+neovim

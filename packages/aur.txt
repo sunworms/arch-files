@@ -1,0 +1,4 @@
+decman
+quickshell-git
+ttf-aporetic
+vencord-hook

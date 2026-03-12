@@ -1,0 +1,4 @@
+gnome-keyring
+swayimg
+zathura
+mpv

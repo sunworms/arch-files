@@ -1,0 +1,10 @@
+pipewire
+pipewire-alsa
+pipewire-jack
+pipewire-pulse
+wireplumber
+libpulse
+gst-plugin-pipewire
+cava
+bluez
+bluez-utils
