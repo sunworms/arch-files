@@ -53,13 +53,7 @@ return {
 					end,
 				})
 
-				vim.keymap.set("n", "<leader>tp", function()
-					local client = vim.lsp.get_clients({ name = "tinymist" })[1]
-					if client then
-						client:exec_cmd({ command = "tinymist.startDefaultPreview", title = "Preview" }, { bufnr = 0 })
-					end
-				end, { desc = "Typst: Start Preview" })
-
+				vim.keymap.set("n", "<leader>tp", ":TypstPreview<CR>", { desc = "Typst: Start Preview" })
 				vim.keymap.set("n", "<leader>tm", ":LspTinymistPinMain<CR>", { desc = "Typst: Pin Main File" })
 			end,
 		},
