@@ -10,3 +10,4 @@ unzip
 yay
 kanata
 neovim
+ripgrep
