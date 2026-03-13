@@ -4,6 +4,7 @@ git
 less
 fastfetch
 hyfetch
+ncdu
 7zip
 unrar
 unzip
