@@ -1,5 +1,4 @@
 discord
-fluffychat
 spotify
 zen-browser-bin
 spicetify-cli
