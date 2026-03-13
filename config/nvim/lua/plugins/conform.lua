@@ -5,9 +5,8 @@ return {
 		require("conform").setup({
 			formatters_by_ft = {
 				lua = { "stylua" },
-				go = { "goimports", "gofmt" },
-				rust = { "rustfmt" },
-				java = { "google-java-format" },
+				tex = { "tex-fmt" },
+				typst = { "typstyle" },
 			},
 		})
 
