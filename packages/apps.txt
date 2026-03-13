@@ -1,5 +1,5 @@
 discord
+helium-browser-bin
 spotify
-zen-browser-bin
 spicetify-cli
 spicetify-marketplace-bin

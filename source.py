@@ -20,6 +20,7 @@ decman.directories["/home/sunny/.config/kanata"] = Directory(source_directory=".
 decman.directories["/home/sunny/.config/matugen"] = Directory(source_directory="./config/matugen", owner="sunny")
 decman.directories["/home/sunny/.config/niri"] = Directory(source_directory="./config/niri", owner="sunny")
 decman.directories["/home/sunny/.config/nvim"] = Directory(source_directory="./config/nvim", owner="sunny")
+decman.directories["/home/sunny/.local/share/applications"] = Directory(source_directory="./config/desktop-files", owner="sunny")
 
 decman.files["/home/sunny/.config/spicetify/config-xpui.ini"] = File(source_file="./config/spicetify-config-xpui.ini", owner="sunny")
 decman.files["/home/sunny/.config/mimeapps.list"] = File(source_file="./config/mimeapps.list", owner="sunny")
@@ -28,6 +29,7 @@ decman.files["/home/sunny/.face"] = File(source_file="./haruta.jpg", owner="sunn
 
 decman.files["/etc/pacman.conf"] = File(source_file="./config/system/pacman.conf")
 decman.files["/etc/makepkg.conf"] = File(source_file="./config/system/makepkg.conf")
+decman.files["/etc/chromium/policies/managed/default.json"] = File(source_file="./config/system/chromium.json")
 
 decman.symlinks["/home/sunny/.config/systemd/user/niri.service.wants/dms.service"] = "/usr/lib/systemd/user/dms.service"
 
