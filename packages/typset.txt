@@ -1,0 +1,6 @@
+texlive-basic
+texlive-latexextra
+texlive-binextra
+texlive-fontsrecommended
+texlive-bibtexextra
+typst
