@@ -33,6 +33,3 @@ decman.symlinks["/home/sunny/.config/systemd/user/niri.service.wants/dms.service
 
 systemd_services = Path("enabled_services.txt").read_text().splitlines()
 decman.systemd.enabled_units |= set(systemd_services)
-
-systemd_user_services = Path("enabled_user_services.txt").read_text().splitlines()
-decman.systemd.enabled_user_units.setdefault("sunny", set()).update(set(systemd_user_services))
