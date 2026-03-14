@@ -15,6 +15,10 @@
 @import url('https://refact0r.github.io/midnight-discord/build/midnight.css');
 
 /* customize things here */
+body {
+  --border-thickness: 2px;
+}
+
 :root {
 	/* font, change to 'gg sans' for default discord font*/
 	--font: 'gg sans';
@@ -84,6 +88,13 @@
 	--login-bg-filter: saturate(0.3) hue-rotate(-15deg) brightness(0.4); /* login background artwork */
 	--green-to-accent-3-filter: hue-rotate(56deg) saturate(1.43); /* add friend page explore icon */
 	--blurple-to-accent-3-filter: hue-rotate(304deg) saturate(0.84) brightness(1.2); /* add friend page school icon */
+
+
+  /* border colors */
+  --border-light: var(--hover); /* general light border color */
+  --border: var(--active); /* general normal border color */
+  --border-hover: var(--accent-2); /* border color of panels when hovered */
+  --button-border: hsl(220, 0%, 100%, 0.1); /* neutral border color of buttons */
 }
 
 /* Selected chat/friend text */
