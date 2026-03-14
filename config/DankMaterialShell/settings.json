@@ -300,12 +300,22 @@
   "matugenTemplateVscode": true,
   "matugenTemplateEmacs": true,
   "matugenTemplateZed": true,
+  "matugenTemplateNeovimSettings": {
+    "dark": {
+      "baseTheme": "github_dark",
+      "harmony": 0.5
+    },
+    "light": {
+      "baseTheme": "github_light",
+      "harmony": 0.5
+    }
+  },
   "showDock": false,
   "dockAutoHide": false,
   "dockSmartAutoHide": false,
   "dockGroupByApp": false,
   "dockRestoreSpecialWorkspaceOnClick": false,
-  "dockOpenOnOverview": false,
+  "dockOpenOnOverview": true,
   "dockPosition": 1,
   "dockSpacing": 4,
   "dockBottomGap": 0,
@@ -487,7 +497,7 @@
       "widgetOutlineThickness": 1,
       "fontScale": 1,
       "iconScale": 1,
-      "autoHide": false,
+      "autoHide": true,
       "autoHideDelay": 250,
       "showOnWindowsOpen": false,
       "openOnOverview": false,

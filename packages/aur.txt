@@ -1,4 +1,5 @@
 decman
+niri-wip-git
 quickshell-git
 ttf-aporetic
 vencord-hook
