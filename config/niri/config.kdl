@@ -103,13 +103,6 @@ layout {
     }
 }
 
-blur {
-    passes 2
-    offset 2
-    noise 0.02
-    saturation 1.5
-}
-
 spawn-at-startup "sh" "-c" "kanata --cfg ~/.config/kanata/config.kbd"
 
 hotkey-overlay {
@@ -164,11 +157,7 @@ window-rule {
     geometry-corner-radius 12
     clip-to-geometry true
     draw-border-with-background false
-    opacity 0.8
-    background-effect {
-        blur true
-        xray true
-    }
+    opacity 0.9
 }
 
 // layer rules
@@ -180,7 +169,7 @@ layer-rule {
 
 layer-rule {
     match namespace="^dms:"
-    opacity 0.8
+    opacity 0.9
 }
 
 prefer-no-csd

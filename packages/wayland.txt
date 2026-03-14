@@ -1,3 +1,4 @@
+niri-git
 foot
 wl-clipboard
 xwayland-satellite
