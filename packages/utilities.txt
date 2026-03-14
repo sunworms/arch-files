@@ -1,5 +1,6 @@
 gnome-keyring
 swayimg
+satty
 zathura
 zathura-cb
 zathura-djvu
