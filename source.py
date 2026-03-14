@@ -30,6 +30,7 @@ decman.files["/home/sunny/.face"] = File(source_file="./haruta.jpg", owner="sunn
 decman.files["/etc/pacman.conf"] = File(source_file="./config/system/pacman.conf")
 decman.files["/etc/makepkg.conf"] = File(source_file="./config/system/makepkg.conf")
 decman.files["/etc/chromium/policies/managed/default.json"] = File(source_file="./config/system/chromium.json")
+decman.files["/etc/timeshift/timeshift.json"] = File(source_file="./config/system/timeshift.json")
 
 decman.symlinks["/home/sunny/.config/systemd/user/niri.service.wants/dms.service"] = "/usr/lib/systemd/user/dms.service"
 
