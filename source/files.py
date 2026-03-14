@@ -6,8 +6,7 @@ HOME = f"/home/{USER}"
 CONFIG = f"{HOME}/.config"
 
 FILES = {
-    f"{CONFIG}/gtk-3.0/settings.ini": "../config/gtk-settings.ini",
-    f"{CONFIG}/gtk-4.0/settings.ini": "../config/gtk-settings.ini",
+    f"{CONFIG}/fontconfig/fonts.conf": "../config/fonts.conf",
     f"{CONFIG}/spicetify/config-xpui.ini": "../config/spicetify-config-xpui.ini",
     f"{CONFIG}/mimeapps.list": "../config/mimeapps.list",
     f"{CONFIG}/hyfetch.json": "../config/hyfetch.json",
