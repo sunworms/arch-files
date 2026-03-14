@@ -11,4 +11,5 @@ unzip
 yay
 kanata
 neovim
+tree-sitter-cli
 ripgrep
