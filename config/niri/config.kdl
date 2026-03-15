@@ -157,7 +157,7 @@ window-rule {
     geometry-corner-radius 12
     clip-to-geometry true
     draw-border-with-background false
-    opacity 0.9
+    opacity 0.95
 }
 
 // layer rules
@@ -169,7 +169,7 @@ layer-rule {
 
 layer-rule {
     match namespace="^dms:"
-    opacity 0.9
+    opacity 0.95
 }
 
 prefer-no-csd
