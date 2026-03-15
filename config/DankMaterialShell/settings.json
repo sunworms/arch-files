@@ -474,7 +474,7 @@
         }
       ],
       "spacing": 4,
-      "innerPadding": 4,
+      "innerPadding": -4,
       "bottomGap": 0,
       "transparency": 1,
       "widgetTransparency": 1,
