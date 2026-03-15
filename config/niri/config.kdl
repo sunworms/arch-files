@@ -103,6 +103,11 @@ layout {
     }
 }
 
+blur {
+    passes 2
+    offset 3
+}
+
 spawn-at-startup "sh" "-c" "kanata --cfg ~/.config/kanata/config.kbd"
 
 hotkey-overlay {
@@ -144,6 +149,22 @@ window-rule {
     open-on-workspace "fun"
 }
 
+window-rule {
+    match is-active=true
+    opacity 0.9
+    background-effect {
+        blur true
+    }
+}
+
+window-rule {
+    match is-active=false
+    opacity 0.8
+    background-effect {
+        blur true
+    }
+}
+
 /-window-rule {
     match app-id=r#"^org\.keepassxc\.KeePassXC$"#
     match app-id=r#"^org\.gnome\.World\.Secrets$"#
@@ -165,11 +186,6 @@ window-rule {
 layer-rule {
     match namespace="^quickshell$"
     place-within-backdrop true
-}
-
-layer-rule {
-    match namespace="^dms:"
-    opacity 0.95
 }
 
 prefer-no-csd
