@@ -16,7 +16,7 @@
 
 /* customize things here */
 body {
-  --border-thickness: 1px;
+  --border-thickness: 0px;
 }
 
 :root {
