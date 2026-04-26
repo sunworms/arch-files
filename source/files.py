@@ -18,7 +18,6 @@ for dest, src in FILES.items():
 SYSTEM_FILES = {
     "/etc/pacman.conf": "../config/system/pacman.conf",
     "/etc/makepkg.conf": "../config/system/makepkg.conf",
-    "/etc/greetd/config.toml": "../config/system/greetd.toml",
 }
 
 for dest, src in SYSTEM_FILES.items():

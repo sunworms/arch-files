@@ -1,2 +1,1 @@
-greetd
-greetd-tuigreet
+ly
