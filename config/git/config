@@ -28,7 +28,7 @@
 	ui = "auto"
 
 [core]
-	editor = "nvim"
+	editor = "hx"
 	pager = "less"
 	whitespace = "fix,-indent-with-non-tab,trailing-space,cr-at-eol"
 
@@ -90,7 +90,7 @@
 	enabled = 1
 
 [sequence]
-	editor = "emacsclient"
+	editor = "hx"
 
 [tag]
 	sort = "version:refname"
@@ -105,4 +105,4 @@
 	username = "sunworms"
 
 [web]
-	browser = "zen"
+	browser = "firefox"

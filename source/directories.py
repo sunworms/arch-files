@@ -6,14 +6,13 @@ HOME = f"/home/{USER}"
 CONFIG = f"{HOME}/.config"
 
 CONFIG_DIRS = [
-    "DankMaterialShell",
+    "noctalia",
     "fish",
-    "foot",
+    "kitty",
     "git",
     "kanata",
-    "matugen",
     "niri",
-    "nvim",
+    "helix",
 ]
 
 for d in CONFIG_DIRS:
@@ -21,8 +20,3 @@ for d in CONFIG_DIRS:
         source_directory=f"../config/{d}",
         owner=USER,
     )
-
-decman.directories[f"{HOME}/.local/share/applications"] = Directory(
-    source_directory="../config/desktop-files",
-    owner=USER,
-)

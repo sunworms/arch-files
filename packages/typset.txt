@@ -3,4 +3,7 @@ texlive-latexextra
 texlive-binextra
 texlive-fontsrecommended
 texlive-bibtexextra
+texlab
 typst
+tinymist
+typstyle

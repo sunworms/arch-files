@@ -10,6 +10,6 @@ unrar
 unzip
 yay
 kanata
-neovim
-tree-sitter-cli
+helix-git
+lazygit
 ripgrep

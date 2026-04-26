@@ -1,5 +1,2 @@
-discord
-helium-browser-bin
-spotify
-spicetify-cli
-spicetify-marketplace-bin
+vesktop-git
+firefox

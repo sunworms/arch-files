@@ -1,9 +1,4 @@
 bluetooth.service
 cronie.service
-getty@.service
 grub-btrfsd.service
-NetworkManager-dispatcher.service
-NetworkManager-wait-online.service
-NetworkManager.service
-systemd-timesyncd.service
 warp-svc.service
