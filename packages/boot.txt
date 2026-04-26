@@ -1,5 +1,2 @@
 efibootmgr
-grub
-grub-btrfs
-timeshift
 zram-generator

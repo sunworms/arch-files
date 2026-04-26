@@ -18,7 +18,6 @@ for dest, src in FILES.items():
 SYSTEM_FILES = {
     "/etc/pacman.conf": "../config/system/pacman.conf",
     "/etc/makepkg.conf": "../config/system/makepkg.conf",
-    "/etc/timeshift/timeshift.json": "../config/system/timeshift.json",
 }
 
 for dest, src in SYSTEM_FILES.items():

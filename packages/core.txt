@@ -1,6 +1,7 @@
 base
 base-devel
 linux
+systemd
 linux-firmware
 intel-ucode
 sudo

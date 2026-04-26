@@ -1,4 +1,2 @@
 bluetooth.service
-cronie.service
-grub-btrfsd.service
 warp-svc.service
