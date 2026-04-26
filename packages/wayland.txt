@@ -3,17 +3,3 @@ wl-clipboard
 cliphist
 xwayland-satellite
 niri-git
-noctalia-shell
-noctalia-qs
-matugen
-tesseract
-tesseract-data-eng
-gpu-screen-recorder
-grim
-slurp
-imagemagick
-zbar
-translate-shell
-wf-recorder
-wl-mirror
-gifski
