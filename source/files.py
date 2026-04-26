@@ -9,6 +9,7 @@ FILES = {
     f"{CONFIG}/fontconfig/fonts.conf": "../config/fonts.conf",
     f"{CONFIG}/mimeapps.list": "../config/mimeapps.list",
     f"{CONFIG}/hyfetch.json": "../config/hyfetch.json",
+    f"{CONFIG}/kdeglobals": "../config/kdeglobals",
     f"{HOME}/.face": "../haruta.jpg",
 }
 
