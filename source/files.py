@@ -19,7 +19,8 @@ for dest, src in FILES.items():
 SYSTEM_FILES = {
     "/etc/pacman.conf": "../config/system/pacman.conf",
     "/etc/makepkg.conf": "../config/system/makepkg.conf",
-    "/etc/systemd/zram-generator.conf": "../config/system/zram-generator.conf",
+    "/etc/systemd/zram-generator.conf": "../config/system/systemd/zram-generator.conf",
+    "/etc/systemd/logind.conf": "../config/system/systemd/logind.conf",
 }
 
 for dest, src in SYSTEM_FILES.items():
