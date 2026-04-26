@@ -1,5 +1,6 @@
 import decman
 from decman import File
+from pathlib import Path
 
 USER = "sunny"
 HOME = f"/home/{USER}"
@@ -16,12 +17,10 @@ FILES = {
 for dest, src in FILES.items():
     decman.files[dest] = File(source_file=src, owner=USER)
 
-SYSTEM_FILES = {
-    "/etc/pacman.conf": "../config/system/pacman.conf",
-    "/etc/makepkg.conf": "../config/system/makepkg.conf",
-    "/etc/systemd/zram-generator.conf": "../config/system/systemd/zram-generator.conf",
-    "/etc/systemd/logind.conf": "../config/system/systemd/logind.conf",
-}
+SYSTEM_SRC = Path("../config/system")
 
-for dest, src in SYSTEM_FILES.items():
-    decman.files[dest] = File(source_file=src)
+for path in SYSTEM_SRC.rglob("*"):
+    if path.is_file():
+        relative = path.relative_to(SYSTEM_SRC)
+        dest = Path("/etc") / relative
+        decman.files[str(dest)] = File(source_file=str(path))
