@@ -3,3 +3,5 @@ wl-clipboard
 cliphist
 xwayland-satellite
 niri-git
+xdg-desktop-portal-gnome
+xdg-desktop-portal-gtk
