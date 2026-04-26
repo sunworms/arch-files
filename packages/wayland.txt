@@ -1,9 +1,11 @@
 kitty
 wl-clipboard
+cliphist
 xwayland-satellite
 niri-git
 noctalia-shell
 noctalia-qs
+matugen
 tesseract
 tesseract-data-eng
 gpu-screen-recorder
