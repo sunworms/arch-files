@@ -1,6 +1,7 @@
 fish
 fisher
 git
+git-lfs
 less
 fastfetch
 hyfetch
