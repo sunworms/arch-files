@@ -1,6 +1,6 @@
 base
 base-devel
-linux-tachyon
+linux-cachyos
 systemd
 linux-firmware
 intel-ucode
