@@ -17,6 +17,8 @@ FILES = {
 for dest, src in FILES.items():
     decman.files[dest] = File(source_file=src, owner=USER)
 
+decman.files["/boot/loader/entries/linux-tachyon.conf"] = File(source_file="../config/boot-linux-tachyon.conf")
+
 SYSTEM_SRC = Path("../config/system")
 
 for path in SYSTEM_SRC.rglob("*"):
