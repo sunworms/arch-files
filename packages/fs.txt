@@ -1,4 +1,5 @@
 libunwind
 zfs-utils
-zfs-dkms
+zfs-meta
+linux-cachyos-zfs
 gvfs-mtp
