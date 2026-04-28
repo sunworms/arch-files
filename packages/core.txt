@@ -1,6 +1,7 @@
 base
 base-devel
 linux-cachyos
+linux-cachyos-headers
 systemd
 linux-firmware
 intel-ucode

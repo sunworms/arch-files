@@ -1,1 +1,4 @@
+libunwind
+zfs-utils
 zfs-dkms
+gvfs-mtp
