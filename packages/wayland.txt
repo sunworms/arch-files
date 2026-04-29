@@ -2,6 +2,6 @@ kitty
 wl-clipboard
 cliphist
 xwayland-satellite
-niri-git
+niri
 xdg-desktop-portal-gnome
 xdg-desktop-portal-gtk
