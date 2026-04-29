@@ -29,8 +29,11 @@ source = "wallpaper"
 wallpaper_scheme = "faithful"
 
     [theme.templates]
-    builtin_ids = [ "gtk3", "gtk4", "helix", "kcolorscheme", "niri" ]
+    builtin_ids = [ "gtk3", "gtk4", "helix", "kcolorscheme", "niri", "kitty" ]
     enable_user_templates = true
+
+[wallpaper]
+directory = "/home/sunny/Pictures/walls"
 
 [weather]
 address = "Jatani, India"
