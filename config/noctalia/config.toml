@@ -14,7 +14,11 @@ widget_spacing = 10
 [dock]
 auto_hide = true
 background_opacity = 0.89999997615814209
-enabled = true
+enabled = false
+position = "top"
+
+[notification]
+background_opacity = 0.89999997615814209
 
 [shell]
 avatar_path = "/home/sunny/arch-files/haruta.jpg"
