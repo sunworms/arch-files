@@ -20,3 +20,9 @@ for d in CONFIG_DIRS:
         source_directory=f"../config/{d}",
         owner=USER,
     )
+
+decman.directories["/home/sunny/.local/bin"] = Directory(
+    source_directory="../scripts/bin",
+    owner=USER,
+    permissions=0o755,
+)

@@ -9,6 +9,7 @@ if status is-login
     set -gx TERMINAL kitty
     set -gx GTK_THEME adw-gtk3
     set -gx QT_QPA_PLATFORMTHEME gtk3
+    set -gx fish_user_paths /home/sunny/.local/bin
 end
 if status is-interactive
     abbr --add -- grep 'grep --color=auto'

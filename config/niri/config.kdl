@@ -163,7 +163,7 @@ layer-rule {
 }
 
 switch-events {
-    lid-close { spawn "/home/sunny/arch-files/noctalia-lock-and-suspend.sh"; }
+    lid-close { spawn "noctalia-lock-and-suspend"; }
 }
 
 prefer-no-csd
@@ -192,7 +192,7 @@ binds {
     XF86Launch6 hotkey-overlay-title="Control Center" { spawn "noctalia" "msg" "panel-toggle" "control-center"; }
     // XF86Calculator hotkey-overlay-title="Open Windows" { spawn "noctalia" "msg" "call" "launcher" "windows"; }
     XF86Favorites hotkey-overlay-title="Emoji Selector" { spawn "noctalia" "msg" "panel-toggle" "launcher" "/emo"; }
-    XF86PowerOff hotkey-overlay-title="Lock and Suspend" { spawn "/home/sunny/arch-files/noctalia-lock-and-suspend.sh"; }
+    XF86PowerOff hotkey-overlay-title="Lock and Suspend" { spawn "noctalia-lock-and-suspend"; }
 
     XF86AudioRaiseVolume allow-when-locked=true { spawn "noctalia" "msg" "volume-up" "1"; }
     XF86AudioLowerVolume allow-when-locked=true { spawn "noctalia" "msg" "volume-down" "1"; }
