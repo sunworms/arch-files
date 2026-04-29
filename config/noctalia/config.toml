@@ -1,0 +1,42 @@
+[audio]
+enable_overdrive = true
+
+[bar.default]
+background_opacity = 0.89999997615814209
+capsule = true
+end = [ "tray", "notifications", "network", "bluetooth", "volume", "brightness", "battery", "control-center", "session" ]
+margin_h = 10
+position = "bottom"
+scale = 1.0
+start = [ "launcher", "wallpaper", "workspaces", "media" ]
+widget_spacing = 10
+
+[dock]
+auto_hide = true
+background_opacity = 0.89999997615814209
+enabled = true
+
+[shell]
+avatar_path = "/home/sunny/arch-files/haruta.jpg"
+clipboard_auto_paste = "off"
+password_style = "random"
+polkit_agent = true
+telemetry_enabled = false
+
+[theme]
+builtin = "Noctalia"
+source = "wallpaper"
+wallpaper_scheme = "faithful"
+
+    [theme.templates]
+    builtin_ids = [ "gtk3", "gtk4", "helix", "kcolorscheme", "niri" ]
+    enable_user_templates = true
+
+[weather]
+address = "Jatani, India"
+
+[widget.clock]
+format = "{:%a, %b %d, %H:%M}"
+
+[widget.workspaces]
+display = "none"

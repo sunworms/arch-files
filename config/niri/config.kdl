@@ -102,7 +102,7 @@ blur {
     saturation 1.5
 }
 
-spawn-at-startup "qs" "-c" "noctalia-shell"
+spawn-at-startup "noctalia"
 spawn-at-startup "kanata" "--cfg" "/home/sunny/.config/kanata/config.kbd"
 spawn-sh-at-startup "pywalfox install && pywalfox start"
 
@@ -163,7 +163,7 @@ layer-rule {
 }
 
 switch-events {
-    lid-close { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "sessionMenu" "lockAndSuspend"; }
+    lid-close { spawn "/home/sunny/arch-files/noctalia-lock-and-suspend.sh"; }
 }
 
 prefer-no-csd
@@ -183,30 +183,29 @@ binds {
 
     Mod+T hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
 
-    Mod+Alt+N { spawn-sh "pkill qs && sleep 1 && qs -c noctalia-shell"; }
-    Mod+A hotkey-overlay-title="Application Launcher" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "launcher" "toggle"; }
-    Mod+V hotkey-overlay-title="Clipboard" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "launcher" "clipboard"; }
-    Mod+Escape hotkey-overlay-title="Power Menu" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "sessionMenu" "toggle"; }
+    Mod+A hotkey-overlay-title="Application Launcher" { spawn "noctalia" "msg" "panel-toggle" "launcher"; }
+    Mod+V hotkey-overlay-title="Clipboard" { spawn "noctalia" "msg" "panel-toggle" "clipboard"; }
+    Mod+Escape hotkey-overlay-title="Power Menu" { spawn "noctalia" "msg" "panel-toggle" "session"; }
 
-    XF86Tools hotkey-overlay-title="Noctalia Settings" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "settings" "toggle"; }
-    XF86Launch5 hotkey-overlay-title="Lock the Screen" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "lockScreen" "lock"; }
-    XF86Launch6 hotkey-overlay-title="Control Center" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "controlCenter" "toggle"; }
-    XF86Calculator hotkey-overlay-title="Open Windows" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "launcher" "windows"; }
-    XF86Favorites hotkey-overlay-title="Emoji Selector" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "launcher" "emoji"; }
-    XF86PowerOff hotkey-overlay-title="Lock and Suspend" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "sessionMenu" "lockAndSuspend"; }
+    XF86Tools hotkey-overlay-title="Noctalia Settings" { spawn "noctalia" "msg" "settings-toggle"; }
+    XF86Launch5 hotkey-overlay-title="Lock the Screen" { spawn "noctalia" "msg" "screen-lock"; }
+    XF86Launch6 hotkey-overlay-title="Control Center" { spawn "noctalia" "msg" "panel-toggle" "control-center"; }
+    // XF86Calculator hotkey-overlay-title="Open Windows" { spawn "noctalia" "msg" "call" "launcher" "windows"; }
+    XF86Favorites hotkey-overlay-title="Emoji Selector" { spawn "noctalia" "msg" "panel-toggle" "launcher" "/emo"; }
+    XF86PowerOff hotkey-overlay-title="Lock and Suspend" { spawn "/home/sunny/arch-files/noctalia-lock-and-suspend.sh"; }
 
-    XF86AudioRaiseVolume allow-when-locked=true { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "volume" "increase"; }
-    XF86AudioLowerVolume allow-when-locked=true { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "volume" "decrease"; }
-    XF86AudioMute allow-when-locked=true { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "volume" "muteOutput"; }
-    XF86AudioMicMute     allow-when-locked=true { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "volume" "muteInput"; }
+    XF86AudioRaiseVolume allow-when-locked=true { spawn "noctalia" "msg" "volume-up" "1"; }
+    XF86AudioLowerVolume allow-when-locked=true { spawn "noctalia" "msg" "volume-down" "1"; }
+    XF86AudioMute allow-when-locked=true { spawn "noctalia" "msg" "volume-mute"; }
+    XF86AudioMicMute     allow-when-locked=true { spawn "noctalia" "msg" "mic-mute"; }
     
-    XF86MonBrightnessUp allow-when-locked=true { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "brightness" "increase"; }
-    XF86MonBrightnessDown allow-when-locked=true { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "brightness" "decrease"; }
+    XF86MonBrightnessUp allow-when-locked=true { spawn "noctalia" "msg" "brightness-up" "1"; }
+    XF86MonBrightnessDown allow-when-locked=true { spawn "noctalia" "msg" "brightness-down" "1"; }
 
-    XF86AudioPlay        allow-when-locked=true { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "media" "playPause"; }
-    XF86AudioStop        allow-when-locked=true { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "media" "stop"; }
-    XF86AudioPrev        allow-when-locked=true { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "media" "previous"; }
-    XF86AudioNext        allow-when-locked=true { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "media" "next"; }
+    XF86AudioPlay        allow-when-locked=true { spawn "noctalia" "msg" "media" "toggle"; }
+    // XF86AudioStop        allow-when-locked=true { spawn "noctalia" "msg" "call" "media" "stop"; }
+    XF86AudioPrev        allow-when-locked=true { spawn "noctalia" "msg" "media" "previous"; }
+    XF86AudioNext        allow-when-locked=true { spawn "noctalia" "msg" "media" "next"; }
 
     Mod+Space repeat=false { toggle-overview; }
 
