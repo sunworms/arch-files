@@ -5,10 +5,15 @@ enable_overdrive = true
 background_opacity = 0.89999997615814209
 capsule = true
 end = [ "notifications", "network", "bluetooth", "cpu", "ram", "temp", "volume", "brightness", "battery" ]
-margin_h = 10
 position = "bottom"
 start = [ "launcher", "wallpaper", "workspaces", "tray", "media", "audio_visualizer" ]
 widget_spacing = 5
+margin_h = 0
+margin_v = 0
+radius = 0
+scale = 0.94999998807907104
+shadow = false
+thickness = 25
 
 [dock]
 auto_hide = true
@@ -46,3 +51,19 @@ format = "{:%a, %b %d, %H:%M}"
 
 [widget.workspaces]
 display = "none"
+
+[widget.cpu]
+display = "gauge"
+show_label = false
+type = "sysmon"
+
+[widget.ram]
+display = "gauge"
+show_label = false
+stat = "ram_used"
+type = "sysmon"
+
+[widget.temp]
+show_label = false
+stat = "cpu_temp"
+type = "sysmon"
