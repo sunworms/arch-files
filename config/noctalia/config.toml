@@ -8,12 +8,14 @@ end = [ "notifications", "network", "bluetooth", "cpu", "ram", "temp", "volume",
 position = "bottom"
 start = [ "launcher", "wallpaper", "workspaces", "tray", "media", "audio_visualizer" ]
 widget_spacing = 5
-margin_h = 5
-margin_v = 5
+margin_h = 40
+margin_v = 0
 radius = 8
-scale = 0.94999998807907104
+radius_bottom_left = 0
+radius_bottom_right = 0
+scale = 1.5
 shadow = false
-thickness = 25
+thickness = 30
 
 [dock]
 auto_hide = true
