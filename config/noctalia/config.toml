@@ -51,6 +51,9 @@ address = "Jatani, India"
 [widget.clock]
 format = "{:%a, %b %d, %H:%M}"
 
+[widget.network]
+show_label = false
+
 [widget.workspaces]
 display = "none"
 
