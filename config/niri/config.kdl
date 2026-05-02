@@ -162,6 +162,16 @@ layer-rule {
     place-within-backdrop true
 }
 
+layer-rule {
+    match namespace="^noctalia-panel*"
+    opacity 0.9
+}
+
+layer-rule {
+    match namespace="^noctalia-osd$"
+    opacity 0.8
+}
+
 switch-events {
     lid-close { spawn "noctalia-lock-and-suspend"; }
 }
@@ -182,6 +192,7 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     Mod+T hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
+    Mod+Shift+T hotkey-overlay-title="Layers" { spawn "kitty" "sh" "-c" "niri msg layers; fish"; }
 
     Mod+A hotkey-overlay-title="Application Launcher" { spawn "noctalia" "msg" "panel-toggle" "launcher"; }
     Mod+V hotkey-overlay-title="Clipboard" { spawn "noctalia" "msg" "panel-toggle" "clipboard"; }
