@@ -17,6 +17,16 @@ scale = 1.5
 shadow = false
 thickness = 30
 
+[idle.behavior.lock]
+timeout = 300
+command = "noctalia:screen-lock"
+enabled = true
+
+[idle.behavior.screen-off]
+timeout = 600
+command = "noctalia:dpms-off"
+resume_command = "noctalia:dpms-on"
+
 [dock]
 auto_hide = true
 background_opacity = 0.89999997615814209
@@ -31,6 +41,7 @@ avatar_path = "/home/sunny/arch-files/haruta.jpg"
 clipboard_auto_paste = "off"
 password_style = "random"
 polkit_agent = true
+settings_show_advanced = true
 telemetry_enabled = false
 
 [theme]
@@ -40,7 +51,8 @@ wallpaper_scheme = "faithful"
 
     [theme.templates]
     builtin_ids = [ "gtk3", "gtk4", "helix", "kcolorscheme", "niri", "kitty" ]
-    enable_user_templates = true
+    community_ids = [ "discord", "pywalfox" ]
+    enable_user_templates = false
 
 [wallpaper]
 directory = "/home/sunny/Pictures/walls"
