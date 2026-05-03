@@ -3,11 +3,11 @@ enable_overdrive = true
 
 [bar.default]
 background_opacity = 0.89999997615814209
-capsule = true
+capsule = false
 end = [ "notifications", "network", "bluetooth", "cpu", "ram", "temp", "volume", "brightness", "battery" ]
 position = "bottom"
 start = [ "launcher", "wallpaper", "workspaces", "tray", "media", "audio_visualizer" ]
-widget_spacing = 5
+widget_spacing = 15
 margin_h = 40
 margin_v = 0
 radius = 8
