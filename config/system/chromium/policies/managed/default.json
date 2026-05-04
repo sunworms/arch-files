@@ -1,0 +1,47 @@
+{
+  "ExtensionInstallForcelist": [
+    "eimadpbcbfnmbkopoojfekhnkhdbieeh",
+    "mnjggcdmjocbbbhaepdhchncahnbgone",
+    "gebbhagfogifgggkldgodflihgfeippi",
+    "nngceckbapebfimnlniiiahkandclblb",
+    "jplgfhpmjnbigmhklmmbgecoobifkmpa",
+    "hkgfoiooedgoejojocmhlaklaeopbecg",
+    "clngdbkpkpeebahjckkjfobafhncgmne"
+  ],
+  "ManagedBookmarks": [
+    {
+      "name": "Latex/Typst",
+      "children": [
+        {
+          "name": "Latex to typst cheat sheet",
+          "url": "https://qwinsi.github.io/tex2typst-webapp/cheat-sheet.html"
+        },
+        {
+          "name": "Latex tables",
+          "url": "https://www.latex-tables.com"
+        },
+        {
+          "name": "Typst symbols",
+          "url": "https://typst.app/docs/reference/symbols/sym"
+        }
+      ]
+    },
+    {
+      "name": "Development",
+      "children": [
+        {
+          "name": "GitHub",
+          "url": "https://github.com"
+        },
+        {
+          "name": "git.gay",
+          "url": "https://git.gay"
+        }
+      ]
+    }
+  ],
+  "DefaultSearchProviderEnabled": true,
+  "DefaultSearchProviderName": "DuckDuckGo (No AI)",
+  "DefaultSearchProviderSearchURL": "https://noai.duckduckgo.com/search?q={searchTerms}",
+  "DefaultSearchProviderSuggestURL": "https://noai.duckduckgo.com/suggestions?q={searchTerms}"
+}

@@ -1,3 +1,2 @@
 decman
 ttf-aporetic
-python-pywalfox-librewolf
