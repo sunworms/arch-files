@@ -1,6 +1,7 @@
 kitty
 wl-clipboard
-cliphist
+dms-shell-git
+quickshell-git
 xwayland-satellite
 niri
 xdg-desktop-portal-gnome

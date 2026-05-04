@@ -1,0 +1,8 @@
+[config]
+
+[templates]
+
+[templates.helix]
+input_path = "~/.config/matugen/helix.toml"
+output_path = "~/.config/helix/themes/dank-helix.toml"
+post_hook = "pkill -USR1 hx"

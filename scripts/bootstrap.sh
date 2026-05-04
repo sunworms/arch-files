@@ -14,4 +14,4 @@ EOF
 
 sudo udevadm control --reload-rules && sudo udevadm trigger
 
-mkdir -p ~/.config/{noctalia/,fish/,kitty/,git/,kanata/,niri/,helix/}
+mkdir -p ~/.config/{DankMaterialShell/,fish/,kitty/,git/,kanata/,niri/,helix/}
