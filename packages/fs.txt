@@ -1,5 +1,2 @@
-libunwind
-zfs-utils
-zfs-meta
-linux-cachyos-zfs
+btrfs-progs
 gvfs-mtp
