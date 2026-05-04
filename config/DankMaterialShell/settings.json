@@ -632,14 +632,14 @@
   },
   "launcherPluginOrder": [],
   "frameEnabled": true,
-  "frameThickness": 16,
+  "frameThickness": 5,
   "frameRounding": 23,
   "frameColor": "",
   "frameOpacity": 0.9,
   "frameScreenPreferences": [
     "all"
   ],
-  "frameBarSize": 40,
+  "frameBarSize": 35,
   "frameShowOnOverview": true,
   "frameBlurEnabled": true,
   "frameCloseGaps": true,
