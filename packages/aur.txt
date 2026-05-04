@@ -1,4 +1,3 @@
 decman
 ttf-aporetic
 python-pywalfox-librewolf
-quickshell-git
