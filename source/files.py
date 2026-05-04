@@ -24,3 +24,5 @@ for path in SYSTEM_SRC.rglob("*"):
         relative = path.relative_to(SYSTEM_SRC)
         dest = Path("/etc") / relative
         decman.files[str(dest)] = File(source_file=str(path))
+
+decman.files["/boot/loader/entries/linux-cachyos.conf"] = File(source_file="../config/linux-cachyos.conf")
