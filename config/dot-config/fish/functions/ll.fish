@@ -1,3 +1,4 @@
-function ll
-    ls -l
+function ll --wraps=ls
+    command ls -l $argv
+
 end

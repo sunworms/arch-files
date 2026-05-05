@@ -1,3 +1,4 @@
-function grep
-    grep --color=auto
+function grep --wraps=grep
+    command grep --color=auto $argv
+
 end

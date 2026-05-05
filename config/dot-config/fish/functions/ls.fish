@@ -1,3 +1,4 @@
-function ls
-    ls --color=tty
+function ls --wraps=ls
+    command ls --color=tty $argv
+
 end
