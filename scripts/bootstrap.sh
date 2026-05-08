@@ -13,5 +13,3 @@ KERNEL=="uinput", MODE="0660", GROUP="uinput", OPTIONS+="static_node=uinput"
 EOF
 
 sudo udevadm control --reload-rules && sudo udevadm trigger
-
-mkdir -p ~/.config/{DankMaterialShell/,fish/,kitty/,git/,kanata/,niri/,helix/}

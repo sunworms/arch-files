@@ -1,0 +1,5 @@
+#!/bin/sh
+
+noctalia msg screen-lock
+sleep 1
+systemctl suspend
