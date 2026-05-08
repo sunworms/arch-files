@@ -1,5 +1,5 @@
 import decman
-from decman import File
+from decman import File, Directory
 from pathlib import Path
 
 USER = "sunny"
