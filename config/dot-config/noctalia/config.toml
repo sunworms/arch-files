@@ -61,9 +61,6 @@ community_palette = "GruvboxAlt"
 [wallpaper]
 directory = "/home/sunny/Pictures/walls"
 
-[weather]
-address = "Jatani, India"
-
 [widget.clock]
 format = "{:%a, %b %d, %H:%M}"
 
