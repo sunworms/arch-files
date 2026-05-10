@@ -1,3 +1,4 @@
 typst
 tinymist
 typstyle
+websocat
