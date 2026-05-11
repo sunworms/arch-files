@@ -38,7 +38,7 @@ capsule_opacity = 0.9
 capsule_radius = 8.0
 end = [ "tray", "notifications", "network", "bluetooth", "cpu", "ram", "temp", "volume", "brightness", "battery" ]
 position = "bottom"
-start = [ "launcher", "wallpaper", "workspaces", "media", "audio_visualizer" ]
+start = [ "wallpaper", "launcher", "workspaces", "media", "audio_visualizer" ]
 widget_spacing = 10
 margin_edge = 0
 margin_ends = 120
@@ -90,6 +90,9 @@ community_palette = "GruvboxAlt"
 
 [wallpaper]
 directory = "/home/sunny/Pictures/walls"
+
+[widget.launcher]
+glyph = "niri"
 
 [widget.clock]
 format = "{:%a, %b %d, %H:%M}"
