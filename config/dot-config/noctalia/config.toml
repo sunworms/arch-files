@@ -1,3 +1,32 @@
+[[shell.session.actions]]
+action = "lock"
+enabled = true
+
+[[shell.session.actions]]
+action = "logout"
+enabled = true
+
+[[shell.session.actions]]
+action = "command"
+command = "systemctl suspend"
+enabled = true
+label = "Suspend"
+
+[[shell.session.actions]]
+action = "command"
+command = "pkill noctalia && noctalia -d"
+enabled = true
+label = "Restart Noctalia"
+
+[[shell.session.actions]]
+action = "reboot"
+enabled = true
+
+[[shell.session.actions]]
+action = "shutdown"
+destructive = true
+enabled = true
+
 [audio]
 enable_overdrive = true
 
