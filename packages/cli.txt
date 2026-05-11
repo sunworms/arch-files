@@ -11,7 +11,6 @@ unrar
 unzip
 yay
 kanata
-neovim-nightly-bin
-fzf
-tree-sitter-cli
+helix-git
+lazygit
 ripgrep

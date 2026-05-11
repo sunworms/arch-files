@@ -86,7 +86,7 @@ community_palette = "GruvboxAlt"
     [theme.templates]
     builtin_ids = [ "gtk3", "gtk4", "helix", "kcolorscheme", "niri", "kitty" ]
     community_ids = [ "discord" ]
-    enable_user_templates = true
+    enable_user_templates = false
 
 [wallpaper]
 directory = "/home/sunny/Pictures/walls"
