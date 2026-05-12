@@ -1,4 +1,4 @@
-kitty
+foot
 wl-clipboard
 cliphist
 xwayland-satellite
