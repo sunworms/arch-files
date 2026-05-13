@@ -134,12 +134,14 @@ capsule_group = "wifi-bt"
 
 [widget.brightness]
 capsule_group = "vol-bright-bat"
+show_label = false
 
 [widget.media]
 capsule_group = "mpris"
 
 [widget.volume]
 capsule_group = "vol-bright-bat"
+show_label = false
 
 [hooks]
 battery_low_percent_threshold = 20
