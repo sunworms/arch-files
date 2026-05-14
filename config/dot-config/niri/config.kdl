@@ -222,8 +222,8 @@ binds {
     XF86AudioMute allow-when-locked=true { spawn "noctalia" "msg" "volume-mute"; }
     XF86AudioMicMute     allow-when-locked=true { spawn "noctalia" "msg" "mic-mute"; }
     
-    XF86MonBrightnessUp allow-when-locked=true { spawn "noctalia" "msg" "brightness-up" "1"; }
-    XF86MonBrightnessDown allow-when-locked=true { spawn "noctalia" "msg" "brightness-down" "1"; }
+    XF86MonBrightnessUp allow-when-locked=true { spawn "noctalia" "msg" "brightness-up" "5"; }
+    XF86MonBrightnessDown allow-when-locked=true { spawn "noctalia" "msg" "brightness-down" "5"; }
 
     XF86AudioPlay        allow-when-locked=true { spawn "noctalia" "msg" "media" "toggle"; }
     // XF86AudioStop        allow-when-locked=true { spawn "noctalia" "msg" "call" "media" "stop"; }
