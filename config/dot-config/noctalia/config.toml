@@ -21,15 +21,15 @@ shadow = false
 thickness = 30
 attach_panels = true
 
-[idle.behavior.lock]
-timeout = 300
-command = "noctalia:screen-lock"
-enabled = true
+    [idle.behavior.lock]
+    timeout = 300
+    command = "noctalia:screen-lock"
+    enabled = true
 
-[idle.behavior.screen-off]
-timeout = 600
-command = "noctalia:dpms-off"
-resume_command = "noctalia:dpms-on"
+    [idle.behavior.screen-off]
+    timeout = 600
+    command = "noctalia:dpms-off"
+    resume_command = "noctalia:dpms-on"
 
 [dock]
 auto_hide = true
@@ -48,39 +48,39 @@ polkit_agent = true
 settings_show_advanced = true
 telemetry_enabled = false
 
-[shell.panel]
-transparency_mode = "glass"
-attach_clipboard = true
-attach_launcher = true
+    [shell.panel]
+    transparency_mode = "glass"
+    attach_clipboard = true
+    attach_launcher = true
 
-[[shell.session.actions]]
-action = "lock"
-enabled = true
+    [[shell.session.actions]]
+    action = "lock"
+    enabled = true
 
-[[shell.session.actions]]
-action = "logout"
-enabled = true
+    [[shell.session.actions]]
+    action = "logout"
+    enabled = true
 
-[[shell.session.actions]]
-action = "command"
-command = "systemctl suspend"
-enabled = true
-label = "Suspend"
+    [[shell.session.actions]]
+    action = "command"
+    command = "systemctl suspend"
+    enabled = true
+    label = "Suspend"
 
-[[shell.session.actions]]
-action = "command"
-command = "pkill noctalia && noctalia -d"
-enabled = true
-label = "Restart Noctalia"
+    [[shell.session.actions]]
+    action = "command"
+    command = "pkill noctalia && noctalia -d"
+    enabled = true
+    label = "Restart Noctalia"
 
-[[shell.session.actions]]
-action = "reboot"
-enabled = true
+    [[shell.session.actions]]
+    action = "reboot"
+    enabled = true
 
-[[shell.session.actions]]
-action = "shutdown"
-destructive = true
-enabled = true
+    [[shell.session.actions]]
+    action = "shutdown"
+    destructive = true
+    enabled = true
 
 [theme]
 builtin = "Noctalia"
@@ -96,57 +96,57 @@ community_palette = "GruvboxAlt"
 [wallpaper]
 directory = "/home/sunny/Pictures/walls"
 
-[widget.launcher]
-glyph = "niri"
+    [widget.launcher]
+    glyph = "niri"
 
-[widget.clock]
-format = "{:%a, %b %d, %H:%M}"
+    [widget.clock]
+    format = "{:%a, %b %d, %H:%M}"
 
-[widget.network]
-show_label = false
-capsule_group = "wifi-bt"
+    [widget.network]
+    show_label = false
+    capsule_group = "wifi-bt"
 
-[widget.workspaces]
-display = "none"
+    [widget.workspaces]
+    display = "none"
 
-[widget.cpu]
-display = "gauge"
-show_label = false
-type = "sysmon"
-capsule_group = "sysmon"
+    [widget.cpu]
+    display = "gauge"
+    show_label = false
+    type = "sysmon"
+    capsule_group = "sysmon"
 
-[widget.ram]
-display = "gauge"
-show_label = false
-stat = "ram_used"
-type = "sysmon"
-capsule_group = "sysmon"
+    [widget.ram]
+    display = "gauge"
+    show_label = false
+    stat = "ram_used"
+    type = "sysmon"
+    capsule_group = "sysmon"
 
-[widget.temp]
-show_label = false
-stat = "cpu_temp"
-type = "sysmon"
-capsule_group = "sysmon"
+    [widget.temp]
+    show_label = false
+    stat = "cpu_temp"
+    type = "sysmon"
+    capsule_group = "sysmon"
 
-[widget.audio_visualizer]
-capsule_group = "mpris"
+    [widget.audio_visualizer]
+    capsule_group = "mpris"
 
-[widget.battery]
-capsule_group = "vol-bright-bat"
+    [widget.battery]
+    capsule_group = "vol-bright-bat"
 
-[widget.bluetooth]
-capsule_group = "wifi-bt"
+    [widget.bluetooth]
+    capsule_group = "wifi-bt"
 
-[widget.brightness]
-capsule_group = "vol-bright-bat"
-show_label = false
+    [widget.brightness]
+    capsule_group = "vol-bright-bat"
+    show_label = false
 
-[widget.media]
-capsule_group = "mpris"
+    [widget.media]
+    capsule_group = "mpris"
 
-[widget.volume]
-capsule_group = "vol-bright-bat"
-show_label = false
+    [widget.volume]
+    capsule_group = "vol-bright-bat"
+    show_label = false
 
 [hooks]
 battery_low_percent_threshold = 20
