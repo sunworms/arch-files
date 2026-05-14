@@ -1,32 +1,3 @@
-[[shell.session.actions]]
-action = "lock"
-enabled = true
-
-[[shell.session.actions]]
-action = "logout"
-enabled = true
-
-[[shell.session.actions]]
-action = "command"
-command = "systemctl suspend"
-enabled = true
-label = "Suspend"
-
-[[shell.session.actions]]
-action = "command"
-command = "pkill noctalia && noctalia -d"
-enabled = true
-label = "Restart Noctalia"
-
-[[shell.session.actions]]
-action = "reboot"
-enabled = true
-
-[[shell.session.actions]]
-action = "shutdown"
-destructive = true
-enabled = true
-
 [audio]
 enable_overdrive = true
 
@@ -76,6 +47,40 @@ password_style = "random"
 polkit_agent = true
 settings_show_advanced = true
 telemetry_enabled = false
+
+[shell.panel]
+transparency_mode = "glass"
+attach_clipboard = true
+attach_launcher = true
+
+[[shell.session.actions]]
+action = "lock"
+enabled = true
+
+[[shell.session.actions]]
+action = "logout"
+enabled = true
+
+[[shell.session.actions]]
+action = "command"
+command = "systemctl suspend"
+enabled = true
+label = "Suspend"
+
+[[shell.session.actions]]
+action = "command"
+command = "pkill noctalia && noctalia -d"
+enabled = true
+label = "Restart Noctalia"
+
+[[shell.session.actions]]
+action = "reboot"
+enabled = true
+
+[[shell.session.actions]]
+action = "shutdown"
+destructive = true
+enabled = true
 
 [theme]
 builtin = "Noctalia"
@@ -145,7 +150,3 @@ show_label = false
 
 [hooks]
 battery_low_percent_threshold = 20
-
-[shell.panel]
-attach_clipboard = true
-attach_launcher = true
