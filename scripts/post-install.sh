@@ -6,3 +6,5 @@ gsettings set org.gnome.desktop.interface gtk-theme "'adw-gtk3'"
 gsettings set org.gnome.desktop.interface font-name "'Aporetic Sans 11'"
 
 sudo systemctl disable getty@tty1.service
+
+chsh -s /usr/bin/fish

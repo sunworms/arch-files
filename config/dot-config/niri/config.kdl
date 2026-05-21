@@ -104,6 +104,7 @@ blur {
 
 spawn-at-startup "noctalia" "--daemon"
 spawn-at-startup "kanata" "--cfg" "/home/sunny/.config/kanata/config.kbd"
+spawn-sh-at-startup "pywalfox install && pywalfox start"
 
 hotkey-overlay {
     skip-at-startup
