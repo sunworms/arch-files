@@ -50,8 +50,9 @@ telemetry_enabled = false
 
     [shell.panel]
     transparency_mode = "glass"
-    attach_clipboard = true
-    attach_launcher = true
+    clipboard_placement = "attached"
+    launcher_placement = "attached"
+    attach_session = true
 
     [[shell.session.actions]]
     action = "lock"
@@ -63,7 +64,7 @@ telemetry_enabled = false
 
     [[shell.session.actions]]
     action = "command"
-    command = "systemctl suspend"
+    command = "noctalia-lock-and-suspend"
     enabled = true
     label = "Suspend"
 
@@ -89,9 +90,8 @@ wallpaper_scheme = "faithful"
 community_palette = "GruvboxAlt"
 
     [theme.templates]
-    builtin_ids = [ "gtk3", "gtk4", "helix", "kcolorscheme", "niri", "foot" ]
-    community_ids = [ "discord" ]
-    enable_user_templates = false
+    builtin_ids = [ "gtk3", "gtk4", "kcolorscheme", "niri", "alacritty", "qt", "helix" ]
+    community_ids = [ "discord", "pywalfox" ]
 
 [wallpaper]
 directory = "/home/sunny/Pictures/walls"

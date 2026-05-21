@@ -195,7 +195,7 @@ environment {
     EDITOR "hx"
     SUDO_EDITOR "hx"
     VISUAL "hx"
-    TERMINAL "foot"
+    TERMINAL "alacritty -e"
     GTK_THEME "adw-gtk3"
     QT_QPA_PLATFORMTHEME "gtk3"
 }
@@ -203,8 +203,8 @@ environment {
 binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
-    Mod+T hotkey-overlay-title="Open a Terminal: foot" { spawn "foot"; }
-    Mod+Shift+T hotkey-overlay-title="Layers" { spawn "foot" "sh" "-c" "niri msg layers; fish"; }
+    Mod+T hotkey-overlay-title="Open a Terminal: alacritty" { spawn "alacritty"; }
+    Mod+Shift+T hotkey-overlay-title="Layers" { spawn "alacritty" "-e" "sh" "-c" "niri msg layers; fish"; }
 
     Mod+A hotkey-overlay-title="Application Launcher" { spawn "noctalia" "msg" "panel-toggle" "launcher"; }
     Mod+V hotkey-overlay-title="Clipboard" { spawn "noctalia" "msg" "panel-toggle" "clipboard"; }

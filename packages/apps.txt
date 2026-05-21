@@ -1,3 +1,2 @@
 vesktop-git
-helium-browser-bin
-chromium-widevine
+firefox

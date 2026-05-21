@@ -1,4 +1,4 @@
-foot
+alacritty
 wl-clipboard
 cliphist
 xwayland-satellite

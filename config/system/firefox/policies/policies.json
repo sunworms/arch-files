@@ -1,0 +1,206 @@
+{
+  "policies": {
+    "AutofillAddressEnabled": true,
+    "AutofillCreditCardEnabled": false,
+    "DisableAppUpdate": true,
+    "DisableFeedbackCommands": true,
+    "DisableFirefoxStudies": true,
+    "DisablePocket": true,
+    "DisableTelemetry": true,
+    "DontCheckDefaultBrowser": true,
+    "EnableTrackingProtection": {
+      "Cryptomining": true,
+      "Fingerprinting": true,
+      "Locked": true,
+      "Value": true
+    },
+    "ExtensionSettings": {
+      "addon@darkreader.org": {
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/darkreader/latest.xpi",
+        "installation_mode": "normal_installed",
+        "private_browsing": true
+      },
+      "pywalfox@frewacom.org": {
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/pywalfox/latest.xpi",
+        "installation_mode": "normal_installed"
+      },
+      "sponsorBlocker@ajay.app": {
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/sponsorblock/latest.xpi",
+        "installation_mode": "normal_installed"
+      },
+      "uBlock0@raymondhill.net": {
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi",
+        "installation_mode": "normal_installed",
+        "private_browsing": true
+      },
+      "vpn@proton.ch": {
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/proton-vpn-firefox-extension/latest.xpi",
+        "installation_mode": "normal_installed"
+      },
+      "{762f9885-5a13-4abd-9c77-433dcd38b8fd}": {
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/return-youtube-dislikes/latest.xpi",
+        "installation_mode": "normal_installed"
+      },
+      "{7a7a4a92-a2a0-41d1-9fd7-1e92480d612d}": {
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/styl-us/latest.xpi",
+        "installation_mode": "normal_installed"
+      }
+    },
+    "Homepage": {
+      "Locked": true,
+      "URL": "about:newtab"
+    },
+    "ManagedBookmarks": [
+      {
+        "name": "Arch Linux",
+        "children": [
+          {
+            "name": "Arch Main Page",
+            "url": "https://archlinux.org"
+          },
+          {
+            "name": "AUR",
+            "url": "https://aur.archlinux.org"
+          }
+        ]
+      },
+      {
+        "children": [
+          {
+            "name": "Latex to typst cheat sheet",
+            "url": "https://qwinsi.github.io/tex2typst-webapp/cheat-sheet.html"
+          },
+          {
+            "name": "Latex tables",
+            "url": "https://www.latex-tables.com"
+          },
+          {
+            "name": "Typst symbols",
+            "url": "https://typst.app/docs/reference/symbols/sym"
+          }
+        ],
+        "name": "Latex/Typst"
+      },
+      {
+        "children": [
+          {
+            "name": "GitHub",
+            "url": "https://github.com"
+          },
+          {
+            "name": "git.gay",
+            "url": "https://git.gay"
+          }
+        ],
+        "name": "Development"
+      }
+    ],
+    "NoDefaultBookmarks": true,
+    "OfferToSaveLogins": false,
+    "Preferences": {
+      "browser.ai.control.default": {
+        "Status": "locked",
+        "Value": "blocked"
+      },
+      "browser.ai.control.linkPreviewKeyPoints": {
+        "Status": "locked",
+        "Value": "blocked"
+      },
+      "browser.ai.control.pdfjsAltText": {
+        "Status": "locked",
+        "Value": "blocked"
+      },
+      "browser.ai.control.sidebarChatbot": {
+        "Status": "locked",
+        "Value": "blocked"
+      },
+      "browser.ai.control.smartTabGroups": {
+        "Status": "locked",
+        "Value": "blocked"
+      },
+      "browser.ai.control.translations": {
+        "Status": "locked",
+        "Value": "blocked"
+      },
+      "browser.ml.chat.enabled": {
+        "Status": "locked",
+        "Value": false
+      },
+      "browser.ml.chat.menu": {
+        "Status": "locked",
+        "Value": false
+      },
+      "browser.ml.chat.page": {
+        "Status": "locked",
+        "Value": false
+      },
+      "browser.ml.chat.sidebar": {
+        "Status": "locked",
+        "Value": false
+      },
+      "browser.ml.enable": {
+        "Status": "locked",
+        "Value": false
+      },
+      "browser.ml.linkPreview.enabled": {
+        "Status": "locked",
+        "Value": false
+      },
+      "browser.ml.pageAssist.enabled": {
+        "Status": "locked",
+        "Value": false
+      },
+      "browser.ml.smartAssist.enabled": {
+        "Status": "locked",
+        "Value": false
+      },
+      "browser.tabs.groups.smart.enabled": {
+        "Status": "locked",
+        "Value": false
+      },
+      "browser.tabs.groups.smart.userEnabled": {
+        "Status": "locked",
+        "Value": false
+      },
+      "extensions.ml.enabled": {
+        "Status": "locked",
+        "Value": false
+      },
+      "pdfjs.enableAltTextModelDownload": {
+        "Status": "locked",
+        "Value": false
+      },
+      "pdfjs.enableGuessAltText": {
+        "Status": "locked",
+        "Value": false
+      },
+      "sidebar.revamp": {
+        "Status": "locked",
+        "Value": true
+      },
+      "sidebar.verticalTabs": {
+        "Status": "locked",
+        "Value": true
+      },
+      "toolkit.legacyUserProfileCustomizations.stylesheets": {
+        "Status": "locked",
+        "Value": true
+      }
+    },
+    "SearchEngines": {
+      "Add": [
+        {
+          "Alias": "@googlenoai",
+          "Description": "Google Search (No AI)",
+          "IconURL": "https://www.google.com/favicon.ico",
+          "Method": "GET",
+          "Name": "Google (No AI)",
+          "SuggestURLTemplate": "https://www.google.com/complete/search?q={searchTerms}&udm=14",
+          "URLTemplate": "https://www.google.com/search?q={searchTerms}&udm=14"
+        }
+      ],
+      "Default": "Google (No AI)",
+      "PreventInstalls": false
+    }
+  }
+}
