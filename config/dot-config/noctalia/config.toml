@@ -1,6 +1,9 @@
 [audio]
 enable_overdrive = true
 
+[osd]
+background_opacity = 0.9
+
 [bar.default]
 background_opacity = 0.9
 capsule = true
