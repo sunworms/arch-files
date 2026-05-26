@@ -2,3 +2,4 @@ typst
 tinymist
 typstyle
 websocat
+uv
