@@ -94,7 +94,7 @@ community_palette = "GruvboxAlt"
 
     [theme.templates]
     builtin_ids = [ "gtk3", "gtk4", "kcolorscheme", "niri", "alacritty", "qt", "helix" ]
-    community_ids = [ "discord", "pywalfox" ]
+    community_ids = [ "discord" ]
 
 [wallpaper]
 directory = "/home/sunny/Pictures/walls"

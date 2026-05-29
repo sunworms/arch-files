@@ -1,5 +1,4 @@
 decman
 ttf-aporetic
 noctalia-git
-python-pywalfox-librewolf
 osu-lazer-bin
