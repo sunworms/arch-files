@@ -7,12 +7,11 @@ background_opacity = 0.9
 [bar.default]
 background_opacity = 0.9
 capsule = true
-capsule_groups = [ "mpris", "wifi-bt", "sysmon", "vol-bright-bat" ]
 capsule_opacity = 0.9
 capsule_radius = 8.0
-end = [ "tray", "notifications", "network", "bluetooth", "cpu", "ram", "temp", "volume", "brightness", "battery" ]
+end = [ "tray", "notifications", "group:g2", "group:g1", "group:g3" ]
 position = "bottom"
-start = [ "screen_recorder", "wallpaper", "launcher", "workspaces", "media", "audio_visualizer" ]
+start = [ "group:g5", "workspaces", "group:g4" ]
 widget_spacing = 10
 margin_edge = 0
 margin_ends = 120
@@ -23,6 +22,46 @@ scale = 1.0
 shadow = false
 thickness = 30
 attach_panels = true
+
+    [[bar.default.capsule_group]]
+    fill = "surface_variant"
+    id = "g1"
+    members = [ "cpu", "ram", "temp" ]
+    opacity = 0.9
+    padding = 6.0
+    radius = 8.0
+
+    [[bar.default.capsule_group]]
+    fill = "surface_variant"
+    id = "g2"
+    members = [ "network", "bluetooth" ]
+    opacity = 0.9
+    padding = 6.0
+    radius = 8.0
+
+    [[bar.default.capsule_group]]
+    fill = "surface_variant"
+    id = "g3"
+    members = [ "volume", "brightness", "battery" ]
+    opacity = 0.9
+    padding = 6.0
+    radius = 8.0
+
+    [[bar.default.capsule_group]]
+    fill = "surface_variant"
+    id = "g4"
+    members = [ "media", "audio_visualizer" ]
+    opacity = 0.9
+    padding = 6.0
+    radius = 8.0
+
+    [[bar.default.capsule_group]]
+    fill = "surface_variant"
+    id = "g5"
+    members = [ "launcher", "screen_recorder", "wallpaper" ]
+    opacity = 0.9
+    padding = 6.0
+    radius = 8.0
 
     [idle.behavior.lock]
     timeout = 300
