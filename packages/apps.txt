@@ -1,4 +1,3 @@
 vesktop-git
-helium-browser-bin
+firefox
 qbittorrent-git
-chromium-widevine

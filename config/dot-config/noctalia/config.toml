@@ -133,7 +133,7 @@ community_palette = "GruvboxAlt"
 
     [theme.templates]
     builtin_ids = [ "alacritty", "gtk3", "gtk4", "helix", "kcolorscheme", "niri" ]
-    community_ids = [ "discord" ]
+    community_ids = [ "discord", "pywalfox" ]
 
 [wallpaper]
 directory = "/home/sunny/Pictures/walls"

@@ -2,3 +2,4 @@ decman
 ttf-aporetic
 noctalia-git
 osu-lazer-bin
+python-pywalfox-librewolf
