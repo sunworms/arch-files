@@ -3,3 +3,4 @@ tinymist
 typstyle
 websocat
 uv
+clang
