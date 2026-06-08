@@ -63,15 +63,21 @@ attach_panels = true
     padding = 6.0
     radius = 8.0
 
-    [idle.behavior.lock]
-    timeout = 300
-    command = "noctalia:screen-lock"
-    enabled = true
+[idle]
+behavior_order = [ "idle-behavior", "idle-behavior-2" ]
 
-    [idle.behavior.screen-off]
+    [idle.behavior.idle-behavior]
+    action = "lock"
+    enabled = true
+    timeout = 300
+
+    [idle.behavior.idle-behavior-2]
+    action = "screen_off"
+    enabled = true
     timeout = 600
-    command = "noctalia:dpms-off"
-    resume_command = "noctalia:dpms-on"
+
+[location]
+auto_locate = true
 
 [dock]
 auto_hide = true
@@ -89,6 +95,7 @@ password_style = "random"
 polkit_agent = true
 settings_show_advanced = true
 telemetry_enabled = false
+clipboard_image_action_command = "satty -f -"
 
     [shell.panel]
     transparency_mode = "glass"
@@ -99,31 +106,35 @@ telemetry_enabled = false
     [[shell.session.actions]]
     action = "lock"
     enabled = true
+    variant = "default"
 
     [[shell.session.actions]]
     action = "logout"
     enabled = true
+    variant = "default"
 
     [[shell.session.actions]]
-    action = "command"
-    command = "noctalia-lock-and-suspend"
+    action = "lock_and_suspend"
     enabled = true
-    label = "Suspend"
+    variant = "default"
 
     [[shell.session.actions]]
     action = "command"
     command = "pkill noctalia && noctalia -d"
     enabled = true
+    glyph = "noctalia"
     label = "Restart Noctalia"
+    variant = "default"
 
     [[shell.session.actions]]
     action = "reboot"
     enabled = true
+    variant = "default"
 
     [[shell.session.actions]]
     action = "shutdown"
-    destructive = true
     enabled = true
+    variant = "default"
 
 [theme]
 builtin = "Noctalia"
