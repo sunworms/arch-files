@@ -58,7 +58,7 @@ attach_panels = true
     [[bar.default.capsule_group]]
     fill = "surface_variant"
     id = "g5"
-    members = [ "launcher", "screen_recorder", "wallpaper" ]
+    members = [ "launcher", "recorder", "wallpaper" ]
     opacity = 0.9
     padding = 6.0
     radius = 8.0
@@ -201,9 +201,12 @@ directory = "/home/sunny/Pictures/walls"
     capsule_group = "vol-bright-bat"
     show_label = false
 
-    [widget.screen_recorder]
-    script = "scripts/screen_recorder.lua"
-    type = "scripted"
-
+    [widget.recorder]
+    type = "noctalia/screen_recorder:recorder"
+    
 [hooks]
 battery_low_percent_threshold = 20
+
+[plugins]
+enabled = [ "noctalia/screen_recorder" ]
+
