@@ -3,4 +3,4 @@ tinymist
 typstyle
 websocat
 uv
-clang
+android-tools
