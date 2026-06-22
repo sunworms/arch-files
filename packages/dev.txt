@@ -4,3 +4,4 @@ typstyle
 websocat
 uv
 android-tools
+libxcrypt-compat
