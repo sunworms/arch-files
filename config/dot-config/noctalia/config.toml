@@ -144,7 +144,7 @@ wallpaper_scheme = "faithful"
 community_palette = "GruvboxAlt"
 
     [theme.templates]
-    builtin_ids = [ "alacritty", "gtk3", "gtk4", "helix", "kcolorscheme", "niri" ]
+    builtin_ids = [ "alacritty", "gtk3", "gtk4", "helix", "niri" ]
     community_ids = [ "discord", "pywalfox" ]
 
 [wallpaper]

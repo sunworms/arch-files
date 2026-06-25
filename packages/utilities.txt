@@ -1,6 +1,5 @@
 gnome-keyring
 swayimg
 satty
-okular
-ebook-tools
 mpv
+papers
