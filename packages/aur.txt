@@ -2,6 +2,5 @@ decman
 ttf-aporetic
 noctalia-git
 osu-lazer-bin
-python-pywalfox-librewolf
 pcsx2-latest-bin
 koreader-nightly-bin

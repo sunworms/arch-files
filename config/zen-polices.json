@@ -3,6 +3,7 @@
     "AutofillAddressEnabled": true,
     "AutofillCreditCardEnabled": false,
     "DisableAppUpdate": true,
+    "DefaultSerialGuardSetting": 3,
     "DisableFeedbackCommands": true,
     "DisableFirefoxStudies": true,
     "DisablePocket": true,
@@ -20,13 +21,10 @@
         "installation_mode": "normal_installed",
         "private_browsing": true
       },
-      "pywalfox@frewacom.org": {
-        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/pywalfox/latest.xpi",
-        "installation_mode": "normal_installed"
-      },
       "sponsorBlocker@ajay.app": {
         "install_url": "https://addons.mozilla.org/firefox/downloads/latest/sponsorblock/latest.xpi",
-        "installation_mode": "normal_installed"
+        "installation_mode": "normal_installed",
+        "private_browsing": true
       },
       "uBlock0@raymondhill.net": {
         "install_url": "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi",
@@ -35,11 +33,13 @@
       },
       "vpn@proton.ch": {
         "install_url": "https://addons.mozilla.org/firefox/downloads/latest/proton-vpn-firefox-extension/latest.xpi",
-        "installation_mode": "normal_installed"
+        "installation_mode": "normal_installed",
+        "private_browsing": true
       },
       "{762f9885-5a13-4abd-9c77-433dcd38b8fd}": {
         "install_url": "https://addons.mozilla.org/firefox/downloads/latest/return-youtube-dislikes/latest.xpi",
-        "installation_mode": "normal_installed"
+        "installation_mode": "normal_installed",
+        "private_browsing": true
       },
       "{7a7a4a92-a2a0-41d1-9fd7-1e92480d612d}": {
         "install_url": "https://addons.mozilla.org/firefox/downloads/latest/styl-us/latest.xpi",
@@ -98,82 +98,6 @@
     "NoDefaultBookmarks": true,
     "OfferToSaveLogins": false,
     "Preferences": {
-      "browser.ai.control.default": {
-        "Status": "locked",
-        "Value": "blocked"
-      },
-      "browser.ai.control.linkPreviewKeyPoints": {
-        "Status": "locked",
-        "Value": "blocked"
-      },
-      "browser.ai.control.pdfjsAltText": {
-        "Status": "locked",
-        "Value": "blocked"
-      },
-      "browser.ai.control.sidebarChatbot": {
-        "Status": "locked",
-        "Value": "blocked"
-      },
-      "browser.ai.control.smartTabGroups": {
-        "Status": "locked",
-        "Value": "blocked"
-      },
-      "browser.ai.control.translations": {
-        "Status": "locked",
-        "Value": "blocked"
-      },
-      "browser.ml.chat.enabled": {
-        "Status": "locked",
-        "Value": false
-      },
-      "browser.ml.chat.menu": {
-        "Status": "locked",
-        "Value": false
-      },
-      "browser.ml.chat.page": {
-        "Status": "locked",
-        "Value": false
-      },
-      "browser.ml.chat.sidebar": {
-        "Status": "locked",
-        "Value": false
-      },
-      "browser.ml.enable": {
-        "Status": "locked",
-        "Value": false
-      },
-      "browser.ml.linkPreview.enabled": {
-        "Status": "locked",
-        "Value": false
-      },
-      "browser.ml.pageAssist.enabled": {
-        "Status": "locked",
-        "Value": false
-      },
-      "browser.ml.smartAssist.enabled": {
-        "Status": "locked",
-        "Value": false
-      },
-      "browser.tabs.groups.smart.enabled": {
-        "Status": "locked",
-        "Value": false
-      },
-      "browser.tabs.groups.smart.userEnabled": {
-        "Status": "locked",
-        "Value": false
-      },
-      "extensions.ml.enabled": {
-        "Status": "locked",
-        "Value": false
-      },
-      "pdfjs.enableAltTextModelDownload": {
-        "Status": "locked",
-        "Value": false
-      },
-      "pdfjs.enableGuessAltText": {
-        "Status": "locked",
-        "Value": false
-      },
       "toolkit.legacyUserProfileCustomizations.stylesheets": {
         "Status": "locked",
         "Value": true
