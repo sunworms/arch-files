@@ -51,7 +51,7 @@ attach_panels = true
     [[bar.default.capsule_group]]
     fill = "surface_variant"
     id = "g4"
-    members = [ "media", "audio_visualizer" ]
+    members = [ "media", "cat" ]
     opacity = 0.9
     padding = 6.0
     radius = 8.0
@@ -145,7 +145,7 @@ community_palette = "GruvboxAlt"
 
     [theme.templates]
     builtin_ids = [ "alacritty", "gtk3", "gtk4", "helix", "niri" ]
-    community_ids = [ "discord", "pywalfox" ]
+    community_ids = [ "discord", "zen-browser" ]
 
 [wallpaper]
 directory = "/home/sunny/Pictures/walls"
@@ -204,10 +204,16 @@ directory = "/home/sunny/Pictures/walls"
 
     [widget.recorder]
     type = "noctalia/screen_recorder:recorder"
+
+    [widget.cat]
+    audio_spectrum = true
+    tappy_mode = true
+    type = "noctalia/bongocat:cat"
+    use_mpris_filter = true
     
 [hooks]
 battery_low_percent_threshold = 20
 
 [plugins]
-enabled = [ "noctalia/screen_recorder" ]
+enabled = [ "noctalia/screen_recorder", "noctalia/kaomoji", "noctalia/bongocat" ]
 
