@@ -1,0 +1,5 @@
+sourceDir = "~/arch-files/chezmoi"
+
+[data]
+user = "sunny"
+editor = "hx"

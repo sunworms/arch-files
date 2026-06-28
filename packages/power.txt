@@ -1,3 +1,0 @@
-tuned
-tuned-ppd
-upower

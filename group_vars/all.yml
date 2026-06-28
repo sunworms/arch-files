@@ -1,0 +1,192 @@
+---
+# ── User ─────────────────────────────────────────────────────────────────────
+arch_user: sunny
+arch_home: "/home/{{ arch_user }}"
+
+# ── chezmoi ──────────────────────────────────────────────────────────────────
+# Path to the chezmoi source directory inside this repo.
+# Default: the chezmoi/ subdirectory sitting next to site.yml.
+# If your dotfiles are at the repo root (no subdirectory), set this to:
+#   chezmoi_source_dir: "{{ playbook_dir }}"
+chezmoi_source_dir: "{{ playbook_dir }}/chezmoi"
+
+# ── Packages ─────────────────────────────────────────────────────────────────
+pacman_packages:
+  # audio
+  - pipewire
+  - pipewire-alsa
+  - pipewire-jack
+  - pipewire-pulse
+  - wireplumber
+  - libpulse
+  - cava
+  - bluez
+  - bluez-utils
+  # boot
+  - efibootmgr
+  - zram-generator
+  - sof-firmware
+  # chaotic / cachyos meta
+  - chaotic-keyring
+  - chaotic-mirrorlist
+  - cachyos-keyring
+  - cachyos-mirrorlist
+  - cachyos-v3-mirrorlist
+  - cachyos-v4-mirrorlist
+  # cli
+  - ansible
+  - chezmoi
+  - helix-git
+  - flatpak
+  - fish
+  - fisher
+  - git
+  - git-lfs
+  - less
+  - fastfetch
+  - hyfetch
+  - man-db
+  - ncdu
+  - 7zip
+  - unrar
+  - unzip
+  - yay
+  - kanata
+  - lazygit
+  - ripgrep
+  # core
+  - base
+  - base-devel
+  - linux-cachyos
+  - systemd
+  - linux-firmware
+  - intel-ucode
+  - sudo
+  - cachyos-rate-mirrors
+  # dev
+  - typst
+  - tinymist
+  - typstyle
+  - websocat
+  - uv
+  - android-tools
+  - libxcrypt-compat
+  # display
+  - ly
+  - terminus-font
+  # fonts
+  - noto-fonts
+  - noto-fonts-cjk
+  - noto-fonts-emoji
+  - ttf-nerd-fonts-symbols
+  - otf-latin-modern
+  # fs
+  - btrfs-progs
+  - gvfs-mtp
+  # gaming
+  - azahar-git
+  - dolphin-emu-git
+  - duckstation-gpl
+  - melonds-git
+  - mgba-qt
+  - eden-git
+  - sameboy
+  - wine
+  - winetricks
+  # graphics
+  - mesa
+  - vulkan-intel
+  - intel-media-driver
+  - libva-intel-driver
+  # network
+  - networkmanager
+  - wpa_supplicant
+  - cloudflare-warp-bin
+  - libayatana-appindicator
+  - webkit2gtk-4.1
+  # power
+  - tuned
+  - tuned-ppd
+  - upower
+  # theming
+  - adw-gtk-theme
+  - candy-icons-git
+  - volantes-cursors
+  - matugen
+  # utilities
+  - gnome-keyring
+  - swayimg
+  - satty
+  - mpv
+  - papers
+  # video
+  - gst-plugins-good
+  - gst-plugins-bad
+  - gst-plugins-ugly
+  - gst-libav
+  - gst-plugin-pipewire
+  - gpu-screen-recorder-git
+  # virtualisation
+  - qemu-desktop
+  - libvirt
+  - virt-manager
+  - dnsmasq
+  # wayland
+  - alacritty
+  - wl-clipboard
+  - cliphist
+  - xwayland-satellite
+  - niri
+  - xdg-desktop-portal-gnome
+  - xdg-desktop-portal-gtk
+  # xorg
+  - xorg-server
+  - xorg-xhost
+  - xorg-xinit
+  # apps (from Chaotic-AUR)
+  - vesktop-git
+  - zen-browser-bin
+  - qbittorrent-git
+
+aur_packages:
+  - ttf-aporetic
+  - noctalia-git
+  - osu-lazer-bin
+  - pcsx2-latest-bin
+  - koreader-nightly-bin
+
+flatpak_packages:
+  - org.vinegarhq.Sober
+
+# ── Systemd units to enable ───────────────────────────────────────────────────
+systemd_services:
+  - bluetooth.service
+  - warp-svc.service
+  - "ly@tty1.service"
+  - btrfs-scrub@-.timer
+  - libvirtd.socket
+
+# ── Systemd units to disable ──────────────────────────────────────────────────
+systemd_services_disabled:
+  - "getty@tty1.service"
+
+# ── User shell ────────────────────────────────────────────────────────────────
+user_shell: /usr/bin/fish
+
+# ── GSetting tweaks (applied as the unprivileged user) ───────────────────────
+gsettings:
+  - schema: org.gnome.desktop.interface
+    key: color-scheme
+    value: "'prefer-dark'"
+  - schema: org.gnome.desktop.interface
+    key: cursor-theme
+    value: "'volantes_cursors'"
+  - schema: org.gnome.desktop.interface
+    key: icon-theme
+    value: "'candy-icons'"
+  - schema: org.gnome.desktop.interface
+    key: gtk-theme
+    value: "'adw-gtk3'"
+  - schema: org.gnome.desktop.interface
+    key: font-name
+    value: "'Aporetic Sans 11'"

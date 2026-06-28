@@ -1,5 +1,0 @@
-networkmanager
-wpa_supplicant
-cloudflare-warp-bin
-libayatana-appindicator
-webkit2gtk-4.1

@@ -1,5 +1,0 @@
-gnome-keyring
-swayimg
-satty
-mpv
-papers

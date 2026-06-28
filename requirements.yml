@@ -1,0 +1,6 @@
+---
+collections:
+  - name: community.general    # pacman, yay, flatpak, modprobe modules
+    version: ">=9.0.0"
+  - name: ansible.posix        # synchronize module (used in dotfiles role)
+    version: ">=1.5.0"

@@ -1,0 +1,109 @@
+---
+# roles/system/tasks/main.yml
+# Deploys system-level config files that used to live in config/system/
+# and config/linux-cachyos.conf.
+
+- name: Deploy /etc/vconsole.conf
+  ansible.builtin.copy:
+    src: vconsole.conf
+    dest: /etc/vconsole.conf
+    owner: root
+    group: root
+    mode: "0644"
+  become: true
+
+- name: Deploy /etc/makepkg.conf
+  ansible.builtin.copy:
+    src: makepkg.conf
+    dest: /etc/makepkg.conf
+    owner: root
+    group: root
+    mode: "0644"
+  become: true
+
+- name: Deploy /etc/pacman.conf (base options only — repo blocks managed by repos role)
+  ansible.builtin.copy:
+    src: pacman.conf
+    dest: /etc/pacman.conf
+    owner: root
+    group: root
+    mode: "0644"
+  become: true
+  # Note: the repos role appends repo blocks via blockinfile.
+  # If you run this role after repos, pacman.conf already has the blocks;
+  # the copy will overwrite them. Run repos first (site.yml ordering ensures this).
+  notify: Re-sync pacman databases
+
+- name: Deploy /etc/systemd/logind.conf
+  ansible.builtin.copy:
+    src: systemd/logind.conf
+    dest: /etc/systemd/logind.conf
+    owner: root
+    group: root
+    mode: "0644"
+  become: true
+
+- name: Deploy /etc/systemd/zram-generator.conf
+  ansible.builtin.copy:
+    src: systemd/zram-generator.conf
+    dest: /etc/systemd/zram-generator.conf
+    owner: root
+    group: root
+    mode: "0644"
+  become: true
+
+- name: Deploy libvirtd.conf
+  ansible.builtin.copy:
+    src: libvirtd/libvirtd.conf
+    dest: /etc/libvirt/libvirtd.conf
+    owner: root
+    group: root
+    mode: "0644"
+  become: true
+
+- name: Deploy qemu.conf
+  ansible.builtin.copy:
+    src: libvirtd/qemu.conf
+    dest: /etc/libvirt/qemu.conf
+    owner: root
+    group: root
+    mode: "0644"
+  become: true
+
+- name: Deploy CachyOS boot entry
+  ansible.builtin.copy:
+    src: linux-cachyos.conf
+    dest: /boot/loader/entries/linux-cachyos.conf
+    owner: root
+    group: root
+    mode: "0644"
+  become: true
+
+- name: Deploy Zen Browser policies
+  ansible.builtin.file:
+    path: /opt/zen-browser-bin/distribution
+    state: directory
+    owner: root
+    group: root
+    mode: "0755"
+  become: true
+
+- name: Copy Zen Browser policies.json
+  ansible.builtin.copy:
+    src: zen-policies.json
+    dest: /opt/zen-browser-bin/distribution/policies.json
+    owner: root
+    group: root
+    mode: "0644"
+  become: true
+
+- name: Deploy udev rule for uinput
+  ansible.builtin.copy:
+    content: |
+      KERNEL=="uinput", MODE="0660", GROUP="uinput", OPTIONS+="static_node=uinput"
+    dest: /etc/udev/rules.d/99-input.rules
+    owner: root
+    group: root
+    mode: "0644"
+  become: true
+  notify: Reload udev rules

@@ -1,7 +1,0 @@
-alacritty
-wl-clipboard
-cliphist
-xwayland-satellite
-niri
-xdg-desktop-portal-gnome
-xdg-desktop-portal-gtk

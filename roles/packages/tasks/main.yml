@@ -1,0 +1,96 @@
+---
+# roles/packages/tasks/main.yml
+
+# ── Pacman ────────────────────────────────────────────────────────────────────
+
+- name: Install pacman packages
+  community.general.pacman:
+    name: "{{ pacman_packages }}"
+    state: present
+    update_cache: true
+  become: true
+
+- name: Get list of explicitly installed pacman packages
+  ansible.builtin.command: pacman -Qqen
+  register: pacman_installed_raw
+  changed_when: false
+  become: false
+
+- name: Remove pacman packages not in declared list
+  community.general.pacman:
+    name: "{{ pacman_installed_raw.stdout_lines | difference(pacman_packages) }}"
+    state: absent
+    extra_args: "--noconfirm"
+  become: true
+  when: pacman_installed_raw.stdout_lines | difference(pacman_packages) | length > 0
+
+# ── AUR (yay) ─────────────────────────────────────────────────────────────────
+
+- name: Write temporary sudoers askpass script
+  ansible.builtin.copy:
+    dest: /tmp/yay-askpass.sh
+    mode: "0700"
+    owner: "{{ arch_user }}"
+    content: |
+      #!/bin/sh
+      echo "{{ become_password }}"
+  become: true
+
+- name: Install AUR packages with yay
+  ansible.builtin.command:
+    cmd: "yay -S --noconfirm --needed --sudoflags '-A' {{ aur_packages | join(' ') }}"
+  become: true
+  become_user: "{{ arch_user }}"
+  environment:
+    SUDO_ASKPASS: /tmp/yay-askpass.sh
+    SUDO_FLAGS: "-A"
+  register: yay_result
+  changed_when: "'nothing to do' not in yay_result.stdout"
+
+- name: Get list of installed AUR packages
+  ansible.builtin.command: pacman -Qqem
+  become: true
+  become_user: "{{ arch_user }}"
+  register: aur_installed_raw
+  changed_when: false
+
+- name: Remove AUR packages not in declared list
+  ansible.builtin.command:
+    cmd: "yay -Rns --noconfirm {{ item }}"
+  become: true
+  become_user: "{{ arch_user }}"
+  environment:
+    SUDO_ASKPASS: /tmp/yay-askpass.sh
+    SUDO_FLAGS: "-A"
+  loop: "{{ aur_installed_raw.stdout_lines | difference(aur_packages) }}"
+  when: aur_installed_raw.stdout_lines | difference(aur_packages) | length > 0
+
+- name: Remove sudoers askpass script
+  ansible.builtin.file:
+    path: /tmp/yay-askpass.sh
+    state: absent
+  become: true
+
+# ── Flatpak ───────────────────────────────────────────────────────────────────
+
+- name: Install flatpak packages
+  community.general.flatpak:
+    name: "{{ flatpak_packages }}"
+    state: present
+    method: system
+  become: true
+
+- name: Get list of installed flatpaks
+  ansible.builtin.command: flatpak list --app --columns=application
+  register: flatpak_installed_raw
+  changed_when: false
+  become: false
+
+- name: Remove flatpak packages not in declared list
+  community.general.flatpak:
+    name: "{{ item }}"
+    state: absent
+    method: system
+  become: true
+  loop: "{{ flatpak_installed_raw.stdout_lines | difference(flatpak_packages) }}"
+  when: flatpak_installed_raw.stdout_lines | difference(flatpak_packages) | length > 0

@@ -1,3 +1,0 @@
-efibootmgr
-zram-generator
-sof-firmware

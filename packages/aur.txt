@@ -1,6 +1,0 @@
-decman
-ttf-aporetic
-noctalia-git
-osu-lazer-bin
-pcsx2-latest-bin
-koreader-nightly-bin

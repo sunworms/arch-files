@@ -1,9 +1,0 @@
-pipewire
-pipewire-alsa
-pipewire-jack
-pipewire-pulse
-wireplumber
-libpulse
-cava
-bluez
-bluez-utils

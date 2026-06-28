@@ -1,9 +1,0 @@
-azahar-git
-dolphin-emu-git
-duckstation-gpl
-melonds-git
-mgba-qt
-eden-git
-sameboy
-wine
-winetricks

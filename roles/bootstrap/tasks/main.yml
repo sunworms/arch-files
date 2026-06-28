@@ -1,0 +1,57 @@
+---
+# roles/bootstrap/tasks/main.yml
+# One-time system wiring: uinput group, user group memberships,
+# modprobe, shell change, and GNOME/GTK gsettings.
+
+- name: Ensure uinput system group exists
+  ansible.builtin.group:
+    name: uinput
+    system: true
+    state: present
+  become: true
+
+- name: Add user to input and uinput groups
+  ansible.builtin.user:
+    name: "{{ arch_user }}"
+    groups:
+      - input
+      - uinput
+    append: true
+  become: true
+
+- name: Load uinput kernel module
+  community.general.modprobe:
+    name: uinput
+    state: present
+  become: true
+
+- name: Persist uinput module across reboots
+  ansible.builtin.copy:
+    content: "uinput\n"
+    dest: /etc/modules-load.d/uinput.conf
+    owner: root
+    group: root
+    mode: "0644"
+  become: true
+
+- name: Set user login shell to fish
+  ansible.builtin.user:
+    name: "{{ arch_user }}"
+    shell: "{{ user_shell }}"
+  become: true
+
+- name: Apply GSetting tweaks
+  ansible.builtin.command:
+    cmd: "gsettings set {{ item.schema }} {{ item.key }} {{ item.value }}"
+  loop: "{{ gsettings }}"
+  become: true
+  become_user: "{{ arch_user }}"
+  changed_when: true   # gsettings has no idempotency check; always mark changed
+
+- name: Install fish plugins via fisher
+  ansible.builtin.command:
+    cmd: fish -c "fisher install ilancosman/tide lewisacidic/fish-git-abbr"
+  become: true
+  become_user: "{{ arch_user }}"
+  changed_when: true
+  # fisher is idempotent internally; 'changed' is a slight lie but harmless
