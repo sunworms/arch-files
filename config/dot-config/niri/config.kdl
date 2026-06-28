@@ -204,8 +204,8 @@ binds {
 
     XF86Tools hotkey-overlay-title="Noctalia Settings" { spawn "noctalia" "msg" "settings-toggle"; }
     XF86Launch5 hotkey-overlay-title="Lock the Screen" { spawn "noctalia" "msg" "session" "lock"; }
-    XF86Launch6 hotkey-overlay-title="Control Center" { spawn "noctalia" "msg" "panel-toggle" "control-center"; }
-    // XF86Calculator hotkey-overlay-title="Open Windows" { spawn "noctalia" "msg" "call" "launcher" "windows"; }
+    XF86Launch6 hotkey-overlay-title="Window Switcher" { spawn "noctalia" "msg" "window-switcher"; }
+    XF86Calculator hotkey-overlay-title="Open Calendar" { spawn "noctalia" "msg" "panel-toggle" "control-center" "calendar"; }
     XF86Favorites hotkey-overlay-title="Emoji Selector" { spawn "noctalia" "msg" "panel-toggle" "launcher" "/emo"; }
     XF86PowerOff hotkey-overlay-title="Lock and Suspend" { spawn "noctalia" "msg" "session" "lock-and-suspend"; }
 
