@@ -1,2 +1,3 @@
 decman
 wl-screenrec
+xdg-desktop-portal-termfilechooser
