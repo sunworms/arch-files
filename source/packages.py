@@ -12,11 +12,13 @@ for pkg_file in pkg_dir.glob("*.txt"):
     else:
         decman.pacman.packages |= set(pkgs)
 
-decman.aur.ignored_packages |= {"dummy-nautilus"}
+decman.pacman.ignored_packages |= {"chromium-widevine"}
+
+decman.aur.ignored_packages |= {"dummy-nautilus", "chromium-widevine"}
 
 pkgbuild_root = Path("../pkgbuilds").resolve()
 
 decman.aur.custom_packages |= {
     CustomPackage(pkg, pkgbuild_directory=pkgbuild_root / pkg)
-    for pkg in ("iosevka-nerd", "watt-bin", "chromium-widevine")
+    for pkg in ("iosevka-nerd", "watt-bin")
 }

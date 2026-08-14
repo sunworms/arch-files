@@ -1,3 +1,2 @@
 helium-browser-bin
-chromium-widevine
 qbittorrent-git
