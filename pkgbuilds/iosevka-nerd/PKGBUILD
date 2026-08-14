@@ -8,10 +8,11 @@ arch=(x86_64)
 url="https://github.com/sunworms/iosevka-nerd"
 license=(OFL-1.0)
 
-source=("iosevka::https://github.com/sunworms/iosevka-nerd/releases/download/v${pkgver}/Iosevka-Custom-v${pkgver}.zip")
+source=("iosevka.zip::https://github.com/sunworms/iosevka-nerd/releases/download/v${pkgver}/Iosevka-Custom-v${pkgver}.zip")
 sha256sums=("SKIP")
 
 package() {
-  mv "$srcdir/*" "$pkgdir/usr/share/fonts/TTF/"
+  cd "$srcdir/"
+  install -Dm644 "*.ttf" "$pkgdir/usr/share/fonts/TTF/"
 }
 
