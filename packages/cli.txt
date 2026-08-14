@@ -1,5 +1,6 @@
 fish
 fisher
+fzf
 git
 git-lfs
 less
