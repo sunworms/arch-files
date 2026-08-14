@@ -1,2 +1,4 @@
 adw-gtk-theme
 volantes-cursors
+qt6ct
+qt5ct
