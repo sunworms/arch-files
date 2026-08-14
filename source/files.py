@@ -5,8 +5,10 @@ from pathlib import Path
 USER = "sunny"
 HOME = f"/home/{USER}"
 CONFIG = f"{HOME}/.config"
+SHARE = f"{HOME}/.local/share"
 
 decman.directories[f"{CONFIG}"] = Directory(source_directory="../config/dot-config", owner=USER)
+decman.directories[f"{SHARE}"] = Directory(source_directory="../config/dot-local", owner=USER)
 
 decman.files[f"{HOME}/.face"] = File(source_file="../face", owner=USER)
 
