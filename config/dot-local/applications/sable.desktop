@@ -3,7 +3,7 @@ Version=1.0
 Type=Application
 Name=Sable
 Comment=Almost Stable Matrix Client
-Exec=helium --app=https://dev.sable.moe
+Exec=helium-browser --app=https://dev.sable.moe
 Icon=/home/sunny/.local/share/app-icons/sable.png
 Categories=Network;InstantMessaging;
 Terminal=false
