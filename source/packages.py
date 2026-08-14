@@ -14,7 +14,9 @@ for pkg_file in pkg_dir.glob("*.txt"):
 
 decman.aur.ignored_packages |= {"dummy-nautilus"}
 
+pkgbuild_root = Path("../pkgbuilds").resolve()
+
 decman.aur.custom_packages |= {
-    CustomPackage("iosevka-nerd", pkgbuild_directory="/home/sunny/arch-files/pkgbuilds/iosevka-nerd"),
-    CustomPackage("watt-bin", pkgbuild_directory="/home/sunny/arch-files/pkgbuilds/watt"),
+    CustomPackage(pkg, pkgbuild_directory=pkgbuild_root / pkg)
+    for pkg in ("iosevka-nerd", "watt-bin", "chromium-widevine")
 }
