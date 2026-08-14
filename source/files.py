@@ -24,4 +24,5 @@ decman.files["/boot/loader/entries/linux-cachyos.conf"] = File(source_file="../c
 decman.files["/etc/chromium/policies/managed/default.json"] = File(source_file="../config/helium-policies.json")
 
 decman.symlinks["/usr/bin/xdg-terminal-exec"] = "/usr/bin/foot"
-decman.symlinks["/home/sunny/.config/yazi/package.toml"] = Path("../config/symlinks/yazi-package.toml").resolve()
+decman.symlinks[f"{CONFIG}/yazi/package.toml"] = Path("../config/symlinks/yazi-package.toml").resolve()
+decman.symlinks[f"{CONFIG}/systemd/user/default.target.wants/clear-cache.service"] = Path("../config/dot-config/systemd/user/clear-cache.service").resolve()

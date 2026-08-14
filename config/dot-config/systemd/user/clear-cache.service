@@ -1,0 +1,9 @@
+[Unit]
+Description=Clear Cache on Login
+
+[Service]
+ExecStart=env rm -r /home/sunny/.config/net.imput.helium/Default/Service\ Worker/ /home/sunny/.cache/
+Type=oneshot
+
+[Install]
+WantedBy=default.target
