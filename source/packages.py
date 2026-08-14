@@ -13,7 +13,7 @@ for pkg_file in pkg_dir.glob("*.txt"):
         decman.pacman.packages |= set(pkgs)
         
 decman.aur.custom_packages |= {
-    CustomPackage("dummy-nautilus", pkgbuild_directory="../pkgbuilds/dummy-nautilus"),
-    CustomPackage("iosevka-nerd", pkgbuild_directory="../pkgbuilds/iosevka-nerd"),
-    CustomPackage("watt-bin", pkgbuild_directory="../pkgbuilds/watt"),
+    CustomPackage("dummy-nautilus", pkgbuild_directory=Path("../pkgbuilds/dummy-nautilus")),
+    CustomPackage("iosevka-nerd", pkgbuild_directory=Path("../pkgbuilds/iosevka-nerd")),
+    CustomPackage("watt-bin", pkgbuild_directory=Path("../pkgbuilds/watt")),
 }
