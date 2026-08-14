@@ -5,6 +5,6 @@ melonds-git
 mgba-qt
 eden-git
 sameboy
-pcsx2
+pcsx2-git
 wine
 winetricks
