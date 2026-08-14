@@ -13,6 +13,7 @@ sha256sums=("SKIP")
 
 package() {
   cd "$srcdir/"
+  mkdir -p "$pkgdir/usr/share/fonts/TTF/"
   cp *.ttf "$pkgdir/usr/share/fonts/TTF/"
 }
 
