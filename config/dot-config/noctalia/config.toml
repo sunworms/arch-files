@@ -372,7 +372,7 @@ post_hook = "pkill -SIGUSR1 nvim"
 [theme.templates.user.variables]
 input_path = "~/.config/noctalia/templates/variables.fish"
 output_path = "~/.config/foot/variables.fish"
-post_hook = "chmod +x ~/.config/foot/variables.fish && ~/.config/foot/reload.fish"
+post_hook = "chmod +x ~/.config/foot/variables.fish && ~/.local/bin/reload-foot"
 
 [theme.templates.user.zathura]
 input_path = "~/.config/noctalia/templates/zathurarc"
@@ -405,9 +405,9 @@ type = "sysmon"
 visualization = "gauge"
 
 [widget.launcher]
-custom_image = "/nix/store/6738xrd1wk9xn47y08aqciwvqbg9j02f-Nix_snowflake.svg"
+custom_image = ""
+glyph = "gender-transgender"
 custom_image_colorize = true
-glyph = "niri"
 
 [widget.media]
 album_art_only = true
