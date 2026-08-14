@@ -1,0 +1,9 @@
+[Unit]
+Conflicts=power-profiles-daemon.service auto-cpufreq.service tlp.service cpupower-gui.service thermald.service tuned.service
+
+[Service]
+ExecStart=env watt
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

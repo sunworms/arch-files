@@ -1,0 +1,19 @@
+# Maintainer:
+
+pkgname=watt-bin
+pkgver=1.4.0
+pkgrel=1
+pkgdesc="CPU frequency and power management utility"
+arch=(x86_64)
+url="https://github.com/NotAShelf/watt"
+license=(MPL-2.0)
+
+source=("watt::https://github.com/NotAShelf/watt/releases/download/v${pkgver}/watt-linux-amd64"
+		"watt.service")
+sha256sums=("SKIP"
+			"SKIP")
+
+package() {
+	install -Dm755 -pt "$pkgdir/usr/bin" watt
+	install -Dm644 -pt "$pkgdir/etc/systemd/system" watt.service
+}
