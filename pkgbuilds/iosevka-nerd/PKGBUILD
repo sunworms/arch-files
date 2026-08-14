@@ -1,0 +1,17 @@
+# Maintainer:
+
+pkgname=iosevka-nerd
+pkgver=34.8.0
+pkgrel=1
+pkgdesc="Sunny's Iosevka fonts"
+arch=(x86_64)
+url="https://github.com/sunworms/iosevka-nerd"
+license=(OFL-1.0)
+
+source=("iosevka::https://github.com/sunworms/iosevka-nerd/releases/download/v${pkgver}/Iosevka-Custom-v${pkgver}.zip")
+sha256sums=("SKIP")
+
+package() {
+  mv "$srcdir/*" "$pkgdir/usr/share/fonts/TTF/"
+}
+
