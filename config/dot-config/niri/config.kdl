@@ -1,0 +1,565 @@
+animations
+binds {
+	Alt+Print {
+		screenshot-window 
+	}
+	Alt+Super+Shift+S {
+		screenshot-window 
+	}
+	Ctrl+Alt+Delete {
+		quit 
+	}
+	Ctrl+Alt+Super+Shift+S {
+		spawn-sh "wl-paste --type image | satty --fullscreen --filename -"
+	}
+	Ctrl+Print {
+		screenshot-screen 
+	}
+	Ctrl+Super+Shift+S {
+		screenshot-screen 
+	}
+	Mod+0 {
+		focus-workspace 10
+	}
+	Mod+1 {
+		focus-workspace 1
+	}
+	Mod+2 {
+		focus-workspace 2
+	}
+	Mod+3 {
+		focus-workspace 3
+	}
+	Mod+4 {
+		focus-workspace 4
+	}
+	Mod+5 {
+		focus-workspace 5
+	}
+	Mod+6 {
+		focus-workspace 6
+	}
+	Mod+7 {
+		focus-workspace 7
+	}
+	Mod+8 {
+		focus-workspace 8
+	}
+	Mod+9 {
+		focus-workspace 9
+	}
+	Mod+A hotkey-overlay-title="Application Launcher" {
+		spawn "noctalia" "msg" "panel-toggle" "launcher"
+	}
+	Mod+Alt+V {
+		toggle-window-floating 
+	}
+	Mod+BracketLeft {
+		consume-or-expel-window-left 
+	}
+	Mod+BracketRight {
+		consume-or-expel-window-right 
+	}
+	Mod+C {
+		center-column 
+	}
+	Mod+Comma {
+		consume-window-into-column 
+	}
+	Mod+Ctrl+0 {
+		move-column-to-workspace 10
+	}
+	Mod+Ctrl+1 {
+		move-column-to-workspace 1
+	}
+	Mod+Ctrl+2 {
+		move-column-to-workspace 2
+	}
+	Mod+Ctrl+3 {
+		move-column-to-workspace 3
+	}
+	Mod+Ctrl+4 {
+		move-column-to-workspace 4
+	}
+	Mod+Ctrl+5 {
+		move-column-to-workspace 5
+	}
+	Mod+Ctrl+6 {
+		move-column-to-workspace 6
+	}
+	Mod+Ctrl+7 {
+		move-column-to-workspace 7
+	}
+	Mod+Ctrl+8 {
+		move-column-to-workspace 8
+	}
+	Mod+Ctrl+9 {
+		move-column-to-workspace 9
+	}
+	Mod+Ctrl+C {
+		center-visible-columns 
+	}
+	Mod+Ctrl+Down {
+		move-window-down 
+	}
+	Mod+Ctrl+End {
+		move-column-to-last 
+	}
+	Mod+Ctrl+F {
+		expand-column-to-available-width 
+	}
+	Mod+Ctrl+H {
+		move-column-left 
+	}
+	Mod+Ctrl+Home {
+		move-column-to-first 
+	}
+	Mod+Ctrl+I {
+		move-column-to-workspace-up 
+	}
+	Mod+Ctrl+J {
+		move-window-down-or-to-workspace-down 
+	}
+	Mod+Ctrl+K {
+		move-window-up-or-to-workspace-up 
+	}
+	Mod+Ctrl+L {
+		move-column-right 
+	}
+	Mod+Ctrl+Left {
+		move-column-left 
+	}
+	Mod+Ctrl+Page_Down {
+		move-column-to-workspace-down 
+	}
+	Mod+Ctrl+Page_Up {
+		move-column-to-workspace-up 
+	}
+	Mod+Ctrl+R {
+		reset-window-height 
+	}
+	Mod+Ctrl+Right {
+		move-column-right 
+	}
+	Mod+Ctrl+Shift+WheelScrollDown {
+		move-column-right 
+	}
+	Mod+Ctrl+Shift+WheelScrollUp {
+		move-column-left 
+	}
+	Mod+Ctrl+U {
+		move-column-to-workspace-down 
+	}
+	Mod+Ctrl+Up {
+		move-window-up 
+	}
+	Mod+Ctrl+WheelScrollDown cooldown-ms=150 {
+		move-column-to-workspace-down 
+	}
+	Mod+Ctrl+WheelScrollLeft {
+		move-column-left 
+	}
+	Mod+Ctrl+WheelScrollRight {
+		move-column-right 
+	}
+	Mod+Ctrl+WheelScrollUp cooldown-ms=150 {
+		move-column-to-workspace-up 
+	}
+	Mod+Down {
+		focus-window-down 
+	}
+	Mod+End {
+		focus-column-last 
+	}
+	Mod+Equal {
+		set-column-width "+5%"
+	}
+	Mod+Escape hotkey-overlay-title="Power Menu" {
+		spawn "noctalia" "msg" "panel-toggle" "session"
+	}
+	Mod+F {
+		maximize-column 
+	}
+	Mod+H {
+		focus-column-left 
+	}
+	Mod+Home {
+		focus-column-first 
+	}
+	Mod+I {
+		focus-workspace-up 
+	}
+	Mod+J {
+		focus-window-or-workspace-down 
+	}
+	Mod+K {
+		focus-window-or-workspace-up 
+	}
+	Mod+L {
+		focus-column-right 
+	}
+	Mod+Left {
+		focus-column-left 
+	}
+	Mod+M {
+		maximize-window-to-edges 
+	}
+	Mod+Minus {
+		set-column-width "-5%"
+	}
+	Mod+Page_Down {
+		focus-workspace-down 
+	}
+	Mod+Page_Up {
+		focus-workspace-up 
+	}
+	Mod+Period {
+		expel-window-from-column 
+	}
+	Mod+Print {
+		spawn-sh "wl-paste --type image | satty --fullscreen --filename -"
+	}
+	Mod+Q repeat=false {
+		close-window 
+	}
+	Mod+R {
+		switch-preset-column-width 
+	}
+	Mod+Right {
+		focus-column-right 
+	}
+	Mod+Shift+Ctrl+Down {
+		move-column-to-monitor-down 
+	}
+	Mod+Shift+Ctrl+H {
+		move-column-to-monitor-left 
+	}
+	Mod+Shift+Ctrl+J {
+		move-column-to-monitor-down 
+	}
+	Mod+Shift+Ctrl+K {
+		move-column-to-monitor-up 
+	}
+	Mod+Shift+Ctrl+L {
+		move-column-to-monitor-right 
+	}
+	Mod+Shift+Ctrl+Left {
+		move-column-to-monitor-left 
+	}
+	Mod+Shift+Ctrl+Right {
+		move-column-to-monitor-right 
+	}
+	Mod+Shift+Ctrl+Up {
+		move-column-to-monitor-up 
+	}
+	Mod+Shift+Down {
+		focus-monitor-down 
+	}
+	Mod+Shift+Equal {
+		set-window-height "+5%"
+	}
+	Mod+Shift+Escape allow-inhibiting=false {
+		toggle-keyboard-shortcuts-inhibit 
+	}
+	Mod+Shift+F {
+		fullscreen-window 
+	}
+	Mod+Shift+H {
+		focus-monitor-left 
+	}
+	Mod+Shift+I {
+		move-workspace-up 
+	}
+	Mod+Shift+J {
+		focus-monitor-down 
+	}
+	Mod+Shift+K {
+		focus-monitor-up 
+	}
+	Mod+Shift+L {
+		focus-monitor-right 
+	}
+	Mod+Shift+Left {
+		focus-monitor-left 
+	}
+	Mod+Shift+Minus {
+		set-window-height "-5%"
+	}
+	Mod+Shift+P {
+		power-off-monitors 
+	}
+	Mod+Shift+Page_Down {
+		move-workspace-down 
+	}
+	Mod+Shift+Page_Up {
+		move-workspace-up 
+	}
+	Mod+Shift+R {
+		switch-preset-window-height 
+	}
+	Mod+Shift+Right {
+		focus-monitor-right 
+	}
+	Mod+Shift+Slash {
+		show-hotkey-overlay 
+	}
+	Mod+Shift+T hotkey-overlay-title="Layers" {
+		spawn "foot" "sh" "-c" "niri msg layers; fish"
+	}
+	Mod+Shift+U {
+		move-workspace-down 
+	}
+	Mod+Shift+Up {
+		focus-monitor-up 
+	}
+	Mod+Shift+V {
+		switch-focus-between-floating-and-tiling 
+	}
+	Mod+Shift+WheelScrollDown {
+		focus-column-right 
+	}
+	Mod+Shift+WheelScrollUp {
+		focus-column-left 
+	}
+	Mod+Space repeat=false {
+		toggle-overview 
+	}
+	Mod+T hotkey-overlay-title="Open a Terminal: foot" {
+		spawn "foot"
+	}
+	Mod+U {
+		focus-workspace-down 
+	}
+	Mod+Up {
+		focus-window-up 
+	}
+	Mod+V hotkey-overlay-title="Clipboard" {
+		spawn "noctalia" "msg" "panel-toggle" "clipboard"
+	}
+	Mod+W {
+		toggle-column-tabbed-display 
+	}
+	Mod+WheelScrollDown cooldown-ms=150 {
+		focus-workspace-down 
+	}
+	Mod+WheelScrollLeft {
+		focus-column-left 
+	}
+	Mod+WheelScrollRight {
+		focus-column-right 
+	}
+	Mod+WheelScrollUp cooldown-ms=150 {
+		focus-workspace-up 
+	}
+	Print {
+		screenshot 
+	}
+	Super+Shift+S {
+		screenshot 
+	}
+	XF86AudioLowerVolume allow-when-locked=true {
+		spawn "noctalia" "msg" "volume-down" "5"
+	}
+	XF86AudioMicMute allow-when-locked=true {
+		spawn "noctalia" "msg" "mic-mute"
+	}
+	XF86AudioMute allow-when-locked=true {
+		spawn "noctalia" "msg" "volume-mute"
+	}
+	XF86AudioNext allow-when-locked=true {
+		spawn "noctalia" "msg" "media" "next"
+	}
+	XF86AudioPlay allow-when-locked=true {
+		spawn "noctalia" "msg" "media" "toggle"
+	}
+	XF86AudioPrev allow-when-locked=true {
+		spawn "noctalia" "msg" "media" "previous"
+	}
+	XF86AudioRaiseVolume allow-when-locked=true {
+		spawn "noctalia" "msg" "volume-up" "5"
+	}
+	XF86Calculator hotkey-overlay-title="Open Calendar" {
+		spawn "noctalia" "msg" "panel-toggle" "control-center" "calendar"
+	}
+	XF86Favorites hotkey-overlay-title="Emoji Selector" {
+		spawn "noctalia" "msg" "panel-toggle" "launcher" "/emo"
+	}
+	XF86Launch5 hotkey-overlay-title="Lock the Screen" {
+		spawn "noctalia" "msg" "session" "lock"
+	}
+	XF86Launch6 hotkey-overlay-title="Window Switcher" {
+		spawn "noctalia" "msg" "window-switcher"
+	}
+	XF86MonBrightnessDown allow-when-locked=true {
+		spawn "noctalia" "msg" "brightness-down" "5"
+	}
+	XF86MonBrightnessUp allow-when-locked=true {
+		spawn "noctalia" "msg" "brightness-up" "5"
+	}
+	XF86PowerOff hotkey-overlay-title="Lock and Suspend" {
+		spawn "noctalia" "msg" "session" "lock-and-suspend"
+	}
+	XF86Tools hotkey-overlay-title="Noctalia Settings" {
+		spawn "noctalia" "msg" "settings-toggle"
+	}
+}
+blur {
+	noise 0.020000
+	offset 3
+	passes 3
+	saturation 1.500000
+}
+cursor {
+	xcursor-size 24
+	xcursor-theme "volantes_cursors"
+}
+environment {
+	EDITOR "nvim"
+	GTK_THEME "adw-gtk3"
+	GTK_USE_PORTAL "1"
+	NIXOS_OZONE_WL "1"
+	QT_AUTO_SCREEN_SCALE_FACTOR "1"
+	QT_QPA_PLATFORMTHEME "qt6ct"
+	QT_WAYLAND_DISABLE_WINDOWDECORATION "1"
+	SUDO_EDITOR "nvim"
+	TERMINAL "foot"
+	VISUAL "nvim"
+	_JAVA_AWT_WM_NONREPARENTING "1"
+}
+gestures {
+	hot-corners {
+		off 
+	}
+}
+hotkey-overlay {
+	skip-at-startup 
+}
+include "noctalia.kdl" optional=true
+input {
+	disable-power-key-handling 
+	keyboard {
+		numlock 
+		xkb
+	}
+	touchpad {
+		natural-scroll 
+		tap 
+	}
+}
+layer-rule {
+	match namespace="^noctalia-wallpaper*"
+	match namespace="^mpvpaper$"
+	
+	place-within-backdrop true
+}
+layout {
+	background-color "transparent"
+	border {
+		off 
+		width 2
+	}
+	center-focused-column "never"
+	default-column-width {
+		proportion 1.000000
+	}
+	focus-ring {
+		width 2
+	}
+	gaps 0
+	preset-column-widths {
+		proportion 0.500000
+		proportion 0.750000
+		proportion 1.000000
+	}
+	shadow {
+		offset x=0 y=5
+		on 
+		softness 20
+		spread 5
+	}
+	struts {
+		bottom 20
+		left 20
+		right 20
+		top 20
+	}
+}
+overview {
+	workspace-shadow {
+		off 
+	}
+	zoom 0.150000
+}
+prefer-no-csd 
+recent-windows {
+	binds {
+		Alt+Shift+Tab {
+			previous-window 
+		}
+		Alt+Tab {
+			next-window 
+		}
+		Mod+Shift+Tab {
+			previous-window 
+		}
+		Mod+Tab {
+			next-window 
+		}
+	}
+}
+screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+spawn-at-startup "noctalia"
+spawn-at-startup "wl-clip-persist" "--clipboard" "regular"
+
+spawn-sh-at-startup "niri-float-sticky -title 'Picture-in-Picture|Picture in picture'"
+spawn-sh-at-startup "kanata --cfg ~/.config/kanata/config.kbd"
+
+switch-events {
+	lid-close {
+		spawn "noctalia" "msg" "session" "lock-and-suspend"
+	}
+}
+window-rule {
+	default-column-width
+	match app-id=r#"^org\.wezfurlong\.wezterm$"#
+}
+window-rule {
+	default-column-width {
+		fixed 525
+	}
+	default-floating-position x=1025 y=225
+	default-window-height {
+		fixed 295
+	}
+	match title="Picture-in-Picture"
+	match title="Picture in picture"
+	
+	open-floating true
+}
+window-rule {
+	default-floating-position x=3000 y=2000
+	match title="discord.com is sharing a window."
+}
+window-rule {
+	default-column-width {
+		fixed 900
+	}
+	default-window-height {
+		fixed 600
+	}
+	match app-id="xdg_filechooser"
+	open-floating true
+}
+window-rule {
+	background-effect {
+		blur true
+		xray true
+	}
+	match app-id="^org.pwmt.zathura$"
+}
+window-rule {
+	clip-to-geometry true
+	draw-border-with-background false
+	geometry-corner-radius 12
+}
+

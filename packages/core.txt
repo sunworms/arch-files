@@ -1,0 +1,8 @@
+base
+base-devel
+linux-cachyos
+systemd
+linux-firmware
+intel-ucode
+sudo
+cachyos-rate-mirrors

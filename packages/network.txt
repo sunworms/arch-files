@@ -1,0 +1,4 @@
+networkmanager
+wpa_supplicant
+cloudflare-warp-bin
+libayatana-appindicator

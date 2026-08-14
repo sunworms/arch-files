@@ -1,0 +1,7 @@
+foot
+wl-clipboard
+xwayland-satellite
+niri
+xdg-desktop-portal-gnome
+xdg-desktop-portal-gtk
+xdg-desktop-portal-termfilechooser

@@ -1,0 +1,12 @@
+noctalia
+gpu-screen-recorder-git
+wl-mirror
+grim
+slurp
+hyprpicker
+tesseract
+bc
+curl
+jq
+zbar
+imagemagick

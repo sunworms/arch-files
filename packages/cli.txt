@@ -1,0 +1,17 @@
+fish
+fisher
+git
+git-lfs
+less
+fastfetch
+hyfetch
+man-db
+ncdu
+7zip
+unrar
+unzip
+yay
+kanata
+ripgrep
+neovim
+yazi

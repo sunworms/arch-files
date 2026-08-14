@@ -1,0 +1,63 @@
+{
+  "DefaultSearchProviderEnabled": true,
+  "DefaultSearchProviderName": "DuckDuckGo (No AI)",
+  "DefaultSearchProviderSearchURL": "https://noai.duckduckgo.com/?q={searchTerms}",
+  "DefaultSearchProviderSuggestURL": "https://noai.duckduckgo.com/?q={searchTerms}&type=list",
+  "ExtensionInstallForcelist": [
+    "eimadpbcbfnmbkopoojfekhnkhdbieeh",
+    "mnjggcdmjocbbbhaepdhchncahnbgone",
+    "gebbhagfogifgggkldgodflihgfeippi",
+    "jplgfhpmjnbigmhklmmbgecoobifkmpa",
+    "clngdbkpkpeebahjckkjfobafhncgmne",
+    "mcambpfmpjnncfoodejdmehedbkjepmi"
+  ],
+  "ManagedBookmarks": [
+    {
+      "name": "NISER login",
+      "url": "http://172.16.255.254/"
+    },
+    {
+      "name": "Arch Linux",
+      "children": [
+        {
+          "name": "Arch Main Page",
+          "url": "https://archlinux.org"
+        },
+        {
+          "name": "AUR",
+          "url": "https://aur.archlinux.org"
+        }
+      ]
+    },
+    {
+      "children": [
+        {
+          "name": "Latex to typst cheat sheet",
+          "url": "https://qwinsi.github.io/tex2typst-webapp/cheat-sheet.html"
+        },
+        {
+          "name": "Latex tables",
+          "url": "https://www.latex-tables.com"
+        },
+        {
+          "name": "Typst symbols",
+          "url": "https://typst.app/docs/reference/symbols/sym"
+        }
+      ],
+      "name": "Latex/Typst"
+    },
+    {
+      "children": [
+        {
+          "name": "GitHub",
+          "url": "https://github.com"
+        },
+        {
+          "name": "git.gay",
+          "url": "https://git.gay"
+        }
+      ],
+      "name": "Development"
+    }
+  ]
+}

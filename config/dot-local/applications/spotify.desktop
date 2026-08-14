@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Spotify
+Comment=Music streaming service
+Exec=helium --app=https://open.spotify.com
+Icon=/home/sunny/.local/share/app-icons/spotify.png
+Categories=Audio;Music;Player;AudioVideo;
+Terminal=false
+StartupWMClass=chrome-open.spotify.com__-Default

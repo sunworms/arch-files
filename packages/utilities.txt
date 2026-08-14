@@ -1,0 +1,9 @@
+gnome-keyring
+imv
+satty
+mpv
+zathura
+zathura-cb
+zathura-djvu
+zathura-pdf-mupdf
+zathura-ps

@@ -1,0 +1,458 @@
+[accessibility]
+ui_scale = 1.05
+
+[audio]
+enable_overdrive = true
+
+[bar]
+order = ["default", "right"]
+
+[bar.default]
+background_opacity = 1.0
+capsule = true
+capsule_opacity = 1.0
+capsule_radius = 8.0
+center = ["clock"]
+end = ["tray", "group:sysmon", "group:osd"]
+margin_edge = 0
+margin_ends = 0
+position = "left"
+radius = 0
+radius_bottom_right = 10
+radius_top_right = 10
+scale = 1.05
+shadow = true
+start = ["group:misc", "group:music"]
+thickness = 30
+widget_spacing = 10
+
+[[bar.default.capsule_group]]
+fill = "surface_variant"
+id = "sysmon"
+members = ["cpu", "ram", "temp"]
+opacity = 1.0
+padding = 6.0
+radius = 8.0
+
+[[bar.default.capsule_group]]
+fill = "surface_variant"
+id = "osd"
+members = ["volume", "brightness", "battery"]
+opacity = 1.0
+padding = 6.0
+radius = 8.0
+
+[[bar.default.capsule_group]]
+fill = "surface_variant"
+id = "music"
+members = ["media", "cat", "audio_visualizer"]
+opacity = 1.0
+padding = 6.0
+radius = 8.0
+
+[[bar.default.capsule_group]]
+fill = "surface_variant"
+id = "misc"
+members = ["launcher", "wallpaper", "mpvpaper"]
+opacity = 1.0
+padding = 6.0
+radius = 8.0
+
+[bar.right]
+background_opacity = 1.0
+capsule = true
+capsule_opacity = 1.0
+capsule_radius = 8.0
+center = ["workspaces"]
+enabled = true
+end = ["group:net", "group:notif", "group:mpv"]
+margin_ends = 0
+position = "right"
+radius = 0
+radius_bottom_left = 10
+radius_top_left = 10
+scale = 1.05
+shadow = true
+start = ["taskbar"]
+thickness = 30
+
+[[bar.right.capsule_group]]
+enabled = true
+fill = "surface_variant"
+id = "net"
+members = ["network", "toggle", "bluetooth"]
+opacity = 1.0
+padding = 6.0
+radius = 8.0
+
+[[bar.right.capsule_group]]
+enabled = true
+fill = "surface_variant"
+id = "notif"
+members = ["notifications", "clipboard"]
+opacity = 1.0
+padding = 6.0
+radius = 8.0
+
+[[bar.right.capsule_group]]
+enabled = true
+fill = "surface_variant"
+id = "mpv"
+members = ["recorder", "widget", "mirror"]
+opacity = 1.0
+padding = 6.0
+radius = 8.0
+
+[battery]
+warning_threshold = 20
+
+[calendar]
+enabled = true
+
+[calendar.account.personal_google]
+color = "primary"
+name = "Sunny's calendar"
+type = "google"
+
+[dock]
+auto_hide = true
+background_opacity = 1.0
+enabled = false
+position = "top"
+
+[idle]
+behavior_order = ["idle-behavior", "idle-behavior-2"]
+
+[idle.behavior.idle-behavior]
+action = "lock"
+enabled = true
+timeout = 300
+
+[idle.behavior.idle-behavior-2]
+action = "screen_off"
+enabled = true
+timeout = 600
+
+[location]
+auto_locate = false
+
+[lockscreen_widgets]
+enabled = true
+schema_version = 2
+widget_order = ["login-box", "logout", "shutdown", "reboot", "suspend", "media", "clock", "weather", "sysmon"]
+
+[lockscreen_widgets.grid]
+cell_size = 16
+major_interval = 4
+visible = true
+
+[lockscreen_widgets.widget.clock]
+box_height = 128.0
+box_width = 208.0
+cx = 823.0
+cy = 578.5
+output = "eDP-1"
+rotation = 0.0
+type = "clock"
+
+[lockscreen_widgets.widget.clock.settings]
+center_text = true
+clock_style = "digital"
+format = '{:%H:%M\n%a, %b %d}'
+
+[lockscreen_widgets.widget.login-box]
+box_height = 103.0
+box_width = 400.0
+cx = 823.0
+cy = 806.0
+output = "eDP-1"
+rotation = 0.0
+type = "login_box"
+
+[lockscreen_widgets.widget.login-box.settings]
+background_color = "surface_variant"
+background_opacity = 1.0
+background_radius = 12.0
+input_opacity = 1.0
+input_radius = 6.0
+layout = "compact"
+show_login_button = true
+
+[lockscreen_widgets.widget.logout]
+box_height = 48.0
+box_width = 48.0
+cx = 727.0
+cy = 986.5
+output = "eDP-1"
+rotation = 0.0
+type = "button"
+
+[lockscreen_widgets.widget.logout.settings]
+background = true
+command = "noctalia msg session logout"
+glyph = "logout"
+variant = "default"
+
+[lockscreen_widgets.widget.media]
+box_height = 0.0
+box_width = 0.0
+cx = 823.0
+cy = 290.5
+output = "eDP-1"
+rotation = 0.0
+type = "media_player"
+
+[lockscreen_widgets.widget.reboot]
+box_height = 48.0
+box_width = 48.0
+cx = 855.0
+cy = 986.5
+output = "eDP-1"
+rotation = 0.0
+type = "button"
+
+[lockscreen_widgets.widget.reboot.settings]
+background = true
+command = "noctalia msg session reboot"
+glyph = "reboot"
+variant = "default"
+
+[lockscreen_widgets.widget.shutdown]
+box_height = 48.0
+box_width = 48.0
+cx = 919.0
+cy = 986.5
+output = "eDP-1"
+rotation = 0.0
+type = "button"
+
+[lockscreen_widgets.widget.shutdown.settings]
+background = true
+command = "noctalia msg session shutdown"
+glyph = "shutdown"
+variant = "default"
+
+[lockscreen_widgets.widget.suspend]
+box_height = 48.0
+box_width = 48.0
+cx = 791.0
+cy = 986.5
+output = "eDP-1"
+rotation = 0.0
+type = "button"
+
+[lockscreen_widgets.widget.suspend.settings]
+background = true
+command = "noctalia msg session lock-and-suspend"
+glyph = "suspend"
+variant = "default"
+
+[lockscreen_widgets.widget.sysmon]
+box_height = 0.0
+box_width = 0.0
+cx = 551.0
+cy = 578.5
+output = "eDP-1"
+rotation = 0.0
+type = "sysmon"
+
+[lockscreen_widgets.widget.sysmon.settings]
+stat = "cpu_usage"
+stat2 = "ram_pct"
+
+[lockscreen_widgets.widget.weather]
+box_height = 128.0
+box_width = 208.0
+cx = 1095.0
+cy = 578.5
+output = "eDP-1"
+rotation = 0.0
+type = "weather"
+
+[lockscreen_widgets.widget.weather.settings]
+forecast_days = 2
+show_forecast = true
+
+[notification]
+background_opacity = 1.0
+scale = 1.05
+
+[osd]
+background_opacity = 1.0
+scale = 1.05
+
+[plugin_settings."alexander/screen-toolkit"]
+panel-legacy_placement = "attached"
+panel_placement = "attached"
+result_placement = "attached"
+
+[plugin_settings."cleboost/hotspot"]
+panel_open_near_click = false
+
+[plugin_settings."elijaharch/wl-screen-mirror"]
+controls_open_near_click = false
+
+[plugin_settings."noctalia/mpvpaper"]
+video_directory = "/home/sunny/Pictures/walls/videos"
+
+[plugins]
+enabled = ["noctalia/screen_recorder", "noctalia/kaomoji", "noctalia/bongocat", "noctalia/mpvpaper", "elijaharch/wl-screen-mirror", "cleboost/hotspot", "alexander/screen-toolkit"]
+
+[shell]
+avatar_path = "/home/sunny/.face"
+clipboard_auto_paste = "off"
+clipboard_image_action_command = "satty -f -"
+password_style = "random"
+polkit_agent = true
+settings_show_advanced = true
+telemetry_enabled = false
+
+[shell.launcher]
+app_grid = true
+compact = true
+sort_by_usage = false
+
+[shell.panel]
+clipboard_placement = "attached"
+launcher_placement = "attached"
+transparency_mode = "glass"
+
+[shell.screenshot]
+directory = "~/Pictures/Screenshots"
+remember_last_region = true
+
+[[shell.session.actions]]
+action = "lock"
+enabled = true
+variant = "default"
+
+[[shell.session.actions]]
+action = "logout"
+enabled = true
+variant = "default"
+
+[[shell.session.actions]]
+action = "lock_and_suspend"
+enabled = true
+variant = "default"
+
+[[shell.session.actions]]
+action = "command"
+command = "pkill noctalia && sleep 0.1 && noctalia"
+enabled = true
+glyph = "noctalia"
+label = "Restart Noctalia"
+variant = "default"
+
+[[shell.session.actions]]
+action = "reboot"
+enabled = true
+variant = "default"
+
+[[shell.session.actions]]
+action = "shutdown"
+enabled = true
+variant = "default"
+
+[theme]
+builtin = "Noctalia"
+community_palette = "Catppuccin Lavender"
+source = "wallpaper"
+wallpaper_scheme = "faithful"
+
+[theme.templates]
+builtin_ids = ["foot", "gtk3", "gtk4", "kcolorscheme", "qt", "niri"]
+community_ids = ["yazi"]
+
+[theme.templates.user.nvim-base16]
+input_path = "~/.config/noctalia/templates/matugen.lua"
+output_path = "~/.config/nvim/lua/matugen.lua"
+post_hook = "pkill -SIGUSR1 nvim"
+
+[theme.templates.user.variables]
+input_path = "~/.config/noctalia/templates/variables.fish"
+output_path = "~/.config/foot/variables.fish"
+post_hook = "chmod +x ~/.config/foot/variables.fish && ~/.config/foot/reload.fish"
+
+[theme.templates.user.zathura]
+input_path = "~/.config/noctalia/templates/zathurarc"
+output_path = "~/.config/zathura/zathurarc"
+
+[wallpaper]
+directory = "/home/sunny/Pictures/walls"
+
+[widget.audio_visualizer]
+centered = false
+color_2 = "secondary"
+
+[widget.brightness]
+show_label = false
+
+[widget.cat]
+audio_spectrum = true
+tappy_mode = true
+type = "noctalia/bongocat:cat"
+use_mpris_filter = true
+
+[widget.clock]
+format = "{:%a, %d %b %Y, %H:%M}"
+tooltip_format = "{:%a, %d %b %Y, %H:%M:%S}"
+vertical_format = '{:%d\n%m\n%y\n-\n%H\n%M}'
+
+[widget.cpu]
+show_value = false
+type = "sysmon"
+visualization = "gauge"
+
+[widget.launcher]
+custom_image = "/nix/store/6738xrd1wk9xn47y08aqciwvqbg9j02f-Nix_snowflake.svg"
+custom_image_colorize = true
+glyph = "niri"
+
+[widget.media]
+album_art_only = true
+max_length = 150
+title_scroll = "on_hover"
+
+[widget.mirror]
+type = "elijaharch/wl-screen-mirror:mirror"
+
+[widget.mpvpaper]
+type = "noctalia/mpvpaper:mpvpaper"
+
+[widget.network]
+show_label = false
+
+[widget.ram]
+show_value = false
+stat = "ram_used"
+type = "sysmon"
+visualization = "gauge"
+
+[widget.recorder]
+type = "noctalia/screen_recorder:recorder"
+
+[widget.taskbar]
+capsule = true
+group_by_workspace = true
+hide_empty_workspaces = true
+only_active_workspace = true
+
+[widget.temp]
+show_value = false
+stat = "cpu_temp"
+type = "sysmon"
+visualization = "gauge"
+
+[widget.toggle]
+type = "cleboost/hotspot:toggle"
+
+[widget.volume]
+show_label = false
+
+[widget.widget]
+type = "alexander/screen-toolkit:widget"
+
+[widget.workspaces]
+hide_when_empty = true
+show_labels = false

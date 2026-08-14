@@ -1,0 +1,5 @@
+[filechooser]
+env=PATH='/nix/store/m915nv09ia4wgv6fnnb0zpvcba1hjagy-termfilechooser-deps/bin'
+env=TERMCMD='/nix/store/ls22769pvdl3c28rg16gqc5psckf6kxx-foot-1.27.0/bin/foot --app-id=xdg_filechooser'
+cmd='/nix/store/ykydrx92nlksnyqci6ayg6bfsgavh3g6-xdg-desktop-portal-termfilechooser-1.4.3/share/xdg-desktop-portal-termfilechooser/yazi-wrapper.sh'
+default_dir=$HOME
