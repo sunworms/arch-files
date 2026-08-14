@@ -11,9 +11,10 @@ for pkg_file in pkg_dir.glob("*.txt"):
         decman.aur.packages |= set(pkgs)
     else:
         decman.pacman.packages |= set(pkgs)
-        
+
+decman.aur.ignored_packages |= {"dummy-nautilus"}
+
 decman.aur.custom_packages |= {
-    CustomPackage("dummy-nautilus", pkgbuild_directory=Path("../pkgbuilds/dummy-nautilus")),
-    CustomPackage("iosevka-nerd", pkgbuild_directory=Path("../pkgbuilds/iosevka-nerd")),
-    CustomPackage("watt-bin", pkgbuild_directory=Path("../pkgbuilds/watt")),
+    CustomPackage("iosevka-nerd", pkgbuild_directory="/home/sunny/arch-files/pkgbuilds/iosevka-nerd"),
+    CustomPackage("watt-bin", pkgbuild_directory="/home/sunny/arch-files/pkgbuilds/watt"),
 }

@@ -10,3 +10,5 @@ curl
 jq
 zbar
 imagemagick
+wf-recorder
+mpvpaper

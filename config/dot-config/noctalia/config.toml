@@ -338,7 +338,7 @@ variant = "default"
 
 [[shell.session.actions]]
 action = "command"
-command = "pkill noctalia && sleep 0.1 && noctalia"
+command = "pkill -9 noctalia && sleep 0.1 && noctalia"
 enabled = true
 glyph = "noctalia"
 label = "Restart Noctalia"
