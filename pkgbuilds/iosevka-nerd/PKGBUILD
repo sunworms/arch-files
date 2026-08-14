@@ -13,6 +13,6 @@ sha256sums=("SKIP")
 
 package() {
   cd "$srcdir/"
-  install -Dm644 "*.ttf" "$pkgdir/usr/share/fonts/TTF/"
+  cp *.ttf "$pkgdir/usr/share/fonts/TTF/"
 }
 
