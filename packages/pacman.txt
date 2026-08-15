@@ -81,6 +81,7 @@ qbittorrent-git
 qemu-desktop
 qt5ct
 qt6ct
+rclone
 ripgrep
 sameboy
 satty
