@@ -1,4 +1,5 @@
 #!/bin/sh
+gsettings set org.gnome.desktop.interface font-name 'Iosevka Aile Lean 11'
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 gsettings set org.gnome.desktop.interface cursor-theme "'volantes_cursors'"
 gsettings set org.gnome.desktop.interface icon-theme "'Adwaita'"
