@@ -2,7 +2,7 @@
 Description=Clear Cache on Login
 
 [Service]
-ExecStart=env rm -r /home/sunny/.config/net.imput.helium/Default/Service\ Worker/ /home/sunny/.cache/
+ExecStart=env rm -r /home/sunny/.config/net.imput.helium/Default/Service\ Worker /home/sunny/.cache /home/sunny/.config/net.imput.helium/Default/AutofillAiModelCache /home/sunny/.config/net.imput.helium/Default/DawnGraphiteCache /home/sunny/.config/net.imput.helium/Default/DawnWebGPUCache /home/sunny/.config/net.imput.helium/Default/GPUCache /home/sunny/.config/net.imput.helium/Default/optimization_guide_hint_cache_store
 Type=oneshot
 
 [Install]
