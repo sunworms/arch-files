@@ -1,6 +1,0 @@
-chaotic-keyring
-chaotic-mirrorlist
-cachyos-keyring
-cachyos-mirrorlist
-cachyos-v3-mirrorlist
-cachyos-v4-mirrorlist
