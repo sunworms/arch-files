@@ -1,2 +1,3 @@
 decman
+niri-float-sticky
 xdg-desktop-portal-termfilechooser
