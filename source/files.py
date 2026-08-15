@@ -21,7 +21,6 @@ for path in SYSTEM_SRC.rglob("*"):
         decman.files[str(dest)] = File(source_file=str(path))
 
 decman.files["/boot/loader/entries/linux-cachyos.conf"] = File(source_file="../config/linux-cachyos.conf")
-decman.files["/etc/chromium/policies/managed/default.json"] = File(source_file="../config/helium-policies.json")
 
 decman.directories[f"{HOME}/.local/bin"] = Directory(
     source_directory="../scripts/bin",
