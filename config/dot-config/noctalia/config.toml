@@ -368,7 +368,7 @@ community_ids = ["yazi", "lazygit", "bat", "lsd", "fzf"]
 [theme.templates.user.variables]
 input_path = "~/.config/noctalia/templates/variables.fish"
 output_path = "~/.config/foot/variables.fish"
-post_hook = "chmod +x ~/.config/foot/variables.fish && ~/.config/foot/reload.fish"
+post_hook = "chmod +x ~/.config/foot/variables.fish && ~/.local/bin/reload-foot"
 
 [theme.templates.user.vim-colors]
 input_path = "~/.config/noctalia/templates/vim-colors.vim"
