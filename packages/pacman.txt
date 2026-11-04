@@ -110,7 +110,6 @@ wf-recorder
 wine
 winetricks
 wireplumber
-wl-clip-persist
 wl-clipboard
 wl-mirror
 wpa_supplicant
