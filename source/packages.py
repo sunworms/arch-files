@@ -18,5 +18,5 @@ pkgbuild_root = Path("../pkgbuilds").resolve()
 
 decman.aur.custom_packages |= {
     CustomPackage(pkg, pkgbuild_directory=pkgbuild_root / pkg)
-    for pkg in ("iosevka-nerd", "watt-bin")
+    for pkg in ("watt-bin")
 }
