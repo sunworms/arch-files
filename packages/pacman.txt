@@ -4,6 +4,7 @@ android-tools
 azahar-git
 base
 base-devel
+bat
 bc
 bluez
 bluez-utils
@@ -57,6 +58,7 @@ libvirt
 libxcrypt-compat
 linux-cachyos
 linux-firmware
+lsd
 ly
 man-db
 melonds-git
