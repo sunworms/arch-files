@@ -1,3 +1,3 @@
 function la
-    command lsd -alh
+    command lsd -alh $argv
 end
