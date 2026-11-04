@@ -15,6 +15,7 @@ cachyos-v3-mirrorlist
 cachyos-v4-mirrorlist
 chaotic-keyring
 chaotic-mirrorlist
+chromium-widevine
 curl
 dnsmasq
 dolphin-emu-git
@@ -47,6 +48,7 @@ intel-media-driver
 intel-ucode
 jq
 kanata
+lazygit
 less
 libayatana-appindicator
 libpulse
