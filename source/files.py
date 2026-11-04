@@ -31,3 +31,4 @@ decman.symlinks["/usr/bin/xdg-terminal-exec"] = "/usr/bin/foot"
 decman.symlinks[f"{CONFIG}/yazi/package.toml"] = Path("../config/symlinks/yazi-package.toml").resolve()
 decman.symlinks[f"{CONFIG}/systemd/user/default.target.wants/clear-cache.service"] = Path("../config/dot-config/systemd/user/clear-cache.service").resolve()
 decman.symlinks[f"{CONFIG}/systemd/user/default.target.wants/rclone-gdrive.service"] = Path("../config/dot-config/systemd/user/rclone-gdrive.service").resolve()
+decman.symlinks["/etc/systemd/system/multi-user.target.wants/watt.service"] = "/etc/systemd/system/watt.service"
