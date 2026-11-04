@@ -70,7 +70,7 @@ ncdu
 neovim
 networkmanager
 niri
-noctalia
+noctalia-git
 noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
