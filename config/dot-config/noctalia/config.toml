@@ -430,7 +430,6 @@ visualization = "gauge"
 custom_image = ""
 glyph = "gender-transgender"
 custom_image_colorize = true
-glyph = "gender-transgender"
 
 [widget.media]
 album_art_only = true
