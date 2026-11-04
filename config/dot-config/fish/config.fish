@@ -1,7 +1,4 @@
 if status is-interactive
-    abbr l 'ls -alh'
-    abbr ll 'ls -lh'
-    abbr ls 'ls --color=tty'
     abbr lg lazygit
 
     set -g fish_greeting
