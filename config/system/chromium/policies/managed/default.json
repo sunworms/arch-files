@@ -1,8 +1,9 @@
 {
   "DefaultSearchProviderEnabled": true,
+  "DefaultSearchProviderKeyword": "ddg",
   "DefaultSearchProviderName": "DuckDuckGo (No AI)",
   "DefaultSearchProviderSearchURL": "https://noai.duckduckgo.com/?q={searchTerms}",
-  "DefaultSearchProviderSuggestURL": "https://noai.duckduckgo.com/?q={searchTerms}&type=list",
+  "DefaultSearchProviderSuggestURL": "https://duckduckgo.com/ac/?q={searchTerms}&type=list",
   "ExtensionInstallForcelist": [
     "eimadpbcbfnmbkopoojfekhnkhdbieeh",
     "mnjggcdmjocbbbhaepdhchncahnbgone",
@@ -11,6 +12,14 @@
     "clngdbkpkpeebahjckkjfobafhncgmne",
     "mcambpfmpjnncfoodejdmehedbkjepmi"
   ],
+  "ExtensionSettings": {
+    "eimadpbcbfnmbkopoojfekhnkhdbieeh": {
+      "toolbar_pin": "force_pinned"
+    },
+    "mnjggcdmjocbbbhaepdhchncahnbgone": {
+      "toolbar_pin": "force_pinned"
+    }
+  },
   "ManagedBookmarks": [
     {
       "name": "NISER login",
@@ -58,6 +67,33 @@
         }
       ],
       "name": "Development"
+    }
+  ],
+  "SearchSuggestEnabled": true,
+  "WebAppInstallForceList": [
+    {
+      "create_desktop_shortcut": true,
+      "custom_name": "Discord",
+      "default_launch_container": "window",
+      "url": "https://discord.com/app"
+    },
+    {
+      "create_desktop_shortcut": true,
+      "custom_name": "Spotify",
+      "default_launch_container": "window",
+      "url": "https://open.spotify.com/"
+    },
+    {
+      "create_desktop_shortcut": true,
+      "custom_name": "WhatsApp",
+      "default_launch_container": "window",
+      "url": "https://web.whatsapp.com/"
+    },
+    {
+      "create_desktop_shortcut": true,
+      "custom_name": "Sable",
+      "default_launch_container": "window",
+      "url": "https://dev.sable.moe/"
     }
   ]
 }

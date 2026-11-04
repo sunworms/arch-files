@@ -2,3 +2,13 @@
 linemode = "size_and_mtime"
 show_hidden = true
 show_symlink = true
+
+[[plugin.prepend_fetchers]]
+group = "git"
+run = "git"
+url = "*"
+
+[[plugin.prepend_fetchers]]
+group = "git"
+run = "git"
+url = "*/"

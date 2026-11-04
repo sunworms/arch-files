@@ -1,5 +1,5 @@
 [accessibility]
-ui_scale = 1.05
+ui_scale = 1.0
 
 [audio]
 enable_overdrive = true
@@ -8,103 +8,92 @@ enable_overdrive = true
 order = ["default", "right"]
 
 [bar.default]
-background_opacity = 1.0
+background_opacity = 0.9
 capsule = true
-capsule_opacity = 1.0
-capsule_radius = 8.0
+capsule_opacity = 0.9
+capsule_radius = 6.0
 center = ["clock"]
 end = ["tray", "group:sysmon", "group:osd"]
 margin_edge = 0
 margin_ends = 0
 position = "left"
 radius = 0
-radius_bottom_right = 10
-radius_top_right = 10
-scale = 1.05
+radius_bottom_right = 8
+radius_top_right = 8
+scale = 1.0
 shadow = true
 start = ["group:misc", "group:music"]
 thickness = 30
 widget_spacing = 10
 
 [[bar.default.capsule_group]]
-fill = "surface_variant"
+fill = "surface_container"
 id = "sysmon"
 members = ["cpu", "ram", "temp"]
-opacity = 1.0
 padding = 6.0
-radius = 8.0
 
 [[bar.default.capsule_group]]
-fill = "surface_variant"
+fill = "surface_container"
 id = "osd"
 members = ["volume", "brightness", "battery"]
-opacity = 1.0
 padding = 6.0
-radius = 8.0
 
 [[bar.default.capsule_group]]
-fill = "surface_variant"
+fill = "surface_container"
 id = "music"
 members = ["media", "cat", "audio_visualizer"]
-opacity = 1.0
 padding = 6.0
-radius = 8.0
 
 [[bar.default.capsule_group]]
-fill = "surface_variant"
+fill = "surface_container"
 id = "misc"
 members = ["launcher", "wallpaper", "mpvpaper"]
-opacity = 1.0
 padding = 6.0
-radius = 8.0
 
 [bar.right]
-background_opacity = 1.0
+background_opacity = 0.9
 capsule = true
-capsule_opacity = 1.0
-capsule_radius = 8.0
+capsule_opacity = 0.9
+capsule_radius = 6.0
 center = ["workspaces"]
 enabled = true
 end = ["group:net", "group:notif", "group:mpv"]
 margin_ends = 0
 position = "right"
 radius = 0
-radius_bottom_left = 10
-radius_top_left = 10
-scale = 1.05
+radius_bottom_left = 8
+radius_top_left = 8
+scale = 1.0
 shadow = true
 start = ["taskbar"]
 thickness = 30
 
 [[bar.right.capsule_group]]
 enabled = true
-fill = "surface_variant"
+fill = "surface_container"
 id = "net"
-members = ["network", "toggle", "bluetooth"]
-opacity = 1.0
+members = ["warp", "network", "bluetooth"]
 padding = 6.0
-radius = 8.0
 
 [[bar.right.capsule_group]]
 enabled = true
-fill = "surface_variant"
+fill = "surface_container"
 id = "notif"
 members = ["notifications", "clipboard"]
-opacity = 1.0
 padding = 6.0
-radius = 8.0
 
 [[bar.right.capsule_group]]
 enabled = true
-fill = "surface_variant"
+fill = "surface_container"
 id = "mpv"
 members = ["recorder", "widget", "mirror"]
-opacity = 1.0
 padding = 6.0
-radius = 8.0
 
 [battery]
 warning_threshold = 20
+
+[bluetooth]
+connect_when_enabled = true
 
 [calendar]
 enabled = true
@@ -116,9 +105,20 @@ type = "google"
 
 [dock]
 auto_hide = true
-background_opacity = 1.0
+background_opacity = 0.9
 enabled = false
 position = "top"
+
+[hooks]
+started = '''
+/usr/bin/env gdbus call \
+  --session \
+  --dest org.freedesktop.portal.Desktop \
+  --object-path /org/freedesktop/portal/desktop \
+  --method org.freedesktop.portal.Settings.Read \
+  org.freedesktop.appearance \
+  color-scheme
+'''
 
 [idle]
 behavior_order = ["idle-behavior", "idle-behavior-2"]
@@ -135,6 +135,9 @@ timeout = 600
 
 [location]
 auto_locate = false
+
+[lockscreen]
+transition = []
 
 [lockscreen_widgets]
 enabled = true
@@ -181,8 +184,8 @@ show_login_button = true
 [lockscreen_widgets.widget.logout]
 box_height = 48.0
 box_width = 48.0
-cx = 727.0
-cy = 986.5
+cx = 712.5
+cy = 932.5
 output = "eDP-1"
 rotation = 0.0
 type = "button"
@@ -205,8 +208,8 @@ type = "media_player"
 [lockscreen_widgets.widget.reboot]
 box_height = 48.0
 box_width = 48.0
-cx = 855.0
-cy = 986.5
+cx = 856.5
+cy = 932.5
 output = "eDP-1"
 rotation = 0.0
 type = "button"
@@ -220,8 +223,8 @@ variant = "default"
 [lockscreen_widgets.widget.shutdown]
 box_height = 48.0
 box_width = 48.0
-cx = 919.0
-cy = 986.5
+cx = 927.0
+cy = 932.5
 output = "eDP-1"
 rotation = 0.0
 type = "button"
@@ -235,8 +238,8 @@ variant = "default"
 [lockscreen_widgets.widget.suspend]
 box_height = 48.0
 box_width = 48.0
-cx = 791.0
-cy = 986.5
+cx = 784.5
+cy = 932.5
 output = "eDP-1"
 rotation = 0.0
 type = "button"
@@ -274,20 +277,16 @@ forecast_days = 2
 show_forecast = true
 
 [notification]
-background_opacity = 1.0
-scale = 1.05
+background_opacity = 0.9
+scale = 1.0
 
 [osd]
-background_opacity = 1.0
-scale = 1.05
+background_opacity = 0.9
+scale = 1.0
 
 [plugin_settings."alexander/screen-toolkit"]
-panel-legacy_placement = "attached"
 panel_placement = "attached"
 result_placement = "attached"
-
-[plugin_settings."cleboost/hotspot"]
-panel_open_near_click = false
 
 [plugin_settings."elijaharch/wl-screen-mirror"]
 controls_open_near_click = false
@@ -296,7 +295,7 @@ controls_open_near_click = false
 video_directory = "/home/sunny/Pictures/walls/videos"
 
 [plugins]
-enabled = ["noctalia/screen_recorder", "noctalia/kaomoji", "noctalia/bongocat", "noctalia/mpvpaper", "elijaharch/wl-screen-mirror", "cleboost/hotspot", "alexander/screen-toolkit"]
+enabled = ["noctalia/screen_recorder", "noctalia/kaomoji", "noctalia/bongocat", "noctalia/mpvpaper", "elijaharch/wl-screen-mirror", "alexander/screen-toolkit", "levi/warp"]
 
 [shell]
 avatar_path = "/home/sunny/.face"
@@ -305,11 +304,13 @@ clipboard_image_action_command = "satty -f -"
 password_style = "random"
 polkit_agent = true
 settings_show_advanced = true
+settings_window_translucent = true
 telemetry_enabled = false
 
 [shell.launcher]
 app_grid = true
 compact = true
+default_view = "all"
 sort_by_usage = false
 
 [shell.panel]
@@ -319,7 +320,7 @@ transparency_mode = "glass"
 
 [shell.screenshot]
 directory = "~/Pictures/Screenshots"
-remember_last_region = true
+remember_last_region = false
 
 [[shell.session.actions]]
 action = "lock"
@@ -356,27 +357,48 @@ variant = "default"
 
 [theme]
 builtin = "Noctalia"
-community_palette = "Catppuccin Lavender"
+community_palette = "Catppuccin Mocha Lavender"
 source = "wallpaper"
 wallpaper_scheme = "faithful"
 
 [theme.templates]
 builtin_ids = ["foot", "gtk3", "gtk4", "kcolorscheme", "qt", "niri"]
-community_ids = ["yazi"]
-
-[theme.templates.user.nvim-base16]
-input_path = "~/.config/noctalia/templates/matugen.lua"
-output_path = "~/.config/matugen/matugen.lua"
-post_hook = "pkill -SIGUSR1 nvim"
+community_ids = ["yazi", "lazygit", "bat", "lsd", "fzf"]
 
 [theme.templates.user.variables]
 input_path = "~/.config/noctalia/templates/variables.fish"
 output_path = "~/.config/foot/variables.fish"
-post_hook = "chmod +x ~/.config/foot/variables.fish && ~/.local/bin/reload-foot"
+post_hook = "chmod +x ~/.config/foot/variables.fish && ~/.config/foot/reload.fish"
+
+[theme.templates.user.vim-colors]
+input_path = "~/.config/noctalia/templates/vim-colors.vim"
+output_path = "~/.cache/noctalia/colors.vim"
+post_hook = '''pkill -SIGUSR1 nvim; for s in $(vim --serverlist 2>/dev/null); do vim --servername "$s" --remote-send '<C-\><C-N>:source ~/.cache/noctalia/colors.vim<CR>'; done'''
 
 [theme.templates.user.zathura]
 input_path = "~/.config/noctalia/templates/zathurarc"
 output_path = "~/.config/zathura/zathurarc"
+post_hook = '''
+#!/usr/bin/env bash
+set -euo pipefail
+
+zathura_instances=$(dbus-send --session \
+    --dest=org.freedesktop.DBus \
+    --type=method_call \
+    --print-reply \
+    /org/freedesktop/DBus \
+    org.freedesktop.DBus.ListNames |
+    grep -o 'org.pwmt.zathura.PID-[0-9]*' || true)
+
+for id in $zathura_instances; do
+    dbus-send --session \
+        --dest="$id" \
+        --type=method_call \
+        /org/pwmt/zathura \
+        org.pwmt.zathura.ExecuteCommand \
+        string:"source"
+done
+'''
 
 [wallpaper]
 directory = "/home/sunny/Pictures/walls"
@@ -408,6 +430,7 @@ visualization = "gauge"
 custom_image = ""
 glyph = "gender-transgender"
 custom_image_colorize = true
+glyph = "gender-transgender"
 
 [widget.media]
 album_art_only = true
@@ -436,7 +459,6 @@ type = "noctalia/screen_recorder:recorder"
 capsule = true
 group_by_workspace = true
 hide_empty_workspaces = true
-only_active_workspace = true
 
 [widget.temp]
 show_value = false
@@ -444,11 +466,11 @@ stat = "cpu_temp"
 type = "sysmon"
 visualization = "gauge"
 
-[widget.toggle]
-type = "cleboost/hotspot:toggle"
-
 [widget.volume]
 show_label = false
+
+[widget.warp]
+type = "levi/warp:warp"
 
 [widget.widget]
 type = "alexander/screen-toolkit:widget"

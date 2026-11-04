@@ -15,7 +15,6 @@ cachyos-v3-mirrorlist
 cachyos-v4-mirrorlist
 chaotic-keyring
 chaotic-mirrorlist
-cloudflare-warp-bin
 curl
 dnsmasq
 dolphin-emu-git
@@ -94,6 +93,7 @@ terminus-font
 tesseract
 tinymist
 tree-sitter-cli
+ttf-ubuntu-mono-nerd
 typst
 typstyle
 unrar

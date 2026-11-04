@@ -12,9 +12,7 @@ for pkg_file in pkg_dir.glob("*.txt"):
     else:
         decman.pacman.packages |= set(pkgs)
 
-decman.pacman.ignored_packages |= {"chromium-widevine"}
-
-decman.aur.ignored_packages |= {"dummy-nautilus", "chromium-widevine"}
+decman.aur.ignored_packages |= {"dummy-nautilus"}
 
 pkgbuild_root = Path("../pkgbuilds").resolve()
 

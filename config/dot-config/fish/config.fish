@@ -1,14 +1,17 @@
 if status is-interactive
     abbr l 'ls -alh'
-    abbr ll 'ls -l'
+    abbr ll 'ls -lh'
     abbr ls 'ls --color=tty'
-    abbr osb 'nh os boot --ask -f ./.'
-    abbr osbu 'nh os build -f ./.'
-    abbr osca 'nh clean all'
-    abbr oscd 'nh clean all --no-direnv'
-    abbr oss 'nh os switch --ask -f ./.'
-    abbr ost 'nh os test --ask -f ./.'
+    abbr lg lazygit
 
     set -g fish_greeting
     set -g fish_key_bindings fish_vi_key_bindings
 end
+if status is-login
+    set -gx DIRENV_LOG_FORMAT
+    set -gx EDITOR nvim
+    set -gx VISUAL nvim
+    set -gx SUDO_EDITOR nvim
+    set -gx MANPAGER "nvim +Man!"
+end
+

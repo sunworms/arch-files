@@ -4,11 +4,6 @@ rev = "3f2b882"
 hash = "336548d9f67926e12d5584f60b790f1"
 
 [[plugin.deps]]
-use = "TD-Sky/sudo"
-rev = "afd61ce"
-hash = "d390cd2d8b996939a695411b446f58d0"
-
-[[plugin.deps]]
 use = "yazi-rs/plugins:mount"
 rev = "3f2b882"
 hash = "46cbdc05596a3ecd730b288e28c7079d"
@@ -32,11 +27,6 @@ hash = "7b625412411be411153886894d9acaf"
 use = "yazi-rs/plugins:chmod"
 rev = "3f2b882"
 hash = "5b1c276b75cae91cbbdbe7863f39a540"
-
-[[plugin.deps]]
-use = "XYenon/clipboard"
-rev = "0f4982a"
-hash = "dcda5f179482ee8cc191ad679c9d72e0"
 
 [[plugin.deps]]
 use = "XYenon/yafg"

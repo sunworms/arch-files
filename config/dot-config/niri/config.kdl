@@ -303,9 +303,6 @@ binds {
 	Mod+Shift+Slash {
 		show-hotkey-overlay 
 	}
-	Mod+Shift+T hotkey-overlay-title="Layers" {
-		spawn "foot" "sh" "-c" "niri msg layers; fish"
-	}
 	Mod+Shift+U {
 		move-workspace-down 
 	}
@@ -324,7 +321,7 @@ binds {
 	Mod+Space repeat=false {
 		toggle-overview 
 	}
-	Mod+T hotkey-overlay-title="Open a Terminal: foot" {
+	Mod+T hotkey-overlay-title="Open a Terminal: foot" repeat=false {
 		spawn "foot"
 	}
 	Mod+U {
@@ -378,7 +375,7 @@ binds {
 	XF86AudioRaiseVolume allow-when-locked=true {
 		spawn "noctalia" "msg" "volume-up" "5"
 	}
-	XF86Calculator hotkey-overlay-title="Open Calendar" {
+	XF86Calculator hotkey-overlay-title="Calendar" {
 		spawn "noctalia" "msg" "panel-toggle" "control-center" "calendar"
 	}
 	XF86Favorites hotkey-overlay-title="Emoji Selector" {
@@ -387,7 +384,7 @@ binds {
 	XF86Launch5 hotkey-overlay-title="Lock the Screen" {
 		spawn "noctalia" "msg" "session" "lock"
 	}
-	XF86Launch6 hotkey-overlay-title="Window Switcher" {
+	XF86Launch6 hotkey-overlay-title="Niri Window Switcher" {
 		spawn "noctalia" "msg" "window-switcher"
 	}
 	XF86MonBrightnessDown allow-when-locked=true {
@@ -413,17 +410,16 @@ cursor {
 	xcursor-size 24
 	xcursor-theme "volantes_cursors"
 }
+debug {
+	honor-xdg-activation-with-invalid-serial 
+}
 environment {
-	EDITOR "nvim"
-	GTK_THEME "adw-gtk3"
 	GTK_USE_PORTAL "1"
 	NIXOS_OZONE_WL "1"
 	QT_AUTO_SCREEN_SCALE_FACTOR "1"
 	QT_QPA_PLATFORMTHEME "qt6ct"
 	QT_WAYLAND_DISABLE_WINDOWDECORATION "1"
-	SUDO_EDITOR "nvim"
 	TERMINAL "foot"
-	VISUAL "nvim"
 	_JAVA_AWT_WM_NONREPARENTING "1"
 }
 gestures {
@@ -434,7 +430,7 @@ gestures {
 hotkey-overlay {
 	skip-at-startup 
 }
-include "noctalia.kdl" optional=true
+include "~/.config/niri/noctalia.kdl" optional=true
 input {
 	disable-power-key-handling 
 	keyboard {
@@ -447,11 +443,22 @@ input {
 	}
 }
 layer-rule {
-	match namespace="^noctalia-wallpaper*"
+	match namespace="^noctalia-wallpaper$"
 	match namespace="^mpvpaper$"
 	
 	place-within-backdrop true
 }
+layer-rule {
+	background-effect {
+		blur true
+		xray true
+	}
+	match namespace="^noctalia-bar*"
+	match namespace="^noctalia-notification$"
+	match namespace="^noctalia-osd$"
+	
+}
+
 layout {
 	background-color "transparent"
 	border {
@@ -478,10 +485,10 @@ layout {
 		spread 5
 	}
 	struts {
-		bottom 20
-		left 20
-		right 20
-		top 20
+		bottom 15
+		left 15
+		right 15
+		top 15
 	}
 }
 overview {
@@ -511,8 +518,8 @@ screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 spawn-at-startup "noctalia"
 spawn-at-startup "wl-clip-persist" "--clipboard" "regular"
 
-spawn-sh-at-startup "niri-float-sticky -title 'Picture-in-Picture|Picture in picture'"
 spawn-sh-at-startup "kanata --cfg ~/.config/kanata/config.kbd"
+spawn-sh-at-startup "niri-float-sticky -title '^Picture-in-Picture$|^Picture in picture$'"
 
 switch-events {
 	lid-close {
@@ -527,7 +534,7 @@ window-rule {
 	default-column-width {
 		fixed 525
 	}
-	default-floating-position x=1025 y=225
+	default-floating-position x=1100 y=225
 	default-window-height {
 		fixed 295
 	}
@@ -537,17 +544,24 @@ window-rule {
 	open-floating true
 }
 window-rule {
-	default-floating-position x=3000 y=2000
-	match title="discord.com is sharing a window."
+	match app-id="^org.gnome.Nautilus$" title=".*Files?"
+	
+	open-floating true
 }
 window-rule {
+	background-effect {
+		blur true
+		xray true
+	}
 	default-column-width {
-		fixed 900
+		fixed 1000
 	}
 	default-window-height {
-		fixed 600
+		fixed 750
 	}
-	match app-id="xdg_filechooser"
+	match app-id="^xdg_filechooser$"
+	match app-id="^dev.noctalia.Noctalia$"
+	
 	open-floating true
 }
 window-rule {
@@ -556,10 +570,18 @@ window-rule {
 		xray true
 	}
 	match app-id="^org.pwmt.zathura$"
+	match app-id="^foot$"
+	match app-id="^emacs$"
+	match app-id="^Emacs$"
+	
+}
+window-rule {
+	default-floating-position x=3000 y=2000
+	match title=".+?is sharing a window.$"
 }
 window-rule {
 	clip-to-geometry true
 	draw-border-with-background false
-	geometry-corner-radius 12
+	geometry-corner-radius 6
 }
 
