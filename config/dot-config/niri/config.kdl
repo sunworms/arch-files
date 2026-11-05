@@ -454,9 +454,6 @@ layer-rule {
 		xray true
 	}
 	match namespace="^noctalia-bar*"
-	match namespace="^noctalia-notification$"
-	match namespace="^noctalia-osd$"
-	
 }
 
 layout {
