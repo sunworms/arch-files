@@ -69,7 +69,7 @@ mpvpaper
 ncdu
 neovim
 networkmanager
-niri
+niri-git
 noctalia-git
 noto-fonts
 noto-fonts-cjk
