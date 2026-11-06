@@ -69,7 +69,6 @@ mpvpaper
 ncdu
 neovim
 networkmanager
-niri-git
 noctalia-git
 noto-fonts
 noto-fonts-cjk
@@ -100,6 +99,7 @@ tree-sitter-cli
 ttf-ubuntu-mono-nerd
 typst
 typstyle
+umbriel-git
 unrar
 unzip
 upower
@@ -115,8 +115,8 @@ wireplumber
 wl-clipboard
 wl-mirror
 wpa_supplicant
-xdg-desktop-portal-gnome
 xdg-desktop-portal-gtk
+xdg-desktop-portal-umbriel-git
 xorg-server
 xorg-xhost
 xorg-xinit
