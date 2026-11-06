@@ -120,7 +120,6 @@ xdg-desktop-portal-umbriel-git
 xorg-server
 xorg-xhost
 xorg-xinit
-xwayland-satellite
 yay
 yazi
 zathura
