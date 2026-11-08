@@ -67,7 +67,7 @@ mgba-qt
 mpv
 mpvpaper
 ncdu
-neovim
+neovim-git
 networkmanager
 noctalia-git
 noto-fonts
