@@ -3,3 +3,4 @@ warp-svc.service
 ly@tty1.service
 btrfs-scrub@-.timer
 libvirtd.socket
+watt.service
