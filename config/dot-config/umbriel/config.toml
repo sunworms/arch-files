@@ -238,7 +238,7 @@ enabled = false
 match.title = "^(Picture-in-Picture|Picture in picture)$"
 default_floating = true
 default_floating_size_px = { width = 525, height = 295 }
-default_position = { x = 1100, y = 225, anchor = "top_left" }
+default_position = { x = 950, y = 225, anchor = "top_left" }
 default_pinned = true
 
 [[window_rule]]
