@@ -275,4 +275,4 @@ blur_popups = true
 
 [[layer_rule]]
 match.namespace = "^noctalia-(notification|dock|panel|attached-panel|osd)$"
-blur_optimized = false
+blur_optimized = true
