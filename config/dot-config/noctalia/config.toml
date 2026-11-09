@@ -5,88 +5,85 @@ ui_scale = 1.0
 enable_overdrive = true
 
 [bar]
-order = ["default", "right"]
+order = ["default"]
 
 [bar.default]
 background_opacity = 0.9
 capsule = true
 capsule_opacity = 0.9
 capsule_radius = 6.0
+start = [ "workspaces", "group:misc", "group:screen", "group:music" ]
 center = ["clock"]
-end = ["tray", "group:sysmon", "group:osd"]
+end = [ "tray", "group:net", "group:sysmon", "group:osd" ]
 margin_edge = 0
 margin_ends = 0
-position = "left"
+position = "top"
 radius = 0
 radius_bottom_right = 8
-radius_top_right = 8
+radius_bottom_left = 8
 scale = 1.0
 shadow = true
-start = ["group:misc", "group:music"]
 thickness = 30
 widget_spacing = 10
 
 [[bar.default.capsule_group]]
+accordion = false
+accordion_direction = "end"
+border_width = 1.0
+enabled = true
 fill = "surface_container"
 id = "sysmon"
-members = ["cpu", "ram", "temp"]
+members = [ "cpu", "ram", "temp" ]
 padding = 6.0
 
 [[bar.default.capsule_group]]
+accordion = false
+accordion_direction = "end"
+border_width = 1.0
+enabled = true
 fill = "surface_container"
 id = "osd"
-members = ["volume", "brightness", "battery"]
+members = [ "volume", "brightness", "battery" ]
 padding = 6.0
 
 [[bar.default.capsule_group]]
+accordion = false
+accordion_direction = "end"
+border_width = 1.0
+enabled = true
 fill = "surface_container"
 id = "music"
-members = ["media", "cat", "audio_visualizer"]
+members = [ "media", "cat" ]
 padding = 6.0
 
 [[bar.default.capsule_group]]
+accordion = false
+accordion_direction = "end"
+border_width = 1.0
+enabled = true
 fill = "surface_container"
 id = "misc"
-members = ["launcher", "wallpaper", "mpvpaper"]
+members = [ "wallpaper", "mpvpaper" ]
 padding = 6.0
 
-[bar.right]
-background_opacity = 0.9
-capsule = true
-capsule_opacity = 0.9
-capsule_radius = 6.0
-center = ["workspaces"]
-enabled = true
-end = ["group:net", "group:notif", "group:mpv"]
-margin_ends = 0
-position = "right"
-radius = 0
-radius_bottom_left = 8
-radius_top_left = 8
-scale = 1.0
-shadow = true
-start = ["taskbar"]
-thickness = 30
-
-[[bar.right.capsule_group]]
+[[bar.default.capsule_group]]
+accordion = false
+accordion_direction = "end"
+border_width = 1.0
 enabled = true
 fill = "surface_container"
 id = "net"
-members = ["warp", "network", "bluetooth"]
+members = [ "warp", "network", "bluetooth" ]
 padding = 6.0
 
-[[bar.right.capsule_group]]
+[[bar.default.capsule_group]]
+accordion = false
+accordion_direction = "end"
+border_width = 1.0
 enabled = true
 fill = "surface_container"
-id = "notif"
-members = ["notifications", "clipboard"]
-padding = 6.0
-
-[[bar.right.capsule_group]]
-enabled = true
-fill = "surface_container"
-id = "mpv"
-members = ["recorder", "widget", "mirror"]
+id = "screen"
+members = [ "recorder", "widget", "mirror" ]
 padding = 6.0
 
 [battery]
@@ -142,7 +139,7 @@ transition = []
 [lockscreen_widgets]
 enabled = true
 schema_version = 2
-widget_order = ["login-box", "logout", "shutdown", "reboot", "suspend", "media", "clock", "weather", "sysmon"]
+widget_order = [ "login-box", "logout", "shutdown", "reboot", "suspend", "media", "clock", "weather", "sysmon" ]
 
 [lockscreen_widgets.grid]
 cell_size = 16
@@ -155,31 +152,44 @@ box_width = 208.0
 cx = 823.0
 cy = 578.5
 output = "eDP-1"
+placement_height = 1000.0
+placement_width = 1600.0
 rotation = 0.0
 type = "clock"
 
 [lockscreen_widgets.widget.clock.settings]
 center_text = true
 clock_style = "digital"
-format = '{:%H:%M\n%a, %b %d}'
+format = "{:%H:%M\\n%a, %b %d}"
 
 [lockscreen_widgets.widget.login-box]
-box_height = 103.0
+box_height = 70.0
 box_width = 400.0
 cx = 823.0
 cy = 806.0
 output = "eDP-1"
+placement_height = 1000.0
+placement_width = 1600.0
 rotation = 0.0
 type = "login_box"
 
 [lockscreen_widgets.widget.login-box.settings]
-background_color = "surface_variant"
+background_color = "surface_container"
 background_opacity = 1.0
 background_radius = 12.0
+center_password_text = false
 input_opacity = 1.0
 input_radius = 6.0
 layout = "compact"
+show_caps_lock = true
+show_keyboard_layout = true
 show_login_button = true
+show_media = true
+show_media_controls = true
+show_password_reveal = true
+show_session_buttons = true
+show_unlock_hint = true
+show_weather = true
 
 [lockscreen_widgets.widget.logout]
 box_height = 48.0
@@ -187,6 +197,8 @@ box_width = 48.0
 cx = 712.5
 cy = 932.5
 output = "eDP-1"
+placement_height = 1000.0
+placement_width = 1600.0
 rotation = 0.0
 type = "button"
 
@@ -202,6 +214,8 @@ box_width = 0.0
 cx = 823.0
 cy = 290.5
 output = "eDP-1"
+placement_height = 1000.0
+placement_width = 1600.0
 rotation = 0.0
 type = "media_player"
 
@@ -211,6 +225,8 @@ box_width = 48.0
 cx = 856.5
 cy = 932.5
 output = "eDP-1"
+placement_height = 1000.0
+placement_width = 1600.0
 rotation = 0.0
 type = "button"
 
@@ -226,6 +242,8 @@ box_width = 48.0
 cx = 927.0
 cy = 932.5
 output = "eDP-1"
+placement_height = 1000.0
+placement_width = 1600.0
 rotation = 0.0
 type = "button"
 
@@ -241,6 +259,8 @@ box_width = 48.0
 cx = 784.5
 cy = 932.5
 output = "eDP-1"
+placement_height = 1000.0
+placement_width = 1600.0
 rotation = 0.0
 type = "button"
 
@@ -256,6 +276,8 @@ box_width = 0.0
 cx = 551.0
 cy = 578.5
 output = "eDP-1"
+placement_height = 1000.0
+placement_width = 1600.0
 rotation = 0.0
 type = "sysmon"
 
@@ -269,6 +291,8 @@ box_width = 208.0
 cx = 1095.0
 cy = 578.5
 output = "eDP-1"
+placement_height = 1000.0
+placement_width = 1600.0
 rotation = 0.0
 type = "weather"
 
