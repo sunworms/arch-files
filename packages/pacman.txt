@@ -33,6 +33,7 @@ git
 git-lfs
 gnome-keyring
 gpu-screen-recorder-git
+greetd-tuigreet
 grim
 gst-libav
 gst-plugin-pipewire
@@ -59,7 +60,6 @@ libxcrypt-compat
 linux-cachyos
 linux-firmware
 lsd
-ly
 man-db
 melonds-git
 mesa
