@@ -96,6 +96,10 @@ enabled = false
 "Alt+Shift+Tab" = "spawn noctalia msg window-switcher hold reverse"
 "Mod+Tab" = "spawn noctalia msg window-switcher hold"
 "Mod+Shift+Tab" = "spawn noctalia msg window-switcher hold reverse"
+"Alt+grave" = "spawn noctalia msg window-switcher hold workspace"
+"Alt+Shift+grave" = "spawn noctalia msg window-switcher hold workspace reverse"
+"Mod+grave" = "spawn noctalia msg window-switcher hold workspace"
+"Mod+Shift+grave" = "spawn noctalia msg window-switcher hold workspace reverse"
 
 "Print" = "spawn noctalia msg screenshot-region"
 "Ctrl+Print" = "spawn noctalia msg screenshot-fullscreen all"
@@ -115,10 +119,10 @@ enabled = false
 "XF86AudioPrev" = { action = "spawn noctalia msg media previous", allow_when_locked = true }
 "XF86MonBrightnessUp" = { action = "spawn noctalia msg brightness-up 5", allow_when_locked = true }
 "XF86MonBrightnessDown" = { action = "spawn noctalia msg brightness-down 5", allow_when_locked = true }
-"XF86Calculator" = "spawn noctalia msg panel-toggle control-center calendar"
+"XF86Calculator" = "spawn noctalia msg window-switcher"
 "XF86Favorites" = "spawn noctalia msg panel-toggle launcher /emo"
 "XF86Launch5" = "spawn noctalia msg session lock"
-"XF86Launch6" = "spawn noctalia msg window-switcher"
+"XF86Launch6" = "spawn noctalia msg panel-toggle control-center"
 "XF86PowerOff" = "spawn noctalia msg session lock-and-suspend"
 "XF86Tools" = "spawn noctalia msg settings-toggle"
 
