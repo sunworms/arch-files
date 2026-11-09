@@ -311,12 +311,15 @@ scale = 1.0
 [plugin_settings."alexander/screen-toolkit"]
 panel_placement = "attached"
 result_placement = "attached"
+panel_open_near_click = true
+result_open_near_click = true
 
 [plugin_settings."elijaharch/wl-screen-mirror"]
-controls_open_near_click = false
+controls_open_near_click = true
 
 [plugin_settings."noctalia/mpvpaper"]
 video_directory = "/home/sunny/Pictures/walls/videos"
+picker_open_near_click = true
 
 [plugins]
 enabled = ["noctalia/screen_recorder", "noctalia/kaomoji", "noctalia/bongocat", "noctalia/mpvpaper", "elijaharch/wl-screen-mirror", "alexander/screen-toolkit", "levi/warp"]
@@ -341,6 +344,8 @@ sort_by_usage = false
 clipboard_placement = "attached"
 launcher_placement = "attached"
 transparency_mode = "glass"
+open_near_click_wallpaper = true
+open_near_click_control_center = true
 
 [shell.screenshot]
 directory = "~/Pictures/Screenshots"
