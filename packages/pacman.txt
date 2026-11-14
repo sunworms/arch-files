@@ -54,7 +54,6 @@ less
 libayatana-appindicator
 libpulse
 libva-intel-driver
-libvirt
 libxcrypt-compat
 linux-cachyos
 linux-firmware
@@ -81,7 +80,6 @@ pipewire-jack
 pipewire-pulse
 poppler
 qbittorrent-git
-qemu-desktop
 qt5ct
 qt6ct
 rclone
@@ -104,7 +102,6 @@ unrar
 unzip
 upower
 uv
-virt-manager
 volantes-cursors
 vulkan-intel
 websocat
