@@ -88,6 +88,7 @@ sameboy
 satty
 slurp
 sof-firmware
+steam
 sudo
 systemd
 terminus-font
@@ -106,8 +107,6 @@ volantes-cursors
 vulkan-intel
 websocat
 wf-recorder
-wine
-winetricks
 wireplumber
 wl-clipboard
 wl-mirror
