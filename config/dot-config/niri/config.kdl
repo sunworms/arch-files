@@ -375,8 +375,8 @@ binds {
 	XF86AudioRaiseVolume allow-when-locked=true {
 		spawn "noctalia" "msg" "volume-up" "5"
 	}
-	XF86Calculator hotkey-overlay-title="Calendar" {
-		spawn "noctalia" "msg" "panel-toggle" "control-center" "calendar"
+	XF86Launch6 hotkey-overlay-title="Control Center" {
+		spawn "noctalia" "msg" "panel-toggle" "control-center"
 	}
 	XF86Favorites hotkey-overlay-title="Emoji Selector" {
 		spawn "noctalia" "msg" "panel-toggle" "launcher" "/emo"
@@ -384,7 +384,7 @@ binds {
 	XF86Launch5 hotkey-overlay-title="Lock the Screen" {
 		spawn "noctalia" "msg" "session" "lock"
 	}
-	XF86Launch6 hotkey-overlay-title="Niri Window Switcher" {
+	XF86Calculator hotkey-overlay-title="Niri Window Switcher" {
 		spawn "noctalia" "msg" "window-switcher"
 	}
 	XF86MonBrightnessDown allow-when-locked=true {
