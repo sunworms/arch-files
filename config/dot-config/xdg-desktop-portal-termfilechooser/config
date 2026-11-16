@@ -1,5 +1,5 @@
 [filechooser]
 env=PATH='/usr/bin'
-env=TERMCMD='/usr/bin/foot --app-id=xdg_filechooser'
+env=TERMCMD='/usr/bin/kitty --single-instance --app-id=xdg_filechooser'
 cmd='/usr/share/xdg-desktop-portal-termfilechooser/yazi-wrapper.sh'
 default_dir=$HOME

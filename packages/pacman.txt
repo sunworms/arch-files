@@ -27,7 +27,6 @@ fastfetch
 ffmpeg
 fish
 fisher
-foot
 fzf
 git
 git-lfs
@@ -51,6 +50,7 @@ intel-media-driver
 intel-ucode
 jq
 kanata
+kitty-git
 lazygit
 less
 libayatana-appindicator
