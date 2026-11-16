@@ -63,7 +63,7 @@ border_width = 1.0
 enabled = true
 fill = "surface_container"
 id = "misc"
-members = [ "wallpaper", "mpvpaper" ]
+members = [ "launcher", "wallpaper", "mpvpaper" ]
 padding = 6.0
 
 [[bar.default.capsule_group]]
@@ -105,17 +105,6 @@ auto_hide = true
 background_opacity = 0.9
 enabled = false
 position = "top"
-
-[hooks]
-started = '''
-/usr/bin/env gdbus call \
-  --session \
-  --dest org.freedesktop.portal.Desktop \
-  --object-path /org/freedesktop/portal/desktop \
-  --method org.freedesktop.portal.Settings.Read \
-  org.freedesktop.appearance \
-  color-scheme
-'''
 
 [idle]
 behavior_order = ["idle-behavior", "idle-behavior-2"]
@@ -451,7 +440,7 @@ type = "sysmon"
 visualization = "gauge"
 
 [widget.launcher]
-custom_image = ""
+custom_image = "/home/sunny/.arch.svg"
 glyph = "gender-transgender"
 custom_image_colorize = true
 
