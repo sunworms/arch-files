@@ -8,7 +8,6 @@ CONFIG = f"{HOME}/.config"
 
 decman.directories[f"{CONFIG}"] = Directory(source_directory="../config/dot-config", owner=USER)
 
-decman.files[f"{HOME}/.face"] = File(source_file="../face", owner=USER)
 
 SYSTEM_SRC = Path("../config/system")
 
@@ -21,6 +20,7 @@ for path in SYSTEM_SRC.rglob("*"):
 decman.files["/boot/loader/entries/linux-cachyos.conf"] = File(source_file="../config/linux-cachyos.conf")
 decman.files["/usr/bin/xdg-terminal-exec"] = File(source_file="../scripts/bin/xdg-terminal-exec", permissions=0o755)
 
+decman.symlinks[f"{HOME}/.face"] = str(Path("../face").resolve())
 decman.symlinks[f"{HOME}/.arch.svg"] = str(Path("../pfps/arch.svg").resolve())
 decman.symlinks[f"{CONFIG}/yazi/package.toml"] = str(Path("../config/symlinks/yazi-package.toml").resolve())
 decman.symlinks[f"{CONFIG}/systemd/user/default.target.wants/clear-cache.service"] = str(Path("../config/dot-config/systemd/user/clear-cache.service").resolve())
