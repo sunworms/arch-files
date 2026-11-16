@@ -97,7 +97,7 @@ terminus-font
 tesseract
 tinymist
 tree-sitter-cli
-ttf-ubuntu-mono-nerd
+ttf-fantasque-nerd
 typst
 typstyle
 unrar
