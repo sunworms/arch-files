@@ -322,7 +322,7 @@ binds {
 		toggle-overview 
 	}
 	Mod+T hotkey-overlay-title="Open a Terminal: kitty" repeat=false {
-		spawn "kitty" "--single-instance"
+		spawn "kitty" "--single-instance" "--wait-for-single-instance-window-close"
 	}
 	Mod+U {
 		focus-workspace-down 
@@ -419,7 +419,7 @@ environment {
 	QT_AUTO_SCREEN_SCALE_FACTOR "1"
 	QT_QPA_PLATFORMTHEME "qt6ct"
 	QT_WAYLAND_DISABLE_WINDOWDECORATION "1"
-	TERMINAL "kitty --single-instance"
+	TERMINAL "kitty --single-instance --wait-for-single-instance-window-close"
 	_JAVA_AWT_WM_NONREPARENTING "1"
 }
 gestures {
