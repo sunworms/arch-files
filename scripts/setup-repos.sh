@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # =============================================================================
-#  setup-repos.sh — Add CachyOS + Chaotic-AUR repos to an Arch-based system
+#  setup-repos.sh — Add Chaotic-AUR repo to an Arch-based system
 #  Tested on: Arch Linux, Manjaro, EndeavourOS
 # =============================================================================
 
@@ -26,58 +26,13 @@ die()     { error "$*"; exit 1; }
 # ── Banner ────────────────────────────────────────────────────────────────────
 echo -e "${BOLD}"
 echo "╔══════════════════════════════════════════════════╗"
-echo "║   CachyOS Repos + Chaotic-AUR Setup Script      ║"
+echo "║   Chaotic-AUR Setup Script                      ║"
 echo "║   For Arch Linux and Arch-based distributions   ║"
 echo "╚══════════════════════════════════════════════════╝"
 echo -e "${RESET}"
 
 # =============================================================================
-# SECTION 1 — CachyOS Repositories
-# =============================================================================
-setup_cachyos() {
-    echo -e "\n${BOLD}━━━ Step 1: CachyOS Repositories ━━━${RESET}\n"
-
-    if grep -q '\[cachyos\]' /etc/pacman.conf 2>/dev/null; then
-        warn "CachyOS repos already present in /etc/pacman.conf — skipping."
-        return 0
-    fi
-
-    # Work in /tmp so all sibling files (including install-repo.awk) stay together
-    local WORKDIR="/tmp/cachyos-repo-setup"
-    rm -rf "$WORKDIR"
-    mkdir -p "$WORKDIR"
-
-    info "Downloading CachyOS repo tarball..."
-    curl -fsSL "https://mirror.cachyos.org/cachyos-repo.tar.xz" \
-        -o "$WORKDIR/cachyos-repo.tar.xz" \
-        || die "Failed to download CachyOS repo tarball."
-
-    info "Extracting..."
-    tar -xf "$WORKDIR/cachyos-repo.tar.xz" -C "$WORKDIR"
-
-    # The tarball extracts to a subdirectory called cachyos-repo/
-    # We MUST cd into it so install-repo.awk is found via a relative path
-    local SCRIPTDIR="$WORKDIR/cachyos-repo"
-    [[ -d "$SCRIPTDIR" ]] || die "Expected directory $SCRIPTDIR not found after extraction."
-    [[ -f "$SCRIPTDIR/cachyos-repo.sh" ]] || die "cachyos-repo.sh not found in $SCRIPTDIR."
-
-    info "Running official CachyOS installer (from its own directory)..."
-    pushd "$SCRIPTDIR" > /dev/null
-    bash cachyos-repo.sh
-    popd > /dev/null
-
-    # Verify the repos were actually added
-    if grep -q '\[cachyos\]' /etc/pacman.conf 2>/dev/null; then
-        success "CachyOS repositories confirmed in /etc/pacman.conf."
-    else
-        die "CachyOS repos were NOT added to /etc/pacman.conf. Check the installer output above."
-    fi
-
-    rm -rf "$WORKDIR"
-}
-
-# =============================================================================
-# SECTION 2 — Chaotic-AUR Repository
+# Chaotic-AUR Repository
 # =============================================================================
 setup_chaotic_aur() {
     echo -e "\n${BOLD}━━━ Step 2: Chaotic-AUR Repository ━━━${RESET}\n"
@@ -112,7 +67,7 @@ EOF
 }
 
 # =============================================================================
-# SECTION 3 — Final sync
+# Final sync
 # =============================================================================
 sync_databases() {
     echo -e "\n${BOLD}━━━ Step 3: Syncing package databases ━━━${RESET}\n"
@@ -124,10 +79,8 @@ sync_databases() {
 # =============================================================================
 # MAIN
 # =============================================================================
-setup_cachyos
 setup_chaotic_aur
 sync_databases
 
 echo -e "\n${GREEN}${BOLD}All done!${RESET}"
-echo -e "Verify CachyOS:     ${CYAN}pacman -Sl cachyos | head${RESET}"
 echo -e "Verify Chaotic-AUR: ${CYAN}pacman -Sl chaotic-aur | head${RESET}\n"

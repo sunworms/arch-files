@@ -9,11 +9,6 @@ bc
 bluez
 bluez-utils
 btrfs-progs
-cachyos-keyring
-cachyos-mirrorlist
-cachyos-rate-mirrors
-cachyos-v3-mirrorlist
-cachyos-v4-mirrorlist
 chaotic-keyring
 chaotic-mirrorlist
 chromium-widevine
