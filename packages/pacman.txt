@@ -52,8 +52,8 @@ libayatana-appindicator
 libpulse
 libva-intel-driver
 libxcrypt-compat
-linux-cachyos
 linux-firmware
+linux-xanmod-edge-x64v3
 lsd
 man-db
 melonds-git
