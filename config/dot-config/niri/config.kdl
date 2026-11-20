@@ -321,8 +321,8 @@ binds {
 	Mod+Space repeat=false {
 		toggle-overview 
 	}
-	Mod+T hotkey-overlay-title="Open a Terminal: kitty" repeat=false {
-		spawn "kitty" "--single-instance" "--wait-for-single-instance-window-close"
+	Mod+T hotkey-overlay-title="Open a Terminal: foot" repeat=false {
+		spawn "foot"
 	}
 	Mod+U {
 		focus-workspace-down 
@@ -419,7 +419,7 @@ environment {
 	QT_AUTO_SCREEN_SCALE_FACTOR "1"
 	QT_QPA_PLATFORMTHEME "qt6ct"
 	QT_WAYLAND_DISABLE_WINDOWDECORATION "1"
-	TERMINAL "kitty --single-instance --wait-for-single-instance-window-close"
+	TERMINAL "foot"
 	_JAVA_AWT_WM_NONREPARENTING "1"
 }
 gestures {
@@ -514,7 +514,6 @@ recent-windows {
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 spawn-at-startup "noctalia"
 spawn-at-startup "wl-clip-persist" "--clipboard" "regular"
-spawn-at-startup "kitty" "--single-instance" "--start-as=hidden"
 
 spawn-sh-at-startup "kanata --cfg ~/.config/kanata/config.kbd"
 spawn-sh-at-startup "niri-float-sticky -title '^Picture-in-Picture$|^Picture in picture$'"
@@ -568,7 +567,7 @@ window-rule {
 		xray true
 	}
 	match app-id="^org.pwmt.zathura$"
-	match app-id="^kitty$"
+	match app-id="^foot$"
 	match app-id="^emacs$"
 	match app-id="^Emacs$"
 	

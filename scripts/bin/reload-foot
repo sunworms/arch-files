@@ -1,0 +1,11 @@
+#!/usr/bin/env fish
+
+set -l theme_script "$HOME/.config/foot/variables.fish"
+
+if test -f $theme_script
+  for tty in /dev/pts/*
+    if test -w $tty
+      $theme_script > $tty 2>/dev/null
+    end
+  end
+end
