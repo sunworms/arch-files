@@ -79,6 +79,7 @@ poppler
 qbittorrent-git
 qt5ct
 qt6ct
+rate-mirrors
 rclone
 resvg
 ripgrep
