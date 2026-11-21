@@ -1,4 +1,5 @@
 cloudflare-warp-minimal-bin
 decman
+elan-lean-bin
 niri-float-sticky
 xdg-desktop-portal-termfilechooser
