@@ -88,6 +88,7 @@ satty
 slurp
 sof-firmware
 steam
+stylua
 sudo
 systemd
 terminus-font
