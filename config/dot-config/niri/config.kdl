@@ -528,6 +528,12 @@ window-rule {
 	match app-id=r#"^org\.wezfurlong\.wezterm$"#
 }
 window-rule {
+	default-floating-position x=1100 y=225
+	match title="Picture-in-Picture"
+	
+	open-floating true
+}
+window-rule {
 	default-column-width {
 		fixed 525
 	}
@@ -535,7 +541,6 @@ window-rule {
 	default-window-height {
 		fixed 295
 	}
-	match title="Picture-in-Picture"
 	match title="Picture in picture"
 	
 	open-floating true
