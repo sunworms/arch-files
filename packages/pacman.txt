@@ -53,6 +53,7 @@ libva-intel-driver
 libxcrypt-compat
 linux-firmware
 linux-xanmod-edge-x64v3
+localsend
 lsd
 man-db
 melonds-git
