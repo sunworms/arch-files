@@ -115,7 +115,7 @@
           "IconURL": "https://noai.duckduckgo.com/favicon.ico",
           "Alias": "@ddgnoai",
           "Description": "DuckDuckGo Search (No AI)",
-          "SuggestURLTemplate": "https://noai.duckduckgo.com/suggestions?q={searchTerms}"
+          "SuggestURLTemplate": "https://duckduckgo.com/ac/?q={searchTerms}&type=list"
         }
       ],
       "Default": "DuckDuckGo (No AI)",
