@@ -28,7 +28,7 @@ _JAVA_AWT_WM_NONREPARENTING = "1"
 lid_close = "noctalia msg session lock-and-suspend"
 
 [output.eDP-1]
-scale = 1.8
+scale = 1.7
 hdr = "auto"
 
 [appearance]
@@ -59,7 +59,7 @@ natural_scroll = true
 
 [input.cursor]
 theme = "volantes_cursors"
-size = 24
+size = 28
 
 [layout]
 mode = "scrolling"
