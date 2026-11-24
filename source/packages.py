@@ -12,8 +12,6 @@ for pkg_file in pkg_dir.glob("*.txt"):
     else:
         decman.pacman.packages |= set(pkgs)
 
-decman.aur.ignored_packages |= {"dummy-nautilus"}
-
 pkgbuild_root = Path("../pkgbuilds").resolve()
 
 decman.aur.custom_packages |= {
