@@ -11,6 +11,9 @@ autostart = [
 ]
 show_cheatsheet = false
 focus_on_activate = true
+xwayland = true
+xwayland_native_resolution = true
+xwayland_xsettings = true
 
 [environment]
 GTK_USE_PORTAL = "1"
