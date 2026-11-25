@@ -266,7 +266,7 @@ default_floating_size_px = { width = 900, height = 600 }
 blur = true
 
 [[window_rule]]
-match.app_id = ["^org.pwmt.zathura$", "^foot$", "^emacs$", "^Emacs$"]
+match.app_id = ["^org.pwmt.zathura$", "^foot$", "^emacs$", "^Emacs$", "^dev.noctalia.luciole$"]
 blur = true
 
 [[window_rule]]
