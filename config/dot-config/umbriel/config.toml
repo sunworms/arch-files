@@ -254,13 +254,13 @@ match.title = ".*Files?"
 default_floating = true
 
 [[window_rule]]
-match.app_id = "^dev.noctalia.Noctalia$"
+match.app_id = ["^dev.noctalia.Noctalia$", "^dev.noctalia.luciole-chooser$"]
 default_floating = true
 default_floating_size_px = { width = 1000, height = 750 }
 blur = true
 
 [[window_rule]]
-match.app_id = ["^xdg_filechooser$", "^dev.noctalia.UmbrielSharePicker$"]
+match.app_id = "^dev.noctalia.UmbrielSharePicker$"
 default_floating = true
 default_floating_size_px = { width = 900, height = 600 }
 blur = true

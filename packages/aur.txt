@@ -2,4 +2,3 @@ cloudflare-warp-minimal-bin
 decman
 elan-lean-bin
 python-pywalfox
-xdg-desktop-portal-termfilechooser

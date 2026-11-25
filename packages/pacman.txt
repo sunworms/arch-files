@@ -55,6 +55,7 @@ linux
 linux-firmware
 localsend
 lsd
+luciole-git
 man-db
 melonds-git
 mesa
@@ -116,7 +117,6 @@ xorg-server
 xorg-xhost
 xorg-xinit
 yay
-yazi
 zathura
 zathura-cb
 zathura-djvu
