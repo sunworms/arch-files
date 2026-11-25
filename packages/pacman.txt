@@ -81,7 +81,6 @@ qt5ct
 qt6ct
 rate-mirrors
 rclone
-resvg
 ripgrep
 sameboy
 satty
