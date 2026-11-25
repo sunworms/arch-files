@@ -17,7 +17,7 @@ for path in SYSTEM_SRC.rglob("*"):
         dest = Path("/etc") / relative
         decman.files[str(dest)] = File(source_file=str(path))
 
-decman.files["/boot/loader/entries/linux-xanmod-edge-x64v3.conf"] = File(source_file="../config/linux-xanmod-edge-x64v3.conf")
+decman.files["/boot/loader/entries/linux.conf"] = File(source_file="../config/linux.conf")
 
 decman.directories[f"{HOME}/.local/bin"] = Directory(
     source_directory="../scripts/bin",
