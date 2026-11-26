@@ -78,7 +78,9 @@ pipewire-jack
 pipewire-pulse
 poppler
 qbittorrent-git
+qt5-wayland
 qt5ct
+qt6-wayland
 qt6ct
 rate-mirrors
 rclone
