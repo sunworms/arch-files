@@ -138,11 +138,11 @@ visible = true
 [lockscreen_widgets.widget.clock]
 box_height = 128.0
 box_width = 208.0
-cx = 847.0
-cy = 595.0
+cx = 871.7
+cy = 611.8
 output = "eDP-1"
-placement_height = 1029.0
-placement_width = 1646.0
+placement_height = 1058.0
+placement_width = 1694.0
 rotation = 0.0
 type = "clock"
 
@@ -154,11 +154,11 @@ format = "{:%H:%M\\n%a, %b %d}"
 [lockscreen_widgets.widget.login-box]
 box_height = 70.0
 box_width = 400.0
-cx = 847.0
-cy = 829.5
+cx = 871.7
+cy = 852.9
 output = "eDP-1"
-placement_height = 1029.0
-placement_width = 1646.0
+placement_height = 1058.0
+placement_width = 1694.0
 rotation = 0.0
 type = "login_box"
 
@@ -183,11 +183,11 @@ show_weather = true
 [lockscreen_widgets.widget.logout]
 box_height = 48.0
 box_width = 48.0
-cx = 733.0
-cy = 959.5
+cx = 754.4
+cy = 986.5
 output = "eDP-1"
-placement_height = 1029.0
-placement_width = 1646.0
+placement_height = 1058.0
+placement_width = 1694.0
 rotation = 0.0
 type = "button"
 
@@ -200,22 +200,22 @@ variant = "default"
 [lockscreen_widgets.widget.media]
 box_height = 0.0
 box_width = 0.0
-cx = 847.0
-cy = 299.0
+cx = 871.7
+cy = 307.4
 output = "eDP-1"
-placement_height = 1029.0
-placement_width = 1646.0
+placement_height = 1058.0
+placement_width = 1694.0
 rotation = 0.0
 type = "media_player"
 
 [lockscreen_widgets.widget.reboot]
 box_height = 48.0
 box_width = 48.0
-cx = 881.0
-cy = 959.5
+cx = 906.7
+cy = 986.5
 output = "eDP-1"
-placement_height = 1029.0
-placement_width = 1646.0
+placement_height = 1058.0
+placement_width = 1694.0
 rotation = 0.0
 type = "button"
 
@@ -228,11 +228,11 @@ variant = "default"
 [lockscreen_widgets.widget.shutdown]
 box_height = 48.0
 box_width = 48.0
-cx = 953.5
-cy = 959.5
+cx = 981.3
+cy = 986.5
 output = "eDP-1"
-placement_height = 1029.0
-placement_width = 1646.0
+placement_height = 1058.0
+placement_width = 1694.0
 rotation = 0.0
 type = "button"
 
@@ -245,11 +245,11 @@ variant = "default"
 [lockscreen_widgets.widget.suspend]
 box_height = 48.0
 box_width = 48.0
-cx = 807.0
-cy = 959.5
+cx = 830.5
+cy = 986.5
 output = "eDP-1"
-placement_height = 1029.0
-placement_width = 1646.0
+placement_height = 1058.0
+placement_width = 1694.0
 rotation = 0.0
 type = "button"
 
@@ -262,11 +262,11 @@ variant = "default"
 [lockscreen_widgets.widget.sysmon]
 box_height = 0.0
 box_width = 0.0
-cx = 567.0
-cy = 595.0
+cx = 583.5
+cy = 611.8
 output = "eDP-1"
-placement_height = 1029.0
-placement_width = 1646.0
+placement_height = 1058.0
+placement_width = 1694.0
 rotation = 0.0
 type = "sysmon"
 
@@ -277,11 +277,11 @@ stat2 = "ram_pct"
 [lockscreen_widgets.widget.weather]
 box_height = 128.0
 box_width = 208.0
-cx = 1126.5
-cy = 595.0
+cx = 1159.3
+cy = 611.8
 output = "eDP-1"
-placement_height = 1029.0
-placement_width = 1646.0
+placement_height = 1058.0
+placement_width = 1694.0
 rotation = 0.0
 type = "weather"
 
