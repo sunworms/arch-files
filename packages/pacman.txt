@@ -11,6 +11,7 @@ bluez-utils
 btrfs-progs
 chaotic-keyring
 chaotic-mirrorlist
+chromium-widevine
 curl
 dnsmasq
 dolphin-emu-git
@@ -19,7 +20,6 @@ eden-git
 efibootmgr
 fastfetch
 ffmpeg
-firefox
 fish
 fisher
 foot
@@ -37,6 +37,7 @@ gst-plugins-bad
 gst-plugins-good
 gst-plugins-ugly
 gvfs-mtp
+helium-browser-bin
 hyfetch
 hyprpicker
 imagemagick
