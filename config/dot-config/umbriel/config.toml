@@ -249,7 +249,11 @@ default_position = { x = 1125, y = 225, anchor = "top_left" }
 default_pinned = true
 
 [[window_rule]]
+match.app_id = "^helium$"
+match.title = "^Spotify$"
 default_floating = true
+default_position = { x = 1250, y = 225, anchor = "top_left" }
+default_pinned = true
 
 [[window_rule]]
 match.app_id = ["^dev.noctalia.Noctalia$", "^dev.noctalia.luciole-chooser$"]
