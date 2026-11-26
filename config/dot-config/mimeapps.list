@@ -66,3 +66,5 @@ video/x-msvideo=mpv.desktop
 x-scheme-handler/ftp=helium.desktop
 x-scheme-handler/http=helium.desktop
 x-scheme-handler/https=helium.desktop
+x-scheme-handler/chrome=helium.desktop
+x-scheme-handler/discord=helium.desktop
