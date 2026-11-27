@@ -1,6 +1,7 @@
 spawn-sh-at-startup "lxqt-session && niri msg action quit -s"
 spawn-sh-at-startup "kanata --cfg ~/.config/kanata/config.kbd"
 spawn-sh-at-startup "niri-float-sticky -title '^Picture-in-Picture$|^Picture in picture$'"
+spawn-sh-at-startup "wl-clip-persist --clipboard regular"
 spawn-sh-at-startup "copyq"
 
 environment {

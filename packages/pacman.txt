@@ -103,6 +103,7 @@ volantes-cursors
 vulkan-intel
 websocat
 wireplumber
+wl-clip-persist
 wl-clipboard
 wl-mirror
 wpa_supplicant
