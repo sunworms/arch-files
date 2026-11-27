@@ -1,6 +1,7 @@
 spawn-sh-at-startup "lxqt-session && niri msg action quit -s"
 spawn-sh-at-startup "kanata --cfg ~/.config/kanata/config.kbd"
 spawn-sh-at-startup "niri-float-sticky -title '^Picture-in-Picture$|^Picture in picture$'"
+spawn-sh-at-startup "copyq"
 
 environment {
     ELECTRON_OZONE_PLATFORM_HINT "auto"
@@ -42,6 +43,9 @@ hotkey-overlay {
 binds {
     Mod+T hotkey-overlay-title="Open a Terminal: qterminal" repeat=false {
         spawn "qterminal"
+    }
+    Mod+V hotkey-overlay-title="CopyQ" repeat=false {
+        spawn "copyq" "toggle"
     }
     XF86Tools hotkey-overlay-title="LXQt Settings" {
         spawn "lxqt-config"
@@ -555,6 +559,7 @@ window-rule {
 
 window-rule {
     match app-id="^lxqt-config$"
+    match app-id="^com.github.hluk.copyq$"
     default-column-width {
         fixed 1000
     }

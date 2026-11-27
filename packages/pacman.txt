@@ -11,6 +11,7 @@ brightnessctl
 btrfs-progs
 chaotic-keyring
 chaotic-mirrorlist
+copyq
 curl
 dnsmasq
 dolphin-emu-git
