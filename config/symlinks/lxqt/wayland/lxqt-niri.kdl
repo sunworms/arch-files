@@ -42,6 +42,9 @@ hotkey-overlay {
 }
 
 binds {
+    Mod {
+        release { spawn "lxqt-qdbus" "openmenu"; }
+    }
     Mod+T hotkey-overlay-title="Open a Terminal: qterminal" repeat=false {
         spawn "qterminal"
     }
