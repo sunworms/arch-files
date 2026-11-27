@@ -384,7 +384,7 @@ wallpaper_scheme = "faithful"
 
 [theme.templates]
 builtin_ids = ["foot", "gtk3", "gtk4", "kcolorscheme", "qt", "umbriel", "luciole"]
-community_ids = ["lazygit", "bat", "lsd", "fzf"]
+community_ids = ["pywalfox", "lazygit", "bat", "lsd", "fzf"]
 
 [theme.templates.user.variables]
 input_path = "~/.config/noctalia/templates/variables.fish"
