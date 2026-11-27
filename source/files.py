@@ -29,5 +29,6 @@ decman.directories[f"{HOME}/.local/bin"] = Directory(
 decman.symlinks["/usr/bin/xdg-terminal-exec"] = "/usr/bin/foot"
 decman.symlinks[f"{HOME}/.face"] = str(Path("../face").resolve())
 decman.symlinks[f"{HOME}/.arch.svg"] = str(Path("../pfps/arch.svg").resolve())
+decman.symlinks[f"{CONFIG}/yazi/package.toml"] = str(Path("../config/symlinks/yazi-package.toml").resolve())
 decman.symlinks[f"{CONFIG}/systemd/user/default.target.wants/clear-cache.service"] = str(Path("../config/dot-config/systemd/user/clear-cache.service").resolve())
 decman.symlinks[f"{CONFIG}/systemd/user/default.target.wants/rclone-gdrive.service"] = str(Path("../config/dot-config/systemd/user/rclone-gdrive.service").resolve())
