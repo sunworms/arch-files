@@ -75,13 +75,13 @@ binds {
     }
 
     XF86AudioRaiseVolume allow-when-locked=true {
-        spawn "wpctl" "set-volume" "@DEFAULT_SINK@" "5%+"
+        spawn "lxqt-qdbus" "volume" "up"
     }
     XF86AudioLowerVolume allow-when-locked=true {
-        spawn "wpctl" "set-volume" "@DEFAULT_SINK@" "5%-"
+        spawn "lxqt-qdbus" "volume" "down"
     }
     XF86AudioMute allow-when-locked=true {
-        spawn "wpctl" "set-mute" "@DEFAULT_SINK@" "toggle"
+        spawn "lxqt-qdbus" "volume" "mute"
     }
     XF86AudioMicMute allow-when-locked=true {
         spawn "wpctl" "set-mute" "@DEFAULT_SOURCE@" "toggle"
