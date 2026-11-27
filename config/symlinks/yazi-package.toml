@@ -10,8 +10,8 @@ hash = "f0dcc0ea71d5c59ce0d527f4b8a3937b"
 
 [[plugin.deps]]
 use = "Joao-Queiroga/drag"
-rev = "5f6b284"
-hash = "5fa7ee4328551934e4af11e3547f3a2c"
+rev = "94de073"
+hash = "4e3f1669b6454a80fdc61b2b4f9305b0"
 
 [[plugin.deps]]
 use = "boydaihungst/gvfs"
