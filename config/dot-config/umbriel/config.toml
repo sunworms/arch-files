@@ -246,7 +246,13 @@ enabled = false
 "Mod+Ctrl+Shift+WheelUp" = "column-move-left"
 
 [[window_rule]]
-match.title = "^(Picture-in-Picture|Picture in picture)$"
+match.title = "^Picture-in-Picture$"
+default_floating = true
+default_position = { x = 1125, y = 225, anchor = "top_left" }
+default_pinned = true
+
+[[window_rule]]
+match.title = "^Picture in picture$"
 default_floating = true
 default_floating_size_px = { width = 525, height = 295 }
 default_position = { x = 1125, y = 225, anchor = "top_left" }
