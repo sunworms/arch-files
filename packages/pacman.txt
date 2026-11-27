@@ -83,6 +83,7 @@ qt6-wayland
 qt6ct
 rate-mirrors
 rclone
+resvg
 ripgrep
 sameboy
 satty
