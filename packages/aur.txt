@@ -1,5 +1,6 @@
 cloudflare-warp-minimal-bin
 decman
 elan-lean-bin
+niri-float-sticky
 python-pywalfox
 xdg-desktop-portal-termfilechooser
