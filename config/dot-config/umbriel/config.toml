@@ -31,6 +31,10 @@ lid_close = "noctalia msg session lock-and-suspend"
 scale = 1.7
 hdr = "auto"
 
+[animation]
+enabled = true
+duration_ms = 50
+
 [appearance]
 prefer_no_csd = true
 border_width = 2
