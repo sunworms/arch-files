@@ -19,6 +19,10 @@ for path in SYSTEM_SRC.rglob("*"):
 
 decman.files["/boot/loader/entries/linux.conf"] = File(source_file="../config/linux.conf")
 
+decman.files["/usr/share/qtermwidget6/color-schemes/Catppucin-Mocha.colorscheme"] = File(source_file="../config/themes/qterminal/Catppuccin-Mocha.colorscheme")
+decman.directories["/usr/share/lxqt/themes/catppuccin-mocha"] = Directory(source_directory="../config/themes/lxqt/catppuccin-mocha")
+decman.directories[f"{CONFIG}/Kvantum/catppuccin-mocha-lavender"] = Directory(source_directory="../config/themes/Kvantum/catppuccin-mocha-lavender", owner=USER)
+
 decman.directories[f"{HOME}/.local/bin"] = Directory(
     source_directory="../scripts/bin",
     bin_files=False,
@@ -27,8 +31,6 @@ decman.directories[f"{HOME}/.local/bin"] = Directory(
 )
 
 decman.symlinks["/usr/bin/xdg-terminal-exec"] = "/usr/bin/foot"
-decman.symlinks[f"{HOME}/.face"] = str(Path("../face").resolve())
-decman.symlinks[f"{HOME}/.arch.svg"] = str(Path("../pfps/arch.svg").resolve())
-decman.symlinks[f"{CONFIG}/yazi/package.toml"] = str(Path("../config/symlinks/yazi-package.toml").resolve())
+decman.symlinks[f"{CONFIG}/lxqt"] = str(Path("../config/symlinks/lxqt").resolve())
 decman.symlinks[f"{CONFIG}/systemd/user/default.target.wants/clear-cache.service"] = str(Path("../config/dot-config/systemd/user/clear-cache.service").resolve())
 decman.symlinks[f"{CONFIG}/systemd/user/default.target.wants/rclone-gdrive.service"] = str(Path("../config/dot-config/systemd/user/rclone-gdrive.service").resolve())

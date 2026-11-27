@@ -1,0 +1,593 @@
+spawn-sh-at-startup "lxqt-session && niri msg action quit -s"
+spawn-sh-at-startup "kanata --cfg ~/.config/kanata/config.kbd"
+spawn-sh-at-startup "niri-float-sticky -title '^Picture-in-Picture$|^Picture in picture$'"
+
+environment {
+    ELECTRON_OZONE_PLATFORM_HINT "auto"
+    QT_AUTO_SCREEN_SCALE_FACTOR "1"
+    QT_STYLE_OVERRIDE "kvantum"
+    _JAVA_AWT_WM_NONREPARENTING "1"
+}
+
+// prefer-no-csd
+
+screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+
+debug {
+    honor-xdg-activation-with-invalid-serial
+    dbus-interfaces-in-non-session-instances
+}
+
+input {
+    keyboard {
+        numlock
+        xkb
+    }
+    touchpad {
+        natural-scroll
+        tap
+    }
+}
+
+gestures {
+    hot-corners {
+        off
+    }
+}
+
+hotkey-overlay {
+    skip-at-startup
+}
+
+binds {
+    Mod+T hotkey-overlay-title="Open a Terminal: qterminal" repeat=false {
+        spawn "qterminal"
+    }
+    XF86Tools hotkey-overlay-title="LXQt Settings" {
+        spawn "lxqt-config"
+    }
+    XF86Launch5 hotkey-overlay-title="Lock the Screen" {
+        spawn "gtklock"
+    }
+
+    Mod+Shift+Slash {
+        show-hotkey-overlay
+    }
+    Mod+Space repeat=false {
+        toggle-overview
+    }
+    Mod+Shift+Escape allow-inhibiting=false {
+        toggle-keyboard-shortcuts-inhibit
+    }
+    Mod+Shift+P {
+        power-off-monitors
+    }
+    Ctrl+Alt+Delete {
+        quit
+    }
+
+    XF86AudioRaiseVolume allow-when-locked=true {
+        spawn "wpctl" "set-volume" "@DEFAULT_SINK@" "5%+"
+    }
+    XF86AudioLowerVolume allow-when-locked=true {
+        spawn "wpctl" "set-volume" "@DEFAULT_SINK@" "5%-"
+    }
+    XF86AudioMute allow-when-locked=true {
+        spawn "wpctl" "set-mute" "@DEFAULT_SINK@" "toggle"
+    }
+    XF86AudioMicMute allow-when-locked=true {
+        spawn "wpctl" "set-mute" "@DEFAULT_SOURCE@" "toggle"
+    }
+    XF86AudioPlay allow-when-locked=true {
+        spawn "playerctl" "play-pause"
+    }
+    XF86AudioNext allow-when-locked=true {
+        spawn "playerctl" "next"
+    }
+    XF86AudioPrev allow-when-locked=true {
+        spawn "playerctl" "previous"
+    }
+    XF86MonBrightnessUp allow-when-locked=true {
+        spawn "brightnessctl" "set" "+5%"
+    }
+    XF86MonBrightnessDown allow-when-locked=true {
+        spawn "brightnessctl" "set" "5%-"
+    }
+
+    Print {
+        screenshot
+    }
+    Super+Shift+S {
+        screenshot
+    }
+    Ctrl+Print {
+        screenshot-screen
+    }
+    Ctrl+Super+Shift+S {
+        screenshot-screen
+    }
+    Alt+Print {
+        screenshot-window
+    }
+    Alt+Super+Shift+S {
+        screenshot-window
+    }
+    Mod+Print {
+        spawn-sh "wl-paste --type image | satty --fullscreen --filename -"
+    }
+    Ctrl+Alt+Super+Shift+S {
+        spawn-sh "wl-paste --type image | satty --fullscreen --filename -"
+    }
+
+    Mod+Q repeat=false {
+        close-window
+    }
+
+    Mod+H {
+        focus-column-left
+    }
+    Mod+Left {
+        focus-column-left
+    }
+    Mod+L {
+        focus-column-right
+    }
+    Mod+Right {
+        focus-column-right
+    }
+    Mod+Home {
+        focus-column-first
+    }
+    Mod+End {
+        focus-column-last
+    }
+    Mod+J {
+        focus-window-or-workspace-down
+    }
+    Mod+Down {
+        focus-window-down
+    }
+    Mod+K {
+        focus-window-or-workspace-up
+    }
+    Mod+Up {
+        focus-window-up
+    }
+
+    Mod+Ctrl+H {
+        move-column-left
+    }
+    Mod+Ctrl+Left {
+        move-column-left
+    }
+    Mod+Ctrl+L {
+        move-column-right
+    }
+    Mod+Ctrl+Right {
+        move-column-right
+    }
+    Mod+Ctrl+Home {
+        move-column-to-first
+    }
+    Mod+Ctrl+End {
+        move-column-to-last
+    }
+    Mod+Ctrl+J {
+        move-window-down-or-to-workspace-down
+    }
+    Mod+Ctrl+Down {
+        move-window-down
+    }
+    Mod+Ctrl+K {
+        move-window-up-or-to-workspace-up
+    }
+    Mod+Ctrl+Up {
+        move-window-up
+    }
+
+    Mod+Comma {
+        consume-window-into-column
+    }
+    Mod+Period {
+        expel-window-from-column
+    }
+    Mod+BracketLeft {
+        consume-or-expel-window-left
+    }
+    Mod+BracketRight {
+        consume-or-expel-window-right
+    }
+    Mod+W {
+        toggle-column-tabbed-display
+    }
+
+    Mod+R {
+        switch-preset-column-width
+    }
+    Mod+Shift+R {
+        switch-preset-window-height
+    }
+    Mod+Ctrl+R {
+        reset-window-height
+    }
+    Mod+Minus {
+        set-column-width "-5%"
+    }
+    Mod+Equal {
+        set-column-width "+5%"
+    }
+    Mod+Shift+Minus {
+        set-window-height "-5%"
+    }
+    Mod+Shift+Equal {
+        set-window-height "+5%"
+    }
+    Mod+F {
+        maximize-column
+    }
+    Mod+Ctrl+F {
+        expand-column-to-available-width
+    }
+    Mod+M {
+        maximize-window-to-edges
+    }
+    Mod+Shift+F {
+        fullscreen-window
+    }
+    Mod+C {
+        center-column
+    }
+    Mod+Ctrl+C {
+        center-visible-columns
+    }
+
+    Mod+Alt+V {
+        toggle-window-floating
+    }
+    Mod+Shift+V {
+        switch-focus-between-floating-and-tiling
+    }
+
+    Mod+1 {
+        focus-workspace 1
+    }
+    Mod+2 {
+        focus-workspace 2
+    }
+    Mod+3 {
+        focus-workspace 3
+    }
+    Mod+4 {
+        focus-workspace 4
+    }
+    Mod+5 {
+        focus-workspace 5
+    }
+    Mod+6 {
+        focus-workspace 6
+    }
+    Mod+7 {
+        focus-workspace 7
+    }
+    Mod+8 {
+        focus-workspace 8
+    }
+    Mod+9 {
+        focus-workspace 9
+    }
+    Mod+0 {
+        focus-workspace 10
+    }
+    Mod+I {
+        focus-workspace-up
+    }
+    Mod+U {
+        focus-workspace-down
+    }
+    Mod+Page_Up {
+        focus-workspace-up
+    }
+    Mod+Page_Down {
+        focus-workspace-down
+    }
+
+    Mod+Ctrl+1 {
+        move-column-to-workspace 1
+    }
+    Mod+Ctrl+2 {
+        move-column-to-workspace 2
+    }
+    Mod+Ctrl+3 {
+        move-column-to-workspace 3
+    }
+    Mod+Ctrl+4 {
+        move-column-to-workspace 4
+    }
+    Mod+Ctrl+5 {
+        move-column-to-workspace 5
+    }
+    Mod+Ctrl+6 {
+        move-column-to-workspace 6
+    }
+    Mod+Ctrl+7 {
+        move-column-to-workspace 7
+    }
+    Mod+Ctrl+8 {
+        move-column-to-workspace 8
+    }
+    Mod+Ctrl+9 {
+        move-column-to-workspace 9
+    }
+    Mod+Ctrl+0 {
+        move-column-to-workspace 10
+    }
+    Mod+Ctrl+I {
+        move-column-to-workspace-up
+    }
+    Mod+Ctrl+U {
+        move-column-to-workspace-down
+    }
+    Mod+Ctrl+Page_Up {
+        move-column-to-workspace-up
+    }
+    Mod+Ctrl+Page_Down {
+        move-column-to-workspace-down
+    }
+
+    Mod+Shift+I {
+        move-workspace-up
+    }
+    Mod+Shift+U {
+        move-workspace-down
+    }
+    Mod+Shift+Page_Up {
+        move-workspace-up
+    }
+    Mod+Shift+Page_Down {
+        move-workspace-down
+    }
+
+    Mod+Shift+H {
+        focus-monitor-left
+    }
+    Mod+Shift+Left {
+        focus-monitor-left
+    }
+    Mod+Shift+L {
+        focus-monitor-right
+    }
+    Mod+Shift+Right {
+        focus-monitor-right
+    }
+    Mod+Shift+J {
+        focus-monitor-down
+    }
+    Mod+Shift+Down {
+        focus-monitor-down
+    }
+    Mod+Shift+K {
+        focus-monitor-up
+    }
+    Mod+Shift+Up {
+        focus-monitor-up
+    }
+
+    Mod+Shift+Ctrl+H {
+        move-column-to-monitor-left
+    }
+    Mod+Shift+Ctrl+Left {
+        move-column-to-monitor-left
+    }
+    Mod+Shift+Ctrl+L {
+        move-column-to-monitor-right
+    }
+    Mod+Shift+Ctrl+Right {
+        move-column-to-monitor-right
+    }
+    Mod+Shift+Ctrl+J {
+        move-column-to-monitor-down
+    }
+    Mod+Shift+Ctrl+Down {
+        move-column-to-monitor-down
+    }
+    Mod+Shift+Ctrl+K {
+        move-column-to-monitor-up
+    }
+    Mod+Shift+Ctrl+Up {
+        move-column-to-monitor-up
+    }
+
+    Mod+WheelScrollDown cooldown-ms=150 {
+        focus-workspace-down
+    }
+    Mod+WheelScrollUp cooldown-ms=150 {
+        focus-workspace-up
+    }
+    Mod+WheelScrollLeft {
+        focus-column-left
+    }
+    Mod+WheelScrollRight {
+        focus-column-right
+    }
+    Mod+Shift+WheelScrollDown {
+        focus-column-right
+    }
+    Mod+Shift+WheelScrollUp {
+        focus-column-left
+    }
+    Mod+Ctrl+WheelScrollDown cooldown-ms=150 {
+        move-column-to-workspace-down
+    }
+    Mod+Ctrl+WheelScrollUp cooldown-ms=150 {
+        move-column-to-workspace-up
+    }
+    Mod+Ctrl+WheelScrollLeft {
+        move-column-left
+    }
+    Mod+Ctrl+WheelScrollRight {
+        move-column-right
+    }
+    Mod+Ctrl+Shift+WheelScrollDown {
+        move-column-right
+    }
+    Mod+Ctrl+Shift+WheelScrollUp {
+        move-column-left
+    }
+}
+
+recent-windows {
+    binds {
+        Alt+Tab {
+            next-window
+        }
+        Alt+Shift+Tab {
+            previous-window
+        }
+        Mod+Tab {
+            next-window
+        }
+        Mod+Shift+Tab {
+            previous-window
+        }
+    }
+}
+
+layout {
+    background-color "transparent"
+    gaps 0
+    center-focused-column "never"
+    default-column-width {
+        proportion 1.000000
+    }
+    preset-column-widths {
+        proportion 0.500000
+        proportion 0.750000
+        proportion 1.000000
+    }
+    struts {
+        top 15
+        bottom 15
+        left 15
+        right 15
+    }
+    border {
+        off
+        width 2
+    }
+    focus-ring {
+        width 2
+    }
+    shadow {
+        on
+        offset x=0 y=5
+        softness 20
+        spread 5
+    }
+}
+
+cursor {
+    xcursor-theme "volantes_cursors"
+    xcursor-size 24
+}
+
+animations
+
+blur {
+    passes 3
+    offset 3
+    noise 0.020000
+    saturation 1.500000
+}
+
+overview {
+    zoom 0.150000
+    workspace-shadow {
+        off
+    }
+}
+
+layer-rule {
+    match namespace="^desktop$"
+
+    place-within-backdrop true
+}
+
+layer-rule {
+    match namespace="^noctalia-bar*"
+
+    background-effect {
+        blur true
+        xray true
+    }
+}
+
+window-rule {
+    clip-to-geometry true
+    draw-border-with-background false
+    geometry-corner-radius 6
+    background-effect {
+        blur true
+        xray true
+    }
+}
+
+window-rule {
+    match is-active=false
+    opacity 0.8
+}
+
+window-rule {
+    match app-id=r#"^org\.wezfurlong\.wezterm$"#
+
+    default-column-width
+}
+
+window-rule {
+    match app-id="^lxqt-config*"
+    default-column-width {
+        fixed 750
+    }
+    default-window-height {
+        fixed 500
+    }
+    open-floating true
+}
+
+window-rule {
+    match app-id="^lxqt-config$"
+    default-column-width {
+        fixed 1000
+    }
+    default-window-height {
+        fixed 750
+    }
+    open-floating true
+}
+
+window-rule {
+    match title="Picture-in-Picture"
+
+    open-floating true
+    default-floating-position x=1100 y=225
+}
+
+window-rule {
+    match title="Picture in picture"
+
+    open-floating true
+    default-floating-position x=1100 y=225
+    default-column-width {
+        fixed 525
+    }
+    default-window-height {
+        fixed 295
+    }
+}
+
+window-rule {
+    match title=".+?is sharing a window.$"
+
+    default-floating-position x=3000 y=2000
+}
+
+include optional=true "niri/colors.kdl"

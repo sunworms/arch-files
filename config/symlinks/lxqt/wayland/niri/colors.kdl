@@ -1,0 +1,38 @@
+layout {
+    focus-ring {
+        active-color "#b4befe"
+        inactive-color "#585b70"
+        urgent-color "#f38ba8"
+        active-gradient from="#b4befe" to="#74c7ec" angle=45
+        inactive-gradient from="#585b70" to="#45475a" angle=45 relative-to="workspace-view"
+        urgent-gradient from="#f38ba8" to="#eba0ac" angle=45
+    }
+
+    border {
+        active-color "#b4befe"
+        inactive-color "#585b70"
+        urgent-color "#f38ba8"
+        active-gradient from="#b4befe" to="#74c7ec" angle=45
+        inactive-gradient from="#585b70" to="#45475a" angle=45 relative-to="workspace-view"
+        urgent-gradient from="#f38ba8" to="#eba0ac" angle=45
+    }
+
+    shadow {
+        color "#11111b4d"
+        inactive-color "#1e1e2e4d"
+    }
+
+    tab-indicator {
+        active-color "#b4befe"
+        inactive-color "#585b70"
+        urgent-color "#f38ba8"
+        active-gradient from="#b4befe" to="#74c7ec" angle=45
+        inactive-gradient from="#585b70" to="#45475a" angle=45 relative-to="workspace-view"
+        urgent-gradient from="#f38ba8" to="#eba0ac" angle=45
+    }
+
+    insert-hint {
+        color "#b4befe80"
+        gradient from="#b4befe" to="#74c7ec" angle=45 relative-to="workspace-view"
+    }
+}
