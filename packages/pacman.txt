@@ -83,6 +83,7 @@ qt6ct
 rate-mirrors
 rclone
 resvg
+ripdrag
 ripgrep
 sameboy
 satty
