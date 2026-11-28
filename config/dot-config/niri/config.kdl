@@ -603,6 +603,7 @@ window-rule {
 
 window-rule {
     match title="Picture-in-Picture"
+    match app-id="^helium$" title="^Spotify$"
 
     open-floating true
     default-floating-position x=1100 y=225
