@@ -32,5 +32,6 @@ decman.directories[f"{HOME}/.local/bin"] = Directory(
 
 decman.symlinks["/usr/bin/xdg-terminal-exec"] = "/usr/bin/foot"
 decman.symlinks[f"{CONFIG}/lxqt"] = str(Path("../config/symlinks/lxqt").resolve())
+decman.symlinks[f"{CONFIG}/qterminal.org"] = str(Path("../config/symlinks/qterminal.org").resolve())
 decman.symlinks[f"{CONFIG}/systemd/user/default.target.wants/clear-cache.service"] = str(Path("../config/dot-config/systemd/user/clear-cache.service").resolve())
 decman.symlinks[f"{CONFIG}/systemd/user/default.target.wants/rclone-gdrive.service"] = str(Path("../config/dot-config/systemd/user/rclone-gdrive.service").resolve())
