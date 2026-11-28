@@ -8,9 +8,9 @@ enable_overdrive = true
 order = ["default"]
 
 [bar.default]
-background_opacity = 0.9
+background_opacity = 1.0
 capsule = true
-capsule_opacity = 0.9
+capsule_opacity = 1.0
 capsule_radius = 6.0
 start = [ "workspaces", "group:misc", "group:screen", "group:music" ]
 center = ["clock"]
@@ -102,7 +102,7 @@ type = "google"
 
 [dock]
 auto_hide = true
-background_opacity = 0.9
+background_opacity = 1.0
 enabled = false
 position = "top"
 
@@ -290,11 +290,11 @@ forecast_days = 2
 show_forecast = true
 
 [notification]
-background_opacity = 0.9
+background_opacity = 1.0
 scale = 1.0
 
 [osd]
-background_opacity = 0.9
+background_opacity = 1.0
 scale = 1.0
 
 [plugin_settings."alexander/screen-toolkit"]
