@@ -4,14 +4,11 @@ azahar-git
 base
 base-devel
 bc
-blueman
 bluez
 bluez-utils
-brightnessctl
 btrfs-progs
 chaotic-keyring
 chaotic-mirrorlist
-copyq
 curl
 dnsmasq
 dolphin-emu-git
@@ -34,7 +31,6 @@ gst-plugin-pipewire
 gst-plugins-bad
 gst-plugins-good
 gst-plugins-ugly
-gtklock
 gvfs-mtp
 hyfetch
 imagemagick
@@ -42,12 +38,9 @@ intel-media-driver
 intel-ucode
 jq
 kanata
-kvantum
-kvantum-qt5
 lazygit
 less
 libayatana-appindicator
-libnotify
 libpulse
 libva-intel-driver
 libxcrypt-compat
@@ -76,7 +69,6 @@ pipewire-pulse
 qbittorrent-git
 qt5-wayland
 qt5ct
-qt6-tools
 qt6-wayland
 qt6ct
 rate-mirrors
@@ -105,7 +97,6 @@ volantes-cursors
 vulkan-intel
 websocat
 wireplumber
-wl-clip-persist
 wl-clipboard
 wl-mirror
 wpa_supplicant

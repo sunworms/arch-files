@@ -202,10 +202,6 @@
       "firefox@equicord.org": {
         "installation_mode": "normal_installed",
         "install_url": "https://addons.mozilla.org/firefox/downloads/latest/equicord-web/latest.xpi"
-      },
-      "{8446b178-c865-4f5c-8ccc-1d7887811ae3}": {
-        "installation_mode": "normal_installed",
-        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/catppuccin-mocha-lavender-git/latest.xpi"
       }
     }
   }
