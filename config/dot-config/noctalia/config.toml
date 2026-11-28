@@ -117,7 +117,7 @@ timeout = 300
 [idle.behavior.idle-behavior-2]
 action = "screen_off"
 enabled = true
-timeout = 600
+timeout = 150
 
 [location]
 auto_locate = false
