@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=QWarp
+Comment=Unofficial Cloudflare WARP GUI
+Exec="/usr/bin/qwarp" --start-minimized
+Icon=qwarp
+Terminal=false
+Categories=Network;
