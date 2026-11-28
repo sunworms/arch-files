@@ -1,3 +1,5 @@
+spawn-at-startup "dbus-update-activation-environment" "--systemd" "WAYLAND_DISPLAY" "XDG_CURRENT_DESKTOP"
+spawn-at-startup "systemctl" "--user" "start" "graphical-session-shim.service"
 spawn-sh-at-startup "lxqt-session && niri msg action quit -s"
 spawn-sh-at-startup "kanata --cfg ~/.config/kanata/config.kbd"
 spawn-sh-at-startup "niri-float-sticky -title '^Picture-in-Picture$|^Picture in picture$'"
