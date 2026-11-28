@@ -1,4 +1,9 @@
-spawn-at-startup "noctalia"
+spawn-at-startup "vibepanel"
+spawn-at-startup "awww-daemon"
+spawn-at-startup "copyq"
+spawn-at-startup "wl-clip-persist" "--clipboard" "regular"
+spawn-sh-at-startup "sleep 2 && qwarp --start-minimized"
+spawn-sh-at-startup "swayidle -w timeout 600 'gtklock -d' timeout 300 'niri msg action power-off-monitors' after-resume 'niri msg action power-on-monitors' before-sleep 'gtklock -d'"
 spawn-sh-at-startup "kanata --cfg ~/.config/kanata/config.kbd"
 spawn-sh-at-startup "niri-float-sticky -title '^Picture-in-Picture$|^Picture in picture$'"
 
@@ -6,7 +11,7 @@ environment {
     ELECTRON_OZONE_PLATFORM_HINT "auto"
     GTK_USE_PORTAL "1"
     QT_AUTO_SCREEN_SCALE_FACTOR "1"
-    QT_QPA_PLATFORMTHEME "qt6ct"
+    QT_QPA_PLATFORMTHEME "gtk3"
     QT_WAYLAND_DISABLE_WINDOWDECORATION "1"
     TERMINAL "foot"
     _JAVA_AWT_WM_NONREPARENTING "1"
@@ -21,7 +26,6 @@ debug {
 }
 
 input {
-    disable-power-key-handling
     keyboard {
         numlock
         xkb
@@ -38,12 +42,6 @@ gestures {
     }
 }
 
-switch-events {
-    lid-close {
-        spawn "noctalia" "msg" "session" "lock-and-suspend"
-    }
-}
-
 hotkey-overlay {
     skip-at-startup
 }
@@ -53,31 +51,13 @@ binds {
         spawn "foot"
     }
     Mod+A hotkey-overlay-title="Application Launcher" {
-        spawn "noctalia" "msg" "panel-toggle" "launcher"
+        spawn "fuzzel"
     }
     Mod+V hotkey-overlay-title="Clipboard" {
-        spawn "noctalia" "msg" "panel-toggle" "clipboard"
-    }
-    Mod+Escape hotkey-overlay-title="Power Menu" {
-        spawn "noctalia" "msg" "panel-toggle" "session"
-    }
-    XF86Launch6 hotkey-overlay-title="Control Center" {
-        spawn "noctalia" "msg" "panel-toggle" "control-center"
-    }
-    XF86Favorites hotkey-overlay-title="Emoji Selector" {
-        spawn "noctalia" "msg" "panel-toggle" "launcher" "/emo"
-    }
-    XF86Calculator hotkey-overlay-title="Niri Window Switcher" {
-        spawn "noctalia" "msg" "window-switcher"
-    }
-    XF86Tools hotkey-overlay-title="Noctalia Settings" {
-        spawn "noctalia" "msg" "settings-toggle"
+        spawn "copyq" "toggle"
     }
     XF86Launch5 hotkey-overlay-title="Lock the Screen" {
-        spawn "noctalia" "msg" "session" "lock"
-    }
-    XF86PowerOff hotkey-overlay-title="Lock and Suspend" {
-        spawn "noctalia" "msg" "session" "lock-and-suspend"
+        spawn "gtklock"
     }
 
     Mod+Shift+Slash {
@@ -97,31 +77,31 @@ binds {
     }
 
     XF86AudioRaiseVolume allow-when-locked=true {
-        spawn "noctalia" "msg" "volume-up" "5"
+        spawn "vibepanel" "volume" "inc";
     }
     XF86AudioLowerVolume allow-when-locked=true {
-        spawn "noctalia" "msg" "volume-down" "5"
+        spawn "vibepanel" "volume" "dec";
     }
     XF86AudioMute allow-when-locked=true {
-        spawn "noctalia" "msg" "volume-mute"
+        spawn "vibepanel" "volume" "toggle-mute"
     }
     XF86AudioMicMute allow-when-locked=true {
-        spawn "noctalia" "msg" "mic-mute"
+        spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"
     }
     XF86AudioPlay allow-when-locked=true {
-        spawn "noctalia" "msg" "media" "toggle"
+        spawn "vibepanel" "media" "play-pause"
     }
     XF86AudioNext allow-when-locked=true {
-        spawn "noctalia" "msg" "media" "next"
+        spawn "vibepanel" "media" "next"
     }
     XF86AudioPrev allow-when-locked=true {
-        spawn "noctalia" "msg" "media" "previous"
+        spawn "vibepanel" "media" "previous"
     }
     XF86MonBrightnessUp allow-when-locked=true {
-        spawn "noctalia" "msg" "brightness-up" "5"
+        spawn "vibepanel" "brightness" "inc";
     }
     XF86MonBrightnessDown allow-when-locked=true {
-        spawn "noctalia" "msg" "brightness-down" "5"
+        spawn "vibepanel" "brightness" "down";
     }
 
     Print {
@@ -482,8 +462,6 @@ recent-windows {
     }
 }
 
-include "~/.config/niri/noctalia.kdl" optional=true
-
 layout {
     background-color "transparent"
     gaps 0
@@ -539,8 +517,7 @@ overview {
 }
 
 layer-rule {
-    match namespace="^noctalia-wallpaper$"
-    match namespace="^mpvpaper$"
+    match namespace="^awww-daemon$"
 
     place-within-backdrop true
 }
@@ -586,7 +563,6 @@ window-rule {
 
 window-rule {
     match app-id="^xdg_filechooser$"
-    match app-id="^dev.noctalia.Noctalia$"
 
     open-floating true
     default-column-width {
@@ -598,6 +574,18 @@ window-rule {
     background-effect {
         blur true
         xray true
+    }
+}
+
+window-rule {
+    match app-id="^com.github.hluk.copyq$"
+
+    open-floating true
+    default-column-width {
+        fixed 1000
+    }
+    default-window-height {
+        fixed 750
     }
 }
 

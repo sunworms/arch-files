@@ -2,4 +2,7 @@ cloudflare-warp-minimal-bin
 decman
 elan-lean-bin
 niri-float-sticky
+qwarp
+soteria-bin
+vibepanel-bin
 xdg-desktop-portal-termfilechooser

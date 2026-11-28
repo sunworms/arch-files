@@ -1,6 +1,6 @@
 7zip
-adw-gtk-theme
 android-tools
+awww
 azahar-git
 base
 base-devel
@@ -9,9 +9,11 @@ bc
 bluez
 bluez-utils
 btrfs-progs
+cava
 chaotic-keyring
 chaotic-mirrorlist
 chromium-widevine
+copyq
 curl
 dnsmasq
 dolphin-emu-git
@@ -23,10 +25,12 @@ ffmpeg
 fish
 fisher
 foot
+fuzzel
 fzf
 git
 git-lfs
 gnome-keyring
+gnome-themes-extra
 gpu-screen-recorder-git
 greetd
 greetd-tuigreet
@@ -36,6 +40,7 @@ gst-plugin-pipewire
 gst-plugins-bad
 gst-plugins-good
 gst-plugins-ugly
+gtklock
 gvfs-mtp
 helium-browser-bin
 hyfetch
@@ -66,7 +71,6 @@ ncdu
 neovim-git
 networkmanager
 niri-git
-noctalia-git
 noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
@@ -94,6 +98,7 @@ sof-firmware
 steam
 stylua
 sudo
+swayidle
 systemd
 terminus-font
 tesseract
@@ -111,6 +116,7 @@ vulkan-intel
 websocat
 wf-recorder
 wireplumber
+wl-clip-persist
 wl-clipboard
 wl-mirror
 wpa_supplicant

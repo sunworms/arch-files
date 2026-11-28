@@ -2,8 +2,8 @@
 Description=Clear Cache on Login
 
 [Service]
-ExecStart=env rm -rf /home/sunny/.config/net.imput.helium/Default/Service\ Worker /home/sunny/.cache /home/sunny/.config/net.imput.helium/Default/AutofillAiModelCache /home/sunny/.config/net.imput.helium/Default/DawnGraphiteCache /home/sunny/.config/net.imput.helium/Default/DawnWebGPUCache /home/sunny/.config/net.imput.helium/Default/GPUCache /home/sunny/.config/net.imput.helium/Default/optimization_guide_hint_cache_store /home/sunny/.sentry-native
 Type=oneshot
+ExecStart=/bin/sh -c "rm -rf /home/sunny/.config/net.imput.helium/Default/Service\\ Worker /home/sunny/.config/net.imput.helium/Default/AutofillAiModelCache /home/sunny/.config/net.imput.helium/Default/DawnGraphiteCache /home/sunny/.config/net.imput.helium/Default/DawnWebGPUCache /home/sunny/.config/net.imput.helium/Default/GPUCache /home/sunny/.config/net.imput.helium/Default/optimization_guide_hint_cache_store /home/sunny/.sentry-native && find /home/sunny/.cache -mindepth 1 -maxdepth 1 ! -name 'awww' -exec rm -rf {} +"
 
 [Install]
 WantedBy=default.target
