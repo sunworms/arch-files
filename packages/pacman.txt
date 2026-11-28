@@ -1,8 +1,10 @@
 7zip
+adw-gtk-theme
 android-tools
 azahar-git
 base
 base-devel
+bat
 bc
 bluez
 bluez-utils
@@ -20,12 +22,15 @@ ffmpeg
 firefox
 fish
 fisher
+foot
 fzf
 git
 git-lfs
 gnome-keyring
+gpu-screen-recorder-git
 greetd
 greetd-tuigreet
+grim
 gst-libav
 gst-plugin-pipewire
 gst-plugins-bad
@@ -33,7 +38,9 @@ gst-plugins-good
 gst-plugins-ugly
 gvfs-mtp
 hyfetch
+hyprpicker
 imagemagick
+imv
 intel-media-driver
 intel-ucode
 jq
@@ -53,10 +60,12 @@ melonds-git
 mesa
 mgba-qt
 mpv
+mpvpaper
 ncdu
 neovim-git
 networkmanager
 niri-git
+noctalia-git
 noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
@@ -66,6 +75,7 @@ pipewire
 pipewire-alsa
 pipewire-jack
 pipewire-pulse
+poppler
 qbittorrent-git
 qt5-wayland
 qt5ct
@@ -73,6 +83,8 @@ qt6-wayland
 qt6ct
 rate-mirrors
 rclone
+resvg
+ripdrag
 ripgrep
 sameboy
 satty
@@ -96,6 +108,7 @@ uv
 volantes-cursors
 vulkan-intel
 websocat
+wf-recorder
 wireplumber
 wl-clipboard
 wl-mirror
@@ -107,8 +120,10 @@ xorg-xhost
 xorg-xinit
 xwayland-satellite-git
 yay
+yazi
 zathura
 zathura-cb
 zathura-djvu
 zathura-pdf-mupdf
 zathura-ps
+zbar
